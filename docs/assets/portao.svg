@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <filter id="g" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <circle cx="100" cy="100" r="96" fill="#050505" stroke="#3a0000" stroke-width="2"/>
+  <circle cx="100" cy="100" r="80" fill="none" stroke="#ff1a1a" stroke-width="1.5" stroke-dasharray="6 10" filter="url(#g)">
+    <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="20s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="100" cy="100" r="66" fill="none" stroke="#8b0000" stroke-width="1" stroke-dasharray="2 6">
+    <animateTransform attributeName="transform" type="rotate" from="360 100 100" to="0 100 100" dur="14s" repeatCount="indefinite"/>
+  </circle>
+  <!-- portão do submundo -->
+  <path d="M65 145 V95 A35 35 0 0 1 135 95 V145" fill="none" stroke="#ff1a1a" stroke-width="3" filter="url(#g)"/>
+  <g stroke="#ff1a1a" stroke-width="2">
+    <line x1="82" y1="72" x2="82" y2="145"/><line x1="100" y1="64" x2="100" y2="145"/><line x1="118" y1="72" x2="118" y2="145"/>
+  </g>
+  <line x1="55" y1="145" x2="145" y2="145" stroke="#ff1a1a" stroke-width="3"/>
+  <circle cx="100" cy="112" r="4" fill="#2bff6a" filter="url(#g)">
+    <animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.7;0.8;0.9;1" dur="6s" repeatCount="indefinite"/>
+  </circle>
+</svg>
