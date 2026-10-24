@@ -16,7 +16,7 @@
 
 <img src="docs/assets/divisor.svg" width="100%"/>
 
-## 🔥 Sobre o projeto
+## Sobre o projeto
 
 **Cerberus** é um site sobre a **mitologia grega**: deuses, heróis, criaturas, mitos e lugares lendários.
 
@@ -26,20 +26,20 @@ Quem conduz o visitante é o **Cerberus**, o cão de três cabeças que guarda o
 
 <img src="docs/assets/divisor.svg" width="100%"/>
 
-## 🏛️ O que você vai encontrar
+## O que você vai encontrar
 
 <table>
   <tr>
-    <td align="center" width="25%"><b>⚡ Deuses</b><br/><sub>Zeus, Hades, Poseidon e os olimpianos</sub></td>
-    <td align="center" width="25%"><b>🗡️ Heróis</b><br/><sub>Héracles, Perseu, Aquiles, Odisseu</sub></td>
-    <td align="center" width="25%"><b>🐍 Criaturas</b><br/><sub>Medusa, Hidra, Minotauro e o próprio Cerberus</sub></td>
-    <td align="center" width="25%"><b>🌋 Lugares</b><br/><sub>Olimpo, Submundo, Tártaro, Campos Elísios</sub></td>
+    <td align="center" width="25%"><b>Deuses</b><br/><sub>Zeus, Hades, Poseidon e os olimpianos</sub></td>
+    <td align="center" width="25%"><b>Heróis</b><br/><sub>Héracles, Perseu, Aquiles, Odisseu</sub></td>
+    <td align="center" width="25%"><b>Criaturas</b><br/><sub>Medusa, Hidra, Minotauro e o próprio Cerberus</sub></td>
+    <td align="center" width="25%"><b>Lugares</b><br/><sub>Olimpo, Submundo, Tártaro, Campos Elísios</sub></td>
   </tr>
 </table>
 
 <img src="docs/assets/divisor.svg" width="100%"/>
 
-## 🗝️ Estrutura
+## Estrutura
 
 ```
 projeto-individual-cerberus/
@@ -54,7 +54,7 @@ projeto-individual-cerberus/
 
 <img src="docs/assets/divisor.svg" width="100%"/>
 
-## ⚔️ Tecnologias
+## Tecnologias
 
 | Camada | Tecnologia |
 |---|---|
@@ -66,18 +66,18 @@ projeto-individual-cerberus/
 
 <img src="docs/assets/divisor.svg" width="100%"/>
 
-## 🔱 Identidade visual
+## Identidade visual
 
 | Cor | Hex | Uso |
 |---|---|---|
-| ⬛ Preto | `#050505` | Fundo, o escuro do Submundo |
-| 🟥 Vermelho | `#ff1a1a` | Destaques, fogo, os olhos do Cerberus |
-| 🟥 Vermelho sangue | `#8b0000` | Detalhes e sombras |
-| 🟩 Verde | `#2bff6a` | Raro: aparece de vez em nunca, como um sinal |
+| Preto | `#050505` | Fundo, o escuro do Submundo |
+| Vermelho | `#ff1a1a` | Destaques, fogo, os olhos do Cerberus |
+| Vermelho sangue | `#8b0000` | Detalhes e sombras |
+| Verde | `#2bff6a` | Raro: aparece de vez em nunca, como um sinal |
 
 <img src="docs/assets/divisor.svg" width="100%"/>
 
-## 🕯️ Roteiro
+## Roteiro
 
 - [x] Estrutura inicial do repositório
 - [x] README e identidade visual
@@ -89,7 +89,7 @@ projeto-individual-cerberus/
 
 <img src="docs/assets/divisor.svg" width="100%"/>
 
-## 📜 Diário de Prompts
+## Diário de Prompts
 
 O uso de IA neste projeto está registrado em [`docs/diario-de-prompts.md`](docs/diario-de-prompts.md).
 
