@@ -1,9 +1,8 @@
-/* ===== CORES DO SITE =====
-   escuro      #121417  fundo do topo, cartões e rodapé
-   mármore     #e9ebee  fundo claro (pedra dos templos)
-   terracota   #c8693a  cor principal (vasos gregos)
-   âmbar       #f2b632  destaques no escuro (olhos do Cerberus)
-   vermelho    #b0241b  detalhe raro (coleiras)
+/* Cores do site:
+   escuro    #121417
+   mármore   #e9ebee
+   terracota #c8693a
+   âmbar     #f2b632
 */
 
 * {
@@ -12,471 +11,261 @@
 
 body {
     margin: 0;
-    background: #e9ebee;
+    background-color: #e9ebee;
     color: #1d1f24;
-    font-family: 'Nunito Sans', system-ui, sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px;
 }
 
-h1, h2, h3 {
-    margin: 0;
+h1, h2, h3, .logo, .numero {
     font-family: 'Cinzel', serif;
-    font-weight: 700;
 }
 
-p {
-    margin: 0;
+h2 {
+    font-size: 40px;
+    margin: 0 0 12px 0;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding: 0 24px;
 }
 
-.sobretitulo {
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 0.28em;
-    color: #f2b632;
+.secao {
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
-.sobretitulo.escuro {
-    color: #a9532a;
+.subtitulo {
+    color: #4e4a44;
+    margin-bottom: 36px;
 }
 
-.escondido {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
+.linha {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-/* ===== BOTÕES ===== */
+.centro {
+    text-align: center;
+}
 
-.botao-principal,
-.botao-linha,
+/* BOTÕES */
+
+.botao,
+.botao-borda,
 .botao-escuro {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    min-height: 44px;
+    display: inline-block;
+    padding: 14px 26px;
     border-radius: 10px;
-    font-weight: 700;
+    font-weight: bold;
+    font-size: 18px;
     text-decoration: none;
     cursor: pointer;
+    font-family: inherit;
 }
 
-.botao-principal {
-    background: #c8693a;
+.botao {
+    background-color: #c8693a;
     color: #121417;
-    font-size: 18px;
-    padding: 16px 28px;
+    border: none;
 }
 
-.botao-principal:hover {
-    background: #d97a4a;
-}
-
-.botao-linha {
+.botao-borda {
     border: 2px solid #3a3d44;
-    color: #f4ece0;
-    font-size: 18px;
-    padding: 14px 26px;
+    color: #e9ebee;
 }
 
-.botao-linha:hover {
+.botao-borda:hover {
     border-color: #f2b632;
-    color: #ffffff;
 }
 
 .botao-escuro {
-    background: #121417;
-    color: #f4ece0;
+    background-color: #121417;
+    color: #e9ebee;
     border: none;
-    font-family: inherit;
-    font-size: 17px;
-    padding: 14px 24px;
 }
 
-/* ===== TOPO ===== */
+/* TOPO */
 
 .topo {
-    background: #121417;
-    color: #f4ece0;
+    background-color: #121417;
+    color: #e9ebee;
 }
 
 .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     padding-top: 22px;
     padding-bottom: 22px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    color: #f4ece0;
-    text-decoration: none;
-    font-family: 'Cinzel', serif;
+    color: #e9ebee;
+    font-size: 22px;
     font-weight: 800;
-    font-size: 20px;
-    letter-spacing: 0.22em;
-}
-
-.menu-links {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 26px;
-    font-weight: 700;
-    font-size: 16px;
+    letter-spacing: 4px;
+    text-decoration: none;
 }
 
 .menu-links a {
     color: #d6cdbf;
     text-decoration: none;
-}
-
-.menu-links a:hover {
-    color: #f2b632;
-}
-
-.menu-links .botao-linha {
-    font-size: 16px;
-    padding: 10px 20px;
-    color: #f4ece0;
+    font-weight: bold;
+    margin-left: 22px;
 }
 
 .hero {
-    padding-top: 40px;
-    padding-bottom: 96px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 48px;
+    gap: 40px;
+    padding-bottom: 60px;
 }
 
 .hero-texto {
-    flex: 1 1 460px;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    align-items: flex-start;
+    flex: 1;
+    min-width: 300px;
 }
 
 .hero h1 {
-    font-size: clamp(38px, 5vw, 68px);
-    line-height: 1.08;
+    font-size: 56px;
+    line-height: 1.1;
 }
 
-.hero-descricao {
-    max-width: 520px;
-    font-size: 20px;
-    line-height: 1.65;
+.hero p {
     color: #b9b2a7;
-}
-
-.hero-botoes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    padding-top: 6px;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
 }
 
 .hero-imagem {
-    flex: 1 1 440px;
-    min-width: 0;
-    display: flex;
-    justify-content: center;
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
 }
 
-.hero-imagem svg {
+.hero-imagem img {
     width: 100%;
-    max-width: 540px;
-    height: auto;
-}
-
-/* olhos do Cerberus piscando */
-@keyframes piscar {
-    0%, 90%, 100% { opacity: 1; }
-    94% { opacity: 0.25; }
-}
-
-.olhos {
-    animation: piscar 5s infinite;
-}
-
-.olhos.b {
-    animation-delay: 1.6s;
-}
-
-.olhos.c {
-    animation-delay: 3.1s;
+    max-width: 460px;
 }
 
 .faixa-grega {
     height: 28px;
     background-color: #121417;
     background-image: url('../img/meandro.svg');
-    background-size: 28px 28px;
+    animation: andar 3s linear infinite;
 }
 
-/* ===== SEÇÕES ===== */
-
-.secao {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
+/* a faixa grega anda para o lado: o fundo se move 28px (o tamanho de um desenho) e recomeça */
+@keyframes andar {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 28px 0;
+    }
 }
 
-.secao-sem-topo {
-    padding-bottom: 100px;
-}
+/* CARTÕES */
 
-.secao-intro {
-    max-width: 680px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-}
-
-.secao-intro h2 {
-    font-size: 44px;
-    line-height: 1.1;
-}
-
-.secao-intro p {
-    font-size: 19px;
-    line-height: 1.65;
-    color: #4e4a44;
-}
-
-.grade {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-}
-
-.cartao-claro {
-    flex: 1 1 280px;
-    min-width: 0;
-    background: #f7f8f9;
+.cartao {
+    flex: 1;
+    min-width: 240px;
+    background-color: #f7f8f9;
     border: 1px solid #d5d9de;
     border-radius: 16px;
     padding: 28px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    color: #1d1f24;
+    text-decoration: none;
 }
 
-.cartao-claro h3 {
-    font-size: 22px;
-}
-
-.cartao-claro p {
-    font-size: 17px;
+.cartao p {
+    color: #4e4a44;
     line-height: 1.6;
-    color: #4e4a44;
-}
-
-.cabecalho-linha {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 16px;
-    margin-bottom: 36px;
-}
-
-.cabecalho-linha h2 {
-    font-size: 40px;
-}
-
-.cabecalho-linha p {
-    font-size: 18px;
-    color: #4e4a44;
 }
 
 .cartao-escuro {
-    flex: 1 1 240px;
-    min-width: 0;
-    background: #121417;
-    color: #f4ece0;
-    border: 2px solid #121417;
-    border-radius: 16px;
-    padding: 30px 28px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    text-decoration: none;
-    transition: transform 0.2s, border-color 0.2s;
-}
-
-.cartao-escuro:hover {
-    transform: translateY(-4px);
-    border-color: #c8693a;
-}
-
-.cartao-topo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.numeral {
-    font-family: 'Cinzel', serif;
-    font-size: 18px;
-    color: #8a8378;
-}
-
-.cartao-escuro h3 {
-    margin-top: 6px;
-    font-size: 26px;
+    background-color: #121417;
+    border-color: #121417;
+    color: #e9ebee;
 }
 
 .cartao-escuro p {
-    font-size: 17px;
-    line-height: 1.55;
     color: #b9b2a7;
-    flex-grow: 1;
 }
 
-.explorar {
-    font-weight: 700;
-    font-size: 16px;
+.cartao-escuro:hover {
+    border-color: #c8693a;
+}
+
+.numero {
     color: #f2b632;
 }
 
-/* ===== MITO EM DESTAQUE ===== */
+/* MITO DA SEMANA */
 
 .destaque {
-    background: #c8693a;
-    color: #121417;
-    border-radius: 24px;
-    padding: 56px 48px;
     display: flex;
     flex-wrap: wrap;
-    gap: 48px;
+    gap: 40px;
     align-items: center;
-}
-
-.destaque-imagem {
-    flex: 1 1 300px;
-    min-width: 0;
-    display: flex;
-    justify-content: center;
+    background-color: #c8693a;
+    border-radius: 24px;
+    padding: 48px;
 }
 
 .medalhao {
-    width: 100%;
-    max-width: 360px;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
+    width: 280px;
+    height: 280px;
     border: 3px solid #121417;
+    border-radius: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 4px;
-    padding: 24px;
-    text-align: center;
-    font-size: 15px;
-    font-weight: 600;
-}
-
-.medalhao-numero {
-    font-family: 'Cinzel', serif;
-    font-weight: 800;
-    font-size: 120px;
-    line-height: 1;
-}
-
-.destaque-texto {
-    flex: 1 1 440px;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    align-items: flex-start;
-}
-
-.destaque-texto .sobretitulo {
-    color: #121417;
-}
-
-.destaque-texto h2 {
-    font-size: 38px;
-    line-height: 1.12;
-}
-
-.destaque-texto p {
-    font-size: 19px;
-    line-height: 1.65;
-    color: #121417;
-}
-
-/* ===== DESAFIO ===== */
-
-.faixa-escura {
-    background: #121417;
-    color: #f4ece0;
-}
-
-.desafio {
-    padding-top: 88px;
-    padding-bottom: 88px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 48px;
-    align-items: center;
-}
-
-.desafio-texto {
-    flex: 1 1 380px;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-}
-
-.desafio-texto h2 {
-    font-size: 38px;
-    line-height: 1.12;
-}
-
-.desafio-texto p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #b9b2a7;
-}
-
-.desafio-opcoes {
-    flex: 1 1 420px;
-    min-width: 0;
-    display: flex;
-    flex-wrap: wrap;
     gap: 12px;
 }
 
+#contador_trabalhos {
+    font-family: 'Cinzel', serif;
+    font-size: 96px;
+    font-weight: 800;
+}
+
+.destaque-texto {
+    flex: 1;
+    min-width: 300px;
+    line-height: 1.6;
+}
+
+/* DESAFIO */
+
+.faixa-escura {
+    background-color: #121417;
+    color: #e9ebee;
+}
+
+.faixa-escura .subtitulo {
+    color: #b9b2a7;
+}
+
 .opcao {
-    flex: 1 1 180px;
-    min-height: 60px;
-    background: #1b1e23;
+    flex: 1;
+    min-width: 160px;
+    padding: 18px;
+    background-color: #1b1e23;
     border: 2px solid #34373e;
     border-radius: 12px;
+    color: #e9ebee;
     font-family: inherit;
-    font-weight: 700;
     font-size: 18px;
-    color: #f4ece0;
+    font-weight: bold;
     cursor: pointer;
 }
 
@@ -484,91 +273,79 @@ p {
     border-color: #c8693a;
 }
 
-/* ===== CHAMADA FINAL ===== */
+/* CHAMADA FINAL */
 
-.chamada {
-    max-width: 820px;
-    margin: 0 auto;
-    padding: 104px 24px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 22px;
-}
-
-.chamada h2 {
-    font-size: clamp(32px, 4vw, 50px);
-    line-height: 1.12;
-}
-
-.chamada p {
-    max-width: 540px;
-    font-size: 19px;
-    line-height: 1.6;
-    color: #4e4a44;
-}
-
-.formulario {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    width: 100%;
-    max-width: 540px;
-    padding-top: 6px;
-}
-
-.formulario input {
-    flex: 1 1 240px;
-    min-width: 0;
-    min-height: 56px;
-    background: #f7f8f9;
+#input_nome {
+    padding: 14px 20px;
+    width: 300px;
     border: 2px solid #c3c9d0;
     border-radius: 10px;
-    color: #1d1f24;
     font-family: inherit;
     font-size: 18px;
-    padding: 0 20px;
 }
 
-.formulario .botao-escuro {
-    min-height: 56px;
-    font-size: 18px;
-    padding: 0 28px;
-}
-
-.chamada .mensagem-portao {
-    font-weight: 700;
+#mensagem_portao {
     color: #a9532a;
+    font-weight: bold;
 }
 
-/* ===== RODAPÉ ===== */
+/* RODAPÉ */
 
 .rodape {
-    background: #121417;
+    background-color: #121417;
     color: #b9b2a7;
+    padding: 30px 0;
 }
 
-.rodape-conteudo {
-    padding-top: 32px;
-    padding-bottom: 32px;
+.rodape .container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
     gap: 16px;
-    font-size: 15px;
-}
-
-.rodape-logo {
-    font-family: 'Cinzel', serif;
-    font-weight: 800;
-    letter-spacing: 0.22em;
-    color: #f4ece0;
 }
 
 .rodape a {
-    font-weight: 700;
     color: #f2b632;
+}
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-imagem {
+    width: 40px;
+    height: 40px;
+}
+
+/* MINI CERBERUS */
+
+.mini-cerberus {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    text-align: right;
+}
+
+.mini-cerberus img {
+    width: 90px;
+    cursor: pointer;
+}
+
+.mini-cerberus img:hover {
+    transform: scale(1.1);
+}
+
+.balao {
+    background-color: #121417;
+    color: #e9ebee;
+    border: 2px solid #c8693a;
+    border-radius: 12px;
+    padding: 10px 14px;
+    margin: 0 0 8px 0;
+    max-width: 220px;
+    font-size: 15px;
 }

@@ -78,7 +78,7 @@ projeto-individual-cerberus/
 
 **Tipografia:** [Cinzel](https://fonts.google.com/specimen/Cinzel) nos títulos, inspirada nas inscrições gregas, e [Nunito Sans](https://fonts.google.com/specimen/Nunito+Sans) no texto.
 
-O Cerberus é desenhado no estilo dos **vasos gregos de figura negra**: silhueta escura sobre fundo terracota.
+O Cerberus do site é um cão de três cabeças com coleiras vermelhas, apresentado sobre o fundo escuro do Submundo.
 
 <img src="docs/assets/divisor.svg" width="100%"/>
 

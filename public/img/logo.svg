@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 38 38">
+  <style>
+    @keyframes girar { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    .anel { transform-origin: 19px 19px; animation: girar 12s linear infinite; }
+    @keyframes piscar { 0%, 88%, 100% { opacity: 1; } 93% { opacity: 0.2; } }
+    .olho { animation: piscar 4s infinite; }
+    .olho.b { animation-delay: 1.3s; }
+    .olho.c { animation-delay: 2.6s; }
+  </style>
+  <!-- emblema do Cerberus: três cabeças no disco terracota -->
+  <circle cx="19" cy="19" r="18" fill="#c8693a"/>
+  <circle class="anel" cx="19" cy="19" r="14" fill="none" stroke="#121417" stroke-width="2" stroke-dasharray="4 3"/>
+  <circle class="olho" cx="11.5" cy="20" r="3" fill="#121417"/>
+  <circle class="olho b" cx="19" cy="15" r="3" fill="#121417"/>
+  <circle class="olho c" cx="26.5" cy="20" r="3" fill="#121417"/>
+</svg>
