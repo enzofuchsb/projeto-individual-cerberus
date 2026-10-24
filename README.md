@@ -3,11 +3,11 @@
 <img src="docs/assets/banner.svg" alt="Cerberus: o guardião dos mitos gregos" width="100%"/>
 
 <p>
-  <img src="https://img.shields.io/badge/HTML5-050505?style=for-the-badge&logo=html5&logoColor=ff1a1a" alt="HTML5"/>
-  <img src="https://img.shields.io/badge/CSS3-050505?style=for-the-badge&logo=css3&logoColor=ff1a1a" alt="CSS3"/>
-  <img src="https://img.shields.io/badge/JavaScript-050505?style=for-the-badge&logo=javascript&logoColor=ff1a1a" alt="JavaScript"/>
-  <img src="https://img.shields.io/badge/Node.js-050505?style=for-the-badge&logo=nodedotjs&logoColor=2bff6a" alt="Node.js"/>
-  <img src="https://img.shields.io/badge/SQL-050505?style=for-the-badge&logo=mysql&logoColor=ff1a1a" alt="SQL"/>
+  <img src="https://img.shields.io/badge/HTML5-121417?style=for-the-badge&logo=html5&logoColor=f2b632" alt="HTML5"/>
+  <img src="https://img.shields.io/badge/CSS3-121417?style=for-the-badge&logo=css3&logoColor=f2b632" alt="CSS3"/>
+  <img src="https://img.shields.io/badge/JavaScript-121417?style=for-the-badge&logo=javascript&logoColor=f2b632" alt="JavaScript"/>
+  <img src="https://img.shields.io/badge/Node.js-121417?style=for-the-badge&logo=nodedotjs&logoColor=c8693a" alt="Node.js"/>
+  <img src="https://img.shields.io/badge/SQL-121417?style=for-the-badge&logo=mysql&logoColor=f2b632" alt="SQL"/>
 </p>
 
 <i>"Nenhuma alma passa pelos portões sem que eu saiba seu nome."</i>
@@ -43,7 +43,7 @@ Quem conduz o visitante é o **Cerberus**, o cão de três cabeças que guarda o
 
 ```
 projeto-individual-cerberus/
-├── public/          # frontend
+├── public/          # frontend (index.html)
 │   ├── css/         # estilos
 │   ├── img/         # imagens
 │   └── js/          # scripts
@@ -70,10 +70,15 @@ projeto-individual-cerberus/
 
 | Cor | Hex | Uso |
 |---|---|---|
-| Preto | `#050505` | Fundo, o escuro do Submundo |
-| Vermelho | `#ff1a1a` | Destaques, fogo, os olhos do Cerberus |
-| Vermelho sangue | `#8b0000` | Detalhes e sombras |
-| Verde | `#2bff6a` | Raro: aparece de vez em nunca, como um sinal |
+| Escuro | `#121417` | Topo, cartões e rodapé |
+| Mármore | `#e9ebee` | Fundo claro das seções, a pedra dos templos |
+| Terracota | `#c8693a` | Cor principal, inspirada nos vasos gregos |
+| Âmbar | `#f2b632` | Destaques no escuro e os olhos do Cerberus |
+| Vermelho | `#b0241b` | Detalhe raro, as coleiras do Cerberus |
+
+**Tipografia:** [Cinzel](https://fonts.google.com/specimen/Cinzel) nos títulos, inspirada nas inscrições gregas, e [Nunito Sans](https://fonts.google.com/specimen/Nunito+Sans) no texto.
+
+O Cerberus é desenhado no estilo dos **vasos gregos de figura negra**: silhueta escura sobre fundo terracota.
 
 <img src="docs/assets/divisor.svg" width="100%"/>
 
@@ -81,7 +86,7 @@ projeto-individual-cerberus/
 
 - [x] Estrutura inicial do repositório
 - [x] README e identidade visual
-- [ ] Página inicial com a apresentação do Cerberus
+- [x] Página inicial com a apresentação do Cerberus
 - [ ] Páginas de deuses, heróis, criaturas e lugares
 - [ ] Interações em JavaScript
 - [ ] Modelagem do banco de dados
@@ -97,7 +102,7 @@ O uso de IA neste projeto está registrado em [`docs/diario-de-prompts.md`](docs
 
 <div align="center">
 
-<img src="docs/assets/portao.svg" width="120" alt="Portão do Submundo"/>
+<img src="docs/assets/portao.svg" width="120" alt="Emblema do Cerberus"/>
 
 <sub>Projeto Individual · <b>enzofuchsb</b></sub>
 

@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <!-- meandro grego, repetido como faixa -->
+  <path d="M2 26 V2 H24 V20 H10 V10 H18" fill="none" stroke="#c8693a" stroke-width="3" stroke-linecap="square"/>
+</svg>
