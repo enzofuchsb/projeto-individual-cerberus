@@ -162,7 +162,6 @@ h2 {
     animation: andar 3s linear infinite;
 }
 
-/* a faixa grega anda para o lado: o fundo se move 28px (o tamanho de um desenho) e recomeça */
 @keyframes andar {
     from {
         background-position: 0 0;
