@@ -1,0 +1,278 @@
+/* Login, Cadastro e Painel
+   Usar junto com o estilo.css
+*/
+
+/* LOGIN E CADASTRO: Cerberus à esquerda, formulário à direita */
+
+.portao-conta {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    background-color: #f5f3ef;
+}
+
+.lado-escuro {
+    position: relative;
+    background-color: #121417;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 110px 50px 170px 50px;
+    overflow: hidden;
+}
+
+.lado-escuro .logo {
+    position: absolute;
+    left: 40px;
+    top: 30px;
+}
+
+.lado-escuro > img {
+    width: 100%;
+    max-width: 380px;
+    filter: drop-shadow(0 30px 35px #000000);
+}
+
+.lado-escuro .fala-guia {
+    position: absolute;
+    bottom: 40px;
+    width: 80%;
+}
+
+.lado-formulario {
+    display: flex;
+    flex-direction: column;
+    padding: 35px 10%;
+}
+
+.voltar {
+    align-self: flex-end;
+    color: #4e4a44;
+    text-decoration: none;
+}
+
+.formulario {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.formulario h1 {
+    font-size: 44px;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.formulario > p {
+    color: #4e4a44;
+}
+
+.campo {
+    display: block;
+    margin: 20px 0;
+}
+
+.campo span {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.campo input {
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    background-color: #ffffff;
+    border: 1px solid #c7c3bc;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 16px;
+    outline: none;
+}
+
+.campo input:focus {
+    border-color: #c8693a;
+    box-shadow: 0 0 0 3px #c8693a25;
+}
+
+.formulario .botao {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* caixa vermelha de erro, com o mini Cerberus. Começa escondida. */
+.erro {
+    display: none;
+    align-items: center;
+    gap: 12px;
+    background-color: #b0241b12;
+    border: 1px solid #b0241b55;
+    border-radius: 10px;
+    padding: 10px 14px;
+    color: #b0241b;
+    font-size: 15px;
+}
+
+.erro img {
+    width: 44px;
+}
+
+.trocar {
+    text-align: center;
+    margin-top: 22px;
+}
+
+.trocar a {
+    color: #c8693a;
+    font-weight: bold;
+}
+
+/* PAINEL */
+
+.aviso-exemplo {
+    color: #4e4a44;
+    font-size: 14px;
+    margin: 0 0 20px 0;
+}
+
+.grade-numeros {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.numero-painel {
+    position: relative;
+    background-color: #f7f5f1;
+    border: 1px solid #d3cec6;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.numero-painel strong {
+    font-family: 'Cinzel', serif;
+    font-size: 42px;
+}
+
+.numero-painel p {
+    margin: 0;
+    color: #4e4a44;
+}
+
+.grade-graficos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.grafico {
+    background-color: #f7f5f1;
+    border: 1px solid #d3cec6;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.grafico h3 {
+    font-size: 20px;
+    margin: 0 0 4px 0;
+}
+
+.grafico .eixo {
+    color: #4e4a44;
+    font-size: 13px;
+    margin: 0 0 20px 0;
+}
+
+/* gráfico de barras feito só com HTML e CSS:
+   a altura de cada barra é a porcentagem escrita no style="height: ...%" */
+.barras {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 220px;
+    border-bottom: 1px solid #aaaaaa;
+}
+
+.barra {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    width: 60px;
+}
+
+.barra b {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.barra i {
+    display: block;
+    width: 36px;
+    background-color: #c8693a;
+    border-radius: 5px 5px 0 0;
+}
+
+.rotulos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #4e4a44;
+}
+
+.rotulos span {
+    width: 60px;
+    text-align: center;
+}
+
+.cabecalho-pagina .botao-borda {
+    margin-top: 20px;
+}
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+    .portao-conta {
+        grid-template-columns: 1fr;
+    }
+
+    /* no celular some o lado escuro e fica só o formulário */
+    .lado-escuro {
+        display: none;
+    }
+
+    .lado-formulario {
+        padding: 25px 16px;
+    }
+
+    .formulario h1 {
+        font-size: 34px;
+    }
+
+    .grade-numeros,
+    .grade-graficos {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grade-graficos {
+        grid-template-columns: 1fr;
+    }
+
+    .numero-painel strong {
+        font-size: 32px;
+    }
+
+    .grafico {
+        padding: 20px;
+    }
+
+    .barra,
+    .rotulos span {
+        width: 50px;
+    }
+}

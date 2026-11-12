@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Héracles</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/deuses.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <!-- MENU -->
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html">Deuses</a>
+                <a href="herois.html" class="ativo">Heróis</a>
+                <a href="criaturas.html">Criaturas</a>
+                <a href="lugares.html">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+            </nav>
+            <a href="login.html" class="botao-borda">Entrar</a>
+        </div>
+    </header>
+
+    <!-- APRESENTAÇÃO -->
+    <section class="detalhe">
+        <div class="container">
+            <div class="detalhe-foto">
+                <img src="img/herois/heracles.webp" alt="Estátua de Héracles (Héracles Farnese)">
+                <span class="selo">HERÓI</span>
+            </div>
+            <div class="detalhe-texto">
+                <span class="etiqueta etiqueta-ambar">ARQUIVO · HERÓIS</span>
+                <h1>Héracles</h1>
+                <p class="nome-grego">Ἡρακλῆς</p>
+                <p>Filho de Zeus e da mortal Alcmena, o mais famoso dos heróis gregos. Cumpriu doze trabalhos impossíveis e, no último, desceu ao Submundo para me buscar.</p>
+                <button id="botao_favorito" class="favorito" onclick="favoritar()">♡ Adicionar aos favoritos</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <!-- FICHA -->
+    <section class="secao">
+        <div class="container grade-ficha">
+            <div>
+                <div class="titulo-secao">
+                    <span class="etiqueta">FICHA DO GUARDIÃO</span>
+                    <h2>O que os antigos registraram</h2>
+                </div>
+                <div class="ficha">
+                    <div class="ficha-linha">
+                        <span>Pais</span>
+                        <strong>Zeus e Alcmena</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Nome romano</span>
+                        <strong>Hércules</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Símbolos</span>
+                        <strong>Clava e pele do leão de Nemeia</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Inimiga</span>
+                        <strong>Hera, esposa de Zeus</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Trabalhos</span>
+                        <strong>Doze, a serviço do rei Euristeu</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Depois da morte</span>
+                        <strong>Subiu ao Olimpo e casou-se com Hebe</strong>
+                    </div>
+                </div>
+            </div>
+            <p class="fala-guia fala-clara">Hades deixou ele me levar com uma condição: nada de armas. Ele me venceu com as próprias mãos, me mostrou ao rei Euristeu e depois me devolveu ao meu portão.</p>
+        </div>
+    </section>
+
+    <!-- OS DOZE TRABALHOS -->
+    <section class="secao sem-topo">
+        <div class="container">
+            <div class="trabalhos">
+                <div class="contador">
+                    <span id="contador_trabalhos">XII</span>
+                    <button class="botao-escuro" onclick="contarTrabalhos()">Contar os trabalhos</button>
+                </div>
+                <div class="trabalhos-texto">
+                    <h2>Os doze trabalhos</h2>
+                    <p>Na ordem contada por Apolodoro:</p>
+                    <ol>
+                        <li>O leão de Nemeia</li>
+                        <li>A Hidra de Lerna</li>
+                        <li>A corça de Cerineia</li>
+                        <li>O javali de Erimanto</li>
+                        <li>Os estábulos de Áugias</li>
+                        <li>As aves do lago Estínfalo</li>
+                        <li>O touro de Creta</li>
+                        <li>As éguas de Diomedes</li>
+                        <li>O cinturão de Hipólita</li>
+                        <li>O gado de Gerião</li>
+                        <li>Os pomos de ouro das Hespérides</li>
+                        <li>Cérbero, o cão do Hades (eu!)</li>
+                    </ol>
+                    <p id="lista_trabalhos"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MITOS -->
+    <section class="secao faixa-mitos">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">RELATOS PRESERVADOS</span>
+                <h2>Seus mitos</h2>
+            </div>
+            <div class="grade-mitos">
+            <article class="mito">
+                <span class="numero">01</span>
+                <h3>As serpentes no berço</h3>
+                <p>Hera mandou duas serpentes ao quarto do bebê. Héracles, com oito meses de vida, estrangulou as duas com as mãos.</p>
+                <span class="fonte">Píndaro, Nemeia I; Apolodoro, Biblioteca II</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">02</span>
+                <h3>A Hidra de Lerna</h3>
+                <p>A cada cabeça cortada, nasciam duas. Seu sobrinho Iolau queimava os pescoços para impedir que crescessem de novo. Como teve ajuda, Euristeu não contou esse trabalho.</p>
+                <span class="fonte">Apolodoro, Biblioteca II</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">03</span>
+                <h3>A túnica de Nesso</h3>
+                <p>Enganada pelo centauro Nesso, Dejanira deu ao marido uma túnica envenenada achando que era um feitiço de amor. Héracles ergueu a própria pira no monte Eta e subiu ao Olimpo como deus.</p>
+                <span class="fonte">Sófocles, As Traquínias; Apolodoro, Biblioteca II</span>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CITAÇÃO -->
+    <section class="secao faixa-citacao">
+        <div class="container">
+            <blockquote class="citacao">
+                <p>“Plutão permitiu que ele levasse o cão, desde que o dominasse sem usar as armas que trazia.”</p>
+                <cite>Apolodoro, Biblioteca II (tradução livre)</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- RELACIONADOS -->
+    <section class="secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">CONTINUE A JORNADA</span>
+                <h2>Relacionados</h2>
+            </div>
+            <div class="grade-deuses">
+            <a href="cerberus.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/criaturas/cerbero.webp" alt="Estátua de Cérbero, de Gortina">
+                <div class="cartao-deus-texto">
+                    <h3>Cérbero</h3>
+                    <p class="nome-grego">Κέρβερος</p>
+                    <p class="dominio">O cão de guarda dos portões do Hades.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">três cabeças</span>
+                        <span class="simbolo">portões</span>
+                    </div>
+                </div>
+            </a>
+            <a href="hades.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/deuses/hades.webp" alt="Estátua de Hades">
+                <div class="cartao-deus-texto">
+                    <h3>Hades</h3>
+                    <p class="nome-grego">ᾍδης</p>
+                    <p class="dominio">Soberano do mundo dos mortos.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">cetro</span>
+                        <span class="simbolo">chave</span>
+                    </div>
+                </div>
+            </a>
+            <a href="aqueronte.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/lugares/aqueronte.webp" alt="Cânion do rio Aqueronte, no Épiro">
+                <div class="cartao-deus-texto">
+                    <h3>Rio Aqueronte</h3>
+                    <p class="nome-grego">Ἀχέρων</p>
+                    <p class="dominio">Rio do Submundo que também existe no mapa da Grécia.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">Submundo</span>
+                        <span class="simbolo">Épiro</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+                <a href="arquivo.html">Arquivo de histórias</a>
+                <a href="desafio.html">Desafio do Guardião</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="painel.html">Meu painel</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MINI CERBERUS: clique nele para ele falar -->
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <script src="js/cerberus.js"></script>
+    <script src="js/favorito.js"></script>
+    <script src="js/heracles.js"></script>
+</body>
+</html>

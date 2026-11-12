@@ -1,8 +1,15 @@
 /* Cores do site:
    escuro    #121417
    mármore   #e9ebee
+   papel     #f5f3ef
    terracota #c8693a
    âmbar     #f2b632
+   vermelho  #b0241b (raro)
+   texto     #1d1f24
+   apagado   #4e4a44 (no claro) / #b9b2a7 (no escuro)
+
+   Este arquivo vale para TODAS as páginas: menu, rodapé, botões,
+   títulos de seção, balão de fala, mini Cerberus e a página inicial.
 */
 
 * {
@@ -14,42 +21,71 @@ body {
     background-color: #e9ebee;
     color: #1d1f24;
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 18px;
+    font-size: 17px;
+    line-height: 1.55;
 }
 
-h1, h2, h3, .logo, .numero {
+h1, h2, h3, .logo, .numero, .etiqueta {
     font-family: 'Cinzel', serif;
 }
 
-h2 {
-    font-size: 40px;
-    margin: 0 0 12px 0;
+h1, h2, h3, p {
+    margin-top: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1248px;
     margin: 0 auto;
     padding: 0 24px;
 }
 
 .secao {
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-
-.subtitulo {
-    color: #4e4a44;
-    margin-bottom: 36px;
-}
-
-.linha {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .centro {
     text-align: center;
+}
+
+/* título pequeno acima dos títulos grandes, ex.: "ESCOLHA SEU CAMINHO" */
+.etiqueta {
+    display: block;
+    color: #c8693a;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+}
+
+.etiqueta-ambar {
+    color: #f2b632;
+}
+
+.titulo-secao {
+    max-width: 650px;
+    margin-bottom: 50px;
+}
+
+.titulo-secao.centro {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titulo-secao h2 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+.subtitulo {
+    color: #4e4a44;
+    margin: 0;
 }
 
 /* BOTÕES */
@@ -57,104 +93,126 @@ h2 {
 .botao,
 .botao-borda,
 .botao-escuro {
-    display: inline-block;
-    padding: 14px 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 48px;
+    padding: 0 24px;
     border-radius: 10px;
+    font-family: inherit;
+    font-size: 16px;
     font-weight: bold;
-    font-size: 18px;
     text-decoration: none;
     cursor: pointer;
-    font-family: inherit;
+}
+
+.botao:hover,
+.botao-borda:hover,
+.botao-escuro:hover {
+    transform: translateY(-2px);
 }
 
 .botao {
     background-color: #c8693a;
-    color: #121417;
+    color: #ffffff;
     border: none;
+    box-shadow: 0 7px 20px #6e2c1c2d;
+}
+
+.botao:hover {
+    background-color: #b85a30;
 }
 
 .botao-borda {
-    border: 2px solid #3a3d44;
-    color: #e9ebee;
+    background-color: transparent;
+    border: 1px solid #ffffff77;
+    color: #ffffff;
 }
 
 .botao-borda:hover {
     border-color: #f2b632;
+    color: #f2b632;
 }
 
 .botao-escuro {
     background-color: #121417;
-    color: #e9ebee;
+    color: #ffffff;
     border: none;
 }
 
-/* TOPO */
+/* MENU */
 
 .topo {
     background-color: #121417;
-    color: #e9ebee;
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff17;
 }
 
 .menu {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    padding-top: 22px;
-    padding-bottom: 22px;
+    gap: 40px;
+    min-height: 78px;
 }
 
 .logo {
-    color: #e9ebee;
-    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    font-size: 20px;
     font-weight: 800;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     text-decoration: none;
+}
+
+.logo-imagem {
+    width: 38px;
+    height: 38px;
+}
+
+.menu-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex: 1;
 }
 
 .menu-links a {
-    color: #d6cdbf;
+    color: #d4d0c9;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.menu-links a:hover,
+.menu-links .ativo {
+    color: #f2b632;
+}
+
+/* botão redondo com as iniciais, quando a pessoa está logada */
+.conta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    margin-left: 22px;
 }
 
-.hero {
+.conta span {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #c8693a;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    gap: 40px;
-    padding-bottom: 60px;
+    justify-content: center;
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
 }
 
-.hero-texto {
-    flex: 1;
-    min-width: 300px;
-}
-
-.hero h1 {
-    font-size: 56px;
-    line-height: 1.1;
-}
-
-.hero p {
-    color: #b9b2a7;
-    font-size: 20px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-
-.hero-imagem {
-    flex: 1;
-    min-width: 300px;
-    text-align: center;
-}
-
-.hero-imagem img {
-    width: 100%;
-    max-width: 460px;
-}
-
+/* faixa com o desenho grego (meandro) que anda para o lado */
 .faixa-grega {
     height: 28px;
     background-color: #121417;
@@ -162,7 +220,7 @@ h2 {
     animation: andar 3s linear infinite;
 }
 
-/* a faixa grega anda para o lado: o fundo se move 28px (o tamanho de um desenho) e recomeça */
+/* o fundo se move 28px (o tamanho de um desenho) e recomeça */
 @keyframes andar {
     from {
         background-position: 0 0;
@@ -172,100 +230,370 @@ h2 {
     }
 }
 
-/* CARTÕES */
+/* TOPO DAS PÁGINAS INTERNAS (título + fala do guia) */
 
-.cartao {
-    flex: 1;
-    min-width: 240px;
-    background-color: #f7f8f9;
-    border: 1px solid #d5d9de;
-    border-radius: 16px;
-    padding: 28px;
-    color: #1d1f24;
-    text-decoration: none;
-}
-
-.cartao p {
-    color: #4e4a44;
-    line-height: 1.6;
-}
-
-.cartao-escuro {
+.cabecalho-pagina {
     background-color: #121417;
-    border-color: #121417;
-    color: #e9ebee;
+    color: #ffffff;
+    padding: 80px 0 70px 0;
 }
 
-.cartao-escuro p {
-    color: #b9b2a7;
-}
-
-.cartao-escuro:hover {
-    border-color: #c8693a;
-}
-
-.numero {
-    color: #f2b632;
-}
-
-/* MITO DA SEMANA */
-
-.destaque {
+.cabecalho-pagina .container {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    justify-content: space-between;
     align-items: center;
-    background-color: #c8693a;
-    border-radius: 24px;
-    padding: 48px;
+    gap: 40px;
 }
 
-.medalhao {
-    width: 280px;
-    height: 280px;
-    border: 3px solid #121417;
-    border-radius: 50%;
+.cabecalho-pagina h1 {
+    font-size: 68px;
+    line-height: 1;
+    margin: 0;
+}
+
+/* BALÃO DE FALA DO CERBERUS */
+
+.fala-guia {
+    position: relative;
+    max-width: 480px;
+    background-color: #202328;
+    border: 1px solid #ffffff20;
+    border-radius: 16px;
+    padding: 22px 26px 22px 54px;
+    color: #d6d0c8;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* as aspas grandes no começo do balão */
+.fala-guia::before {
+    content: '“';
+    position: absolute;
+    left: 20px;
+    top: 4px;
+    color: #c8693a;
+    font-family: 'Cinzel', serif;
+    font-size: 48px;
+}
+
+/* a pontinha do balão */
+.fala-guia::after {
+    content: '';
+    position: absolute;
+    right: 35px;
+    bottom: -9px;
+    width: 16px;
+    height: 16px;
+    background-color: inherit;
+    border-right: 1px solid #ffffff20;
+    border-bottom: 1px solid #ffffff20;
+    transform: rotate(45deg);
+}
+
+.fala-clara {
+    background-color: #ffffff;
+    border-color: #d6d2ca;
+    color: #1d1f24;
+    box-shadow: 0 15px 40px #1214170e;
+}
+
+.fala-clara::after {
+    border-color: #d6d2ca;
+}
+
+/* CITAÇÃO DE FONTE ANTIGA (Hesíodo, Homero...) */
+
+.citacao {
+    border-left: 4px solid #c8693a;
+    margin: 34px 0;
+    padding: 8px 0 8px 25px;
+}
+
+.citacao p {
+    font-family: 'Cinzel', serif;
+    font-size: 19px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.citacao cite {
+    color: #c8693a;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* ============ PÁGINA INICIAL ============ */
+
+/* APRESENTAÇÃO */
+
+.hero {
+    background-color: #121417;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.hero .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    min-height: 660px;
+}
+
+.hero-texto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero h1 {
+    font-size: 66px;
+    line-height: 1.06;
+    margin-bottom: 26px;
+}
+
+.hero h1 em {
+    color: #f2b632;
+    font-style: normal;
+}
+
+.hero-texto p {
+    color: #b9b2a7;
+    font-size: 19px;
+    max-width: 560px;
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 34px;
+}
+
+.hero-imagem {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 12px;
+    padding: 40px 0;
 }
 
-#contador_trabalhos {
+/* círculo dourado atrás do Cerberus */
+.hero-imagem::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 420px;
+    height: 420px;
+    margin: -230px 0 0 -210px;
+    border: 1px solid #f2b63255;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 36px #121417, inset 0 0 0 37px #c8693a55;
+}
+
+.hero-imagem img {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    filter: drop-shadow(0 30px 35px #000000);
+}
+
+.legenda-imagem {
+    position: relative;
+    margin-top: 18px;
     font-family: 'Cinzel', serif;
-    font-size: 96px;
-    font-weight: 800;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #c6bfb4;
 }
 
-.destaque-texto {
-    flex: 1;
-    min-width: 300px;
-    line-height: 1.6;
+/* TRÊS CABEÇAS */
+
+.tres-cabecas {
+    background: linear-gradient(125deg, #f7f5f1, #e4e3e2);
 }
 
-/* DESAFIO */
+.grade-tres {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+
+.grade-tres article {
+    padding: 22px 40px;
+}
+
+.grade-tres article + article {
+    border-left: 1px solid #cbc7c0;
+}
+
+.grade-tres h3 {
+    font-size: 23px;
+}
+
+.grade-tres p {
+    color: #4e4a44;
+}
+
+/* círculo escuro com o número romano */
+.medalhao {
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 22px auto;
+    border-radius: 50%;
+    background-color: #121417;
+    color: #f2b632;
+    font-family: 'Cinzel', serif;
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 8px #e0dcd5, 0 0 0 9px #b6afa4;
+}
+
+/* CAMINHOS (Deuses, Heróis, Criaturas, Lugares) */
 
 .faixa-escura {
     background-color: #121417;
-    color: #e9ebee;
+    color: #ffffff;
 }
 
 .faixa-escura .subtitulo {
     color: #b9b2a7;
 }
 
-.opcao {
-    flex: 1;
-    min-width: 160px;
-    padding: 18px;
-    background-color: #1b1e23;
-    border: 2px solid #34373e;
-    border-radius: 12px;
-    color: #e9ebee;
-    font-family: inherit;
-    font-size: 18px;
+.grade-caminhos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.caminho {
+    position: relative;
+    min-height: 280px;
+    background-color: #1b1e22;
+    border: 1px solid #ffffff15;
+    border-radius: 16px;
+    /* espaço embaixo para a bolinha com a seta não cobrir o texto */
+    padding: 30px 30px 84px 30px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.caminho:hover {
+    transform: translateY(-7px);
+    border-color: #c8693a;
+    background-color: #22252a;
+}
+
+.numero {
+    color: #f2b632;
+    font-size: 28px;
+}
+
+.caminho h3 {
+    font-size: 25px;
+    margin: 50px 0 8px 0;
+}
+
+.caminho p {
+    color: #b9b2a7;
+    margin: 0;
+}
+
+/* bolinha terracota com a seta */
+.seta-redonda {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #c8693a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* HISTÓRIA DO DIA */
+
+.grade-historia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.historia-imagem {
+    position: relative;
+    height: 560px;
+}
+
+.historia-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* selo amarelo no canto da foto */
+.selo {
+    position: absolute;
+    left: -14px;
+    bottom: 40px;
+    background-color: #f2b632;
+    color: #121417;
+    padding: 12px 20px;
+    font-family: 'Cinzel', serif;
     font-weight: bold;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.grade-historia h2 {
+    font-size: 44px;
+    line-height: 1.1;
+}
+
+.grade-historia p {
+    color: #4e4a44;
+}
+
+/* DESAFIO RÁPIDO */
+
+.faixa-desafio {
+    background-color: #24272c;
+    color: #ffffff;
+}
+
+.grade-desafio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.grade-desafio h2 {
+    font-size: 36px;
+}
+
+.opcoes {
+    display: grid;
+    gap: 10px;
+}
+
+.opcao {
+    padding: 16px 18px;
+    background-color: #30343a;
+    border: 1px solid #ffffff22;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 16px;
+    text-align: left;
     cursor: pointer;
 }
 
@@ -273,61 +601,136 @@ h2 {
     border-color: #c8693a;
 }
 
-/* CHAMADA FINAL */
-
-#input_nome {
-    padding: 14px 20px;
-    width: 300px;
-    border: 2px solid #c3c9d0;
-    border-radius: 10px;
-    font-family: inherit;
-    font-size: 18px;
+#mensagem_desafio {
+    min-height: 26px;
+    color: #f2b632;
+    font-weight: bold;
+    margin: 18px 0;
 }
 
-#mensagem_portao {
-    color: #a9532a;
+.link-ambar {
+    color: #f2b632;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* CHAMADA FINAL (terracota) */
+
+.chamada {
+    background-color: #c8693a;
+    color: #ffffff;
+}
+
+.chamada .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.chamada .etiqueta {
+    color: #4c1c0e;
+}
+
+.chamada h2 {
+    font-size: 44px;
+    margin-bottom: 8px;
+}
+
+.chamada p {
+    margin: 0;
+}
+
+.link-escuro {
+    color: #121417;
     font-weight: bold;
 }
 
-/* RODAPÉ */
+.portao {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#input_nome {
+    height: 48px;
+    width: 260px;
+    padding: 0 16px;
+    border: none;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+#mensagem_portao {
+    width: 100%;
+    min-height: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* ============ RODAPÉ ============ */
 
 .rodape {
     background-color: #121417;
     color: #b9b2a7;
-    padding: 30px 0;
+    padding: 70px 0 25px 0;
 }
 
-.rodape .container {
+.rodape-grade {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 80px;
+}
+
+.rodape-grade div {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.rodape-titulo {
+    color: #f2b632;
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
 }
 
 .rodape a {
+    color: #b9b2a7;
+    text-decoration: none;
+}
+
+.rodape a:hover {
     color: #f2b632;
 }
 
-/* LOGO */
-
-.logo {
+.direitos {
     display: flex;
-    align-items: center;
-    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    border-top: 1px solid #ffffff16;
+    margin-top: 50px;
+    padding-top: 22px;
+    font-size: 12px;
 }
 
-.logo-imagem {
-    width: 40px;
-    height: 40px;
-}
-
-/* MINI CERBERUS */
+/* ============ MINI CERBERUS ============ */
+/* O balão começa escondido: ele só aparece quando a pessoa clica no Cerberus,
+   assim ele não cobre o conteúdo da página. */
 
 .mini-cerberus {
     position: fixed;
+    z-index: 50;
     right: 20px;
     bottom: 20px;
-    text-align: right;
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
 }
 
 .mini-cerberus img {
@@ -340,12 +743,212 @@ h2 {
 }
 
 .balao {
+    display: none;
+    max-width: 240px;
+    background-color: #ffffff;
+    border: 1px solid #cdc8bf;
+    border-radius: 13px 13px 2px 13px;
+    padding: 12px 34px 12px 15px;
+    margin: 0;
+    color: #1d1f24;
+    font-size: 14px;
+    box-shadow: 0 10px 30px #00000022;
+    position: relative;
+}
+
+.balao button {
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    background: none;
+    border: none;
+    color: #4e4a44;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* ============ PÁGINA 404 ============ */
+
+.nao-encontrada {
+    min-height: 720px;
     background-color: #121417;
-    color: #e9ebee;
-    border: 2px solid #c8693a;
-    border-radius: 12px;
-    padding: 10px 14px;
-    margin: 0 0 8px 0;
-    max-width: 220px;
-    font-size: 15px;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 24px;
+    overflow: hidden;
+}
+
+.nao-encontrada div {
+    max-width: 650px;
+    position: relative;
+}
+
+/* o "404" gigante e bem apagado atrás do Cerberus.
+   clamp() escolhe um tamanho entre 120px e 240px conforme a largura da tela,
+   para ele nunca ficar maior que a tela do celular. */
+.numero-gigante {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -40px;
+    font-family: 'Cinzel', serif;
+    font-size: clamp(120px, 30vw, 240px);
+    color: #ffffff0a;
+}
+
+.nao-encontrada img {
+    position: relative;
+    width: 300px;
+    margin: 0 auto 20px auto;
+}
+
+.nao-encontrada h1 {
+    font-size: 40px;
+}
+
+.nao-encontrada p {
+    color: #b9b2a7;
+    margin-bottom: 30px;
+}
+
+/* ============ CELULAR ============ */
+
+@media (max-width: 800px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .secao {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    /* no celular, os links do menu descem para uma linha própria e rolam para o lado */
+    .menu {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 14px 16px 0 16px;
+    }
+
+    .menu .botao-borda,
+    .menu .conta {
+        margin-left: auto;
+        min-height: 40px;
+    }
+
+    .menu-links {
+        order: 3;
+        flex-basis: 100%;
+        justify-content: flex-start;
+        gap: 22px;
+        overflow-x: auto;
+        padding: 6px 0 14px 0;
+        white-space: nowrap;
+    }
+
+    .titulo-secao h2 {
+        font-size: 34px;
+    }
+
+    .cabecalho-pagina {
+        padding: 55px 0;
+    }
+
+    .cabecalho-pagina h1 {
+        font-size: 46px;
+    }
+
+    .hero .container {
+        min-height: 0;
+        padding-top: 50px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-texto p {
+        font-size: 16px;
+    }
+
+    .botoes {
+        flex-direction: column;
+    }
+
+    .hero-imagem::before {
+        width: 280px;
+        height: 280px;
+        margin: -155px 0 0 -140px;
+    }
+
+    .hero-imagem img {
+        max-width: 280px;
+    }
+
+    .grade-tres,
+    .grade-caminhos,
+    .grade-historia,
+    .grade-desafio,
+    .rodape-grade {
+        grid-template-columns: 1fr;
+    }
+
+    .grade-tres article {
+        padding: 30px 12px;
+    }
+
+    .grade-tres article + article {
+        border-left: none;
+        border-top: 1px solid #cbc7c0;
+    }
+
+    .caminho {
+        min-height: 0;
+    }
+
+    .caminho h3 {
+        margin-top: 30px;
+    }
+
+    .grade-historia,
+    .grade-desafio {
+        gap: 35px;
+    }
+
+    .historia-imagem {
+        height: 380px;
+    }
+
+    .grade-historia h2,
+    .chamada h2 {
+        font-size: 34px;
+    }
+
+    #input_nome {
+        width: 100%;
+    }
+
+    .rodape-grade {
+        gap: 35px;
+    }
+
+    .mini-cerberus {
+        right: 12px;
+        bottom: 12px;
+    }
+
+    .balao {
+        max-width: 200px;
+    }
+
+    .nao-encontrada img {
+        width: 220px;
+    }
+
+    .nao-encontrada h1 {
+        font-size: 32px;
+    }
 }

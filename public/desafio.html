@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Desafio do Guardião</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/desafio.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+
+    <main class="container desafio">
+        <div class="desafio-topo">
+            <span class="etiqueta etiqueta-ambar">DESAFIO DO GUARDIÃO</span>
+            <a href="index.html" class="sair">SAIR ✕</a>
+        </div>
+        <div class="progresso"><div id="barra_progresso"></div></div>
+        <p id="contagem"></p>
+
+        <!-- PERGUNTAS (o texto é colocado pelo desafio.js) -->
+        <div id="area_perguntas" class="desafio-meio">
+            <span class="etiqueta">MITOLOGIA GREGA</span>
+            <h1 id="pergunta"></h1>
+            <div class="opcoes-desafio">
+                <button id="opcao_0" class="opcao-desafio" onclick="responderPergunta(0)"></button>
+                <button id="opcao_1" class="opcao-desafio" onclick="responderPergunta(1)"></button>
+                <button id="opcao_2" class="opcao-desafio" onclick="responderPergunta(2)"></button>
+                <button id="opcao_3" class="opcao-desafio" onclick="responderPergunta(3)"></button>
+            </div>
+
+            <div id="resposta">
+                <img src="img/mini-cerberus.webp" alt="Mini Cerberus">
+                <div>
+                    <strong id="titulo_resposta"></strong>
+                    <p id="texto_resposta"></p>
+                </div>
+                <button id="botao_proxima" class="botao" onclick="proximaPergunta()">Próxima →</button>
+            </div>
+        </div>
+
+        <!-- RESULTADO -->
+        <div id="resultado">
+            <img src="img/cerberus.webp" alt="Cerberus">
+            <span class="etiqueta etiqueta-ambar">SEU RESULTADO</span>
+            <h1 id="nota_final"></h1>
+            <p id="frase_final"></p>
+            <div class="botoes">
+                <button class="botao" onclick="jogarDeNovo()">Jogar de novo</button>
+                <a href="index.html" class="botao-borda">Voltar ao início</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/desafio.js"></script>
+</body>
+</html>

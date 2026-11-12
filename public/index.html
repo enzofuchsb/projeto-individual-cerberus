@@ -12,139 +12,207 @@
 <body>
 
     <!-- MENU -->
-    <div class="topo">
+    <header class="topo">
         <div class="container menu">
             <a href="index.html" class="logo">
                 <img src="img/logo.svg" alt="" class="logo-imagem">
                 CERBERUS
             </a>
-            <div class="menu-links">
-                <a href="#caminhos">Deuses</a>
-                <a href="#caminhos">Heróis</a>
-                <a href="#caminhos">Criaturas</a>
-                <a href="#caminhos">Lugares</a>
-                <a href="#portao" class="botao-borda">Entrar</a>
-            </div>
+            <nav class="menu-links">
+                <a href="deuses.html">Deuses</a>
+                <a href="herois.html">Heróis</a>
+                <a href="criaturas.html">Criaturas</a>
+                <a href="lugares.html">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+            </nav>
+            <a href="login.html" class="botao-borda">Entrar</a>
         </div>
+    </header>
 
-        <!-- APRESENTAÇÃO -->
-        <div class="container hero">
+    <!-- APRESENTAÇÃO -->
+    <section class="hero">
+        <div class="container">
             <div class="hero-texto">
-                <h1 id="titulo_hero">Nenhuma alma passa sem que eu saiba seu nome.</h1>
+                <span class="etiqueta etiqueta-ambar">BEM-VINDO AOS PORTÕES</span>
+                <h1 id="titulo_hero">Nenhuma alma passa sem que eu saiba <em>seu nome.</em></h1>
                 <p>Sou o Cerberus. Guardo os portões do Hades, mas hoje sou o seu guia pelos deuses, heróis, criaturas e lugares da mitologia grega.</p>
-                <a href="#caminhos" class="botao">Começar a jornada →</a>
-                <a href="#guia" class="botao-borda">Conhecer o guia</a>
+                <div class="botoes">
+                    <a href="#caminhos" class="botao">Começar a jornada →</a>
+                    <a href="#guia" class="botao-borda">Conhecer o guia</a>
+                </div>
             </div>
             <div class="hero-imagem">
                 <img src="img/cerberus.webp" alt="Cerberus, o cão de três cabeças">
+                <span class="legenda-imagem">O GUARDIÃO DOS PORTÕES</span>
             </div>
         </div>
-    </div>
+    </section>
 
     <div class="faixa-grega"></div>
 
     <!-- AS TRÊS CABEÇAS -->
-    <div id="guia" class="container secao">
-        <h2>Três cabeças, três tempos</h2>
-        <p class="subtitulo">Filho de Tífon e Equidna, vigio a entrada do Submundo há milênios. Desde a Antiguidade, há quem veja nas minhas três cabeças o próprio tempo: o passado, o presente e o futuro.</p>
-
-        <div class="linha">
-            <div class="cartao">
-                <h3>O Passado</h3>
-                <p>Guarda a memória de tudo o que já aconteceu: as origens do mundo, as guerras dos deuses e as almas que já cruzaram o portão.</p>
+    <section id="guia" class="secao tres-cabecas">
+        <div class="container">
+            <div class="titulo-secao centro">
+                <span class="etiqueta">MEU OLHAR NÃO DORME</span>
+                <h2>Três cabeças, três tempos</h2>
+                <p class="subtitulo">Filho de Tífon e Equidna, vigio a entrada do Submundo há milênios. Desde a Antiguidade, há quem veja nas minhas três cabeças o próprio tempo: o passado, o presente e o futuro.</p>
             </div>
-            <div class="cartao">
-                <h3>O Presente</h3>
-                <p>Está sempre de vigia: observa quem chega agora aos portões do Hades e não deixa ninguém passar despercebido.</p>
-            </div>
-            <div class="cartao">
-                <h3>O Futuro</h3>
-                <p>Olha para o que ainda vem: nenhuma alma escapa do Submundo, e um dia todas chegarão até mim.</p>
-            </div>
-        </div>
-    </div>
 
-    <!-- CATEGORIAS -->
-    <div id="caminhos" class="container secao">
-        <h2>Além dos portões</h2>
-        <p class="subtitulo">Quatro caminhos. Escolha por onde começar.</p>
-
-        <div class="linha">
-            <a href="#" class="cartao cartao-escuro">
-                <span class="numero">I</span>
-                <h3>Deuses</h3>
-                <p>Zeus, Hades, Poseidon e os olimpianos que dividiram o mundo entre si.</p>
-            </a>
-            <a href="#" class="cartao cartao-escuro">
-                <span class="numero">II</span>
-                <h3>Heróis</h3>
-                <p>Héracles, Perseu, Aquiles e Odisseu: mortais que desafiaram o destino.</p>
-            </a>
-            <a href="#" class="cartao cartao-escuro">
-                <span class="numero">III</span>
-                <h3>Criaturas</h3>
-                <p>Medusa, a Hidra de Lerna, o Minotauro e, claro, eu mesmo.</p>
-            </a>
-            <a href="#" class="cartao cartao-escuro">
-                <span class="numero">IV</span>
-                <h3>Lugares</h3>
-                <p>Do Olimpo ao Tártaro, passando pelo Submundo, a minha casa.</p>
-            </a>
-        </div>
-    </div>
-
-    <!-- MITO DA SEMANA -->
-    <div class="container secao">
-        <div class="destaque">
-            <div class="medalhao">
-                <span id="contador_trabalhos">XII</span>
-                <button class="botao-escuro" onclick="contarTrabalhos()">Contar os trabalhos</button>
-            </div>
-            <div class="destaque-texto">
-                <h2>O dia em que um mortal me levou para a luz</h2>
-                <p>No último dos doze trabalhos, Héracles desceu ao Submundo para me capturar. Hades permitiu, com uma condição: nada de armas. Ele me venceu com as próprias mãos, me levou até o rei Euristeu e depois me devolveu ao meu portão.</p>
-                <p id="lista_trabalhos"></p>
+            <div class="grade-tres">
+                <article>
+                    <div class="medalhao">I</div>
+                    <h3>O Passado</h3>
+                    <p>Guarda a memória de tudo o que já aconteceu: as origens do mundo, as guerras dos deuses e as almas que já cruzaram o portão.</p>
+                </article>
+                <article>
+                    <div class="medalhao">II</div>
+                    <h3>O Presente</h3>
+                    <p>Está sempre de vigia: observa quem chega agora aos portões do Hades e não deixa ninguém passar despercebido.</p>
+                </article>
+                <article>
+                    <div class="medalhao">III</div>
+                    <h3>O Futuro</h3>
+                    <p>Olha para o que ainda vem: nenhuma alma escapa do Submundo, e um dia todas chegarão até mim.</p>
+                </article>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- DESAFIO -->
-    <div class="faixa-escura">
-        <div class="container secao">
-            <h2 id="pergunta_desafio">Quem é o deus dos mares?</h2>
-            <p id="mensagem_desafio" class="subtitulo">Acerte para provar que conhece o Olimpo.</p>
-            <div class="linha">
+    <!-- CAMINHOS -->
+    <section id="caminhos" class="secao faixa-escura">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">ESCOLHA SEU CAMINHO</span>
+                <h2>Além dos portões</h2>
+                <p class="subtitulo">Quatro caminhos. Escolha por onde começar.</p>
+            </div>
+
+            <div class="grade-caminhos">
+                <a href="deuses.html" class="caminho">
+                    <span class="numero">I</span>
+                    <h3>Deuses</h3>
+                    <p>Zeus, Hades, Poseidon e os olimpianos que dividiram o mundo entre si.</p>
+                    <span class="seta-redonda">→</span>
+                </a>
+                <a href="herois.html" class="caminho">
+                    <span class="numero">II</span>
+                    <h3>Heróis</h3>
+                    <p>Héracles, Perseu, Aquiles e Odisseu: mortais que desafiaram o destino.</p>
+                    <span class="seta-redonda">→</span>
+                </a>
+                <a href="criaturas.html" class="caminho">
+                    <span class="numero">III</span>
+                    <h3>Criaturas</h3>
+                    <p>Medusa, a Hidra de Lerna, o Minotauro e, claro, eu mesmo.</p>
+                    <span class="seta-redonda">→</span>
+                </a>
+                <a href="lugares.html" class="caminho">
+                    <span class="numero">IV</span>
+                    <h3>Lugares</h3>
+                    <p>Do Olimpo ao Submundo, a minha casa, passando por cidades que ainda existem.</p>
+                    <span class="seta-redonda">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <!-- HISTÓRIA DO DIA -->
+    <section class="secao">
+        <div class="container grade-historia">
+            <div class="historia-imagem">
+                <img src="img/deuses/persefone.webp" alt="Estátua de Perséfone">
+                <span class="selo">HISTÓRIA DO DIA</span>
+            </div>
+            <div>
+                <span class="etiqueta">LEITURA DE 6 MINUTOS</span>
+                <h2>Perséfone e a romã</h2>
+                <p>Levada por Hades para o Submundo, Perséfone quase voltou para sempre à superfície. Quase: antes de partir, comeu uma semente de romã, e quem prova o alimento dos mortos fica ligado a eles.</p>
+                <blockquote class="citacao">
+                    <p>“Filha, diga-me: enquanto esteve lá embaixo, provou algum alimento?”</p>
+                    <cite>Hino Homérico a Deméter (tradução livre)</cite>
+                </blockquote>
+                <a href="historia.html" class="botao">Ler a história →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DESAFIO RÁPIDO -->
+    <section class="secao faixa-desafio">
+        <div class="container grade-desafio">
+            <div>
+                <span class="etiqueta etiqueta-ambar">DESAFIO RÁPIDO</span>
+                <h2>Quem é o deus dos mares?</h2>
+                <p id="mensagem_desafio">Acerte para provar que conhece o Olimpo.</p>
+                <a href="desafio.html" class="link-ambar">Fazer o desafio completo →</a>
+            </div>
+            <div class="opcoes">
                 <button class="opcao" onclick="responder('Zeus')">Zeus</button>
                 <button class="opcao" onclick="responder('Poseidon')">Poseidon</button>
                 <button class="opcao" onclick="responder('Hermes')">Hermes</button>
                 <button class="opcao" onclick="responder('Apolo')">Apolo</button>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- CHAMADA FINAL -->
-    <div id="portao" class="container secao centro">
-        <h2>Diga seu nome, viajante.</h2>
-        <p class="subtitulo">Crie sua conta para salvar seus mitos favoritos.</p>
-        <input id="input_nome" type="text" placeholder="Seu nome">
-        <button class="botao-escuro" onclick="atravessar()">Atravessar o portão</button>
-        <p id="mensagem_portao"></p>
-    </div>
+    <section id="portao" class="secao chamada">
+        <div class="container">
+            <div>
+                <span class="etiqueta">SEU NOME ENTRE AS HISTÓRIAS</span>
+                <h2>Diga seu nome, viajante.</h2>
+                <p>Crie sua conta para salvar seus mitos favoritos. <a href="cadastro.html" class="link-escuro">Criar minha conta →</a></p>
+            </div>
+            <div class="portao">
+                <input id="input_nome" type="text" placeholder="Seu nome" autocomplete="given-name">
+                <button class="botao-escuro" onclick="atravessar()">Atravessar o portão</button>
+                <p id="mensagem_portao"></p>
+            </div>
+        </div>
+    </section>
 
     <!-- RODAPÉ -->
-    <div class="rodape">
-        <div class="container">
-            <span class="logo">CERBERUS</span>
-            <span>Projeto Individual · <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">enzofuchsb</a></span>
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+                <a href="arquivo.html">Arquivo de histórias</a>
+                <a href="desafio.html">Desafio do Guardião</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="painel.html">Meu painel</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
         </div>
-    </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
 
     <!-- MINI CERBERUS: clique nele para ele falar -->
     <div class="mini-cerberus">
-        <p id="fala_cerberus" class="balao">Clique em mim!</p>
-        <img src="img/mini-cerberus.webp" alt="Mini Cerberus" onclick="falarCerberus()">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
     </div>
 
+    <script src="js/cerberus.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>

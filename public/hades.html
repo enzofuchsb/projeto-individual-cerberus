@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Hades</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/deuses.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <!-- MENU -->
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html" class="ativo">Deuses</a>
+                <a href="herois.html">Heróis</a>
+                <a href="criaturas.html">Criaturas</a>
+                <a href="lugares.html">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+            </nav>
+            <a href="login.html" class="botao-borda">Entrar</a>
+        </div>
+    </header>
+
+    <!-- APRESENTAÇÃO -->
+    <section class="detalhe">
+        <div class="container">
+            <div class="detalhe-foto">
+                <img src="img/deuses/hades.webp" alt="Estátua de Hades">
+                <span class="selo">DEUS</span>
+            </div>
+            <div class="detalhe-texto">
+                <span class="etiqueta etiqueta-ambar">ARQUIVO · DEUSES</span>
+                <h1>Hades</h1>
+                <p class="nome-grego">ᾍδης</p>
+                <p>Filho de Cronos e Reia, ficou com o reino dos mortos quando os irmãos dividiram o mundo. Não é o deus da morte (esse é Tânato): é o rei que governa as almas depois dela.</p>
+                <button id="botao_favorito" class="favorito" onclick="favoritar()">♡ Adicionar aos favoritos</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <!-- FICHA -->
+    <section class="secao">
+        <div class="container grade-ficha">
+            <div>
+                <div class="titulo-secao">
+                    <span class="etiqueta">FICHA DO GUARDIÃO</span>
+                    <h2>O que os antigos registraram</h2>
+                </div>
+                <div class="ficha">
+                    <div class="ficha-linha">
+                        <span>Pais</span>
+                        <strong>Cronos e Reia</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Irmãos</span>
+                        <strong>Zeus, Poseidon, Hera, Deméter e Héstia</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Esposa</span>
+                        <strong>Perséfone</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Reino</span>
+                        <strong>O Submundo</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Nome romano</span>
+                        <strong>Plutão</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Símbolos</span>
+                        <strong>Cetro, chave e o elmo que deixa invisível</strong>
+                    </div>
+                </div>
+            </div>
+            <p class="fala-guia fala-clara">É o meu senhor. Muitos gregos evitavam dizer o nome dele e o chamavam de Plutão, “o rico”, porque as riquezas da terra vêm de baixo do chão.</p>
+        </div>
+    </section>
+
+    <!-- MITOS -->
+    <section class="secao faixa-mitos">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">RELATOS PRESERVADOS</span>
+                <h2>Seus mitos</h2>
+            </div>
+            <div class="grade-mitos">
+            <article class="mito">
+                <span class="numero">01</span>
+                <h3>A partilha do mundo</h3>
+                <p>Depois da guerra contra os Titãs, os três irmãos tiraram a sorte: Zeus ficou com o céu, Poseidon com o mar e Hades com as trevas debaixo da terra. A terra e o Olimpo ficaram para todos.</p>
+                <span class="fonte">Homero, Ilíada, canto XV</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">02</span>
+                <h3>O rapto de Perséfone</h3>
+                <p>Hades levou Perséfone para ser a rainha do Submundo. Deméter, a mãe dela, fez a terra parar de dar frutos até reencontrar a filha.</p>
+                <a href="historia.html" class="fonte">Ler a história →</a>
+            </article>
+
+            <article class="mito">
+                <span class="numero">03</span>
+                <h3>Orfeu e Eurídice</h3>
+                <p>A música de Orfeu comoveu Hades e Perséfone, que deixaram Eurídice voltar à vida. A condição: Orfeu não podia olhar para trás antes de sair. Ele olhou.</p>
+                <span class="fonte">Virgílio, Geórgicas IV; Ovídio, Metamorfoses X</span>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CITAÇÃO -->
+    <section class="secao faixa-citacao">
+        <div class="container">
+            <blockquote class="citacao">
+                <p>“Somos três irmãos, filhos de Cronos, que Reia deu à luz: Zeus, eu e Hades, que reina sobre os mortos. Tudo foi dividido em três partes.”</p>
+                <cite>Poseidon, em Homero, Ilíada, canto XV (tradução livre)</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- RELACIONADOS -->
+    <section class="secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">CONTINUE A JORNADA</span>
+                <h2>Relacionados</h2>
+            </div>
+            <div class="grade-deuses">
+            <a href="cerberus.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/criaturas/cerbero.webp" alt="Estátua de Cérbero, de Gortina">
+                <div class="cartao-deus-texto">
+                    <h3>Cérbero</h3>
+                    <p class="nome-grego">Κέρβερος</p>
+                    <p class="dominio">O cão de guarda dos portões do Hades.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">três cabeças</span>
+                        <span class="simbolo">portões</span>
+                    </div>
+                </div>
+            </a>
+            <a href="aqueronte.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/lugares/aqueronte.webp" alt="Cânion do rio Aqueronte, no Épiro">
+                <div class="cartao-deus-texto">
+                    <h3>Rio Aqueronte</h3>
+                    <p class="nome-grego">Ἀχέρων</p>
+                    <p class="dominio">Rio do Submundo que também existe no mapa da Grécia.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">Submundo</span>
+                        <span class="simbolo">Épiro</span>
+                    </div>
+                </div>
+            </a>
+            <a href="heracles.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/herois/heracles.webp" alt="Estátua de Héracles (Héracles Farnese)">
+                <div class="cartao-deus-texto">
+                    <h3>Héracles</h3>
+                    <p class="nome-grego">Ἡρακλῆς</p>
+                    <p class="dominio">Filho de Zeus e Alcmena, herói dos doze trabalhos.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">clava</span>
+                        <span class="simbolo">pele de leão</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+                <a href="arquivo.html">Arquivo de histórias</a>
+                <a href="desafio.html">Desafio do Guardião</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="painel.html">Meu painel</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MINI CERBERUS: clique nele para ele falar -->
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <script src="js/cerberus.js"></script>
+    <script src="js/favorito.js"></script>
+</body>
+</html>

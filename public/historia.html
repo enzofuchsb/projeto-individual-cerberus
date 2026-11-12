@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Perséfone e a romã</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/leitura.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <!-- MENU -->
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html">Deuses</a>
+                <a href="herois.html">Heróis</a>
+                <a href="criaturas.html">Criaturas</a>
+                <a href="lugares.html">Lugares</a>
+                <a href="historia.html" class="ativo">História do Dia</a>
+            </nav>
+            <a href="login.html" class="botao-borda">Entrar</a>
+        </div>
+    </header>
+
+    <!-- TÍTULO -->
+    <section class="cabecalho-leitura">
+        <div class="container">
+            <span class="etiqueta etiqueta-ambar">HISTÓRIA DO DIA</span>
+            <h1>Perséfone e a romã</h1>
+            <div class="info-leitura">
+                <span>Mito · Submundo</span>
+                <span>6 min de leitura</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <!-- TEXTO -->
+    <article class="container leitura">
+        <img src="img/deuses/persefone.webp" alt="Estátua de Perséfone" class="leitura-imagem">
+
+        <p class="fala-guia fala-clara">Esta eu vi de perto. Perséfone passou pelo meu portão como rainha, não como alma. Ainda assim, nem ela conseguiu ir embora de vez.</p>
+
+        <p class="primeiro-paragrafo">Perséfone, filha de Zeus e Deméter, colhia flores num campo com as filhas de Oceano: rosas, açafrões, violetas e jacintos. Então viu um narciso maravilhoso, que a Terra tinha feito brotar, a pedido de Zeus, como uma armadilha. Quando ela estendeu as mãos para colhê-lo, o chão se abriu.</p>
+
+        <p>Do buraco saiu Hades, numa carruagem dourada puxada por cavalos imortais. Ele agarrou Perséfone, que gritava pelo pai, e a levou para o Submundo. Zeus sabia de tudo: era ele quem tinha prometido a filha ao irmão.</p>
+
+        <h2>A busca de Deméter</h2>
+
+        <p>Deméter ouviu o grito da filha e saiu à procura dela. Durante nove dias vagou pela terra com tochas acesas nas mãos, sem comer nem beber. No décimo, a deusa Hécate a levou até Hélio, o Sol, que vê tudo. Foi ele quem contou a verdade: Zeus tinha dado Perséfone a Hades.</p>
+
+        <p>Furiosa, Deméter abandonou o Olimpo e, disfarçada de velha, foi viver na cidade de Elêusis. Então fez a terra parar: nenhuma semente brotava, os bois puxavam o arado à toa e a humanidade chegou perto de morrer de fome. Sem os sacrifícios dos mortais, até os deuses perderiam suas honras.</p>
+
+        <h2>A semente</h2>
+
+        <p>Zeus mandou Hermes ao Submundo para trazer Perséfone de volta. Hades obedeceu, mas, antes de deixá-la partir, deu a ela, escondido, uma semente de romã para comer.</p>
+
+        <blockquote class="citacao">
+            <p>“Filha, diga-me: enquanto esteve lá embaixo, provou algum alimento?”</p>
+            <cite>Deméter, no Hino Homérico a Deméter (tradução livre)</cite>
+        </blockquote>
+
+        <p>Mãe e filha se reencontraram em Elêusis. Mas quem prova o alimento dos mortos fica ligado a eles. O acordo foi este: Perséfone passaria um terço do ano com Hades e os outros dois terços com a mãe e os deuses do Olimpo.</p>
+
+        <p>Feliz por ter a filha de volta, Deméter deixou a terra dar frutos outra vez e ensinou aos governantes de Elêusis os seus ritos secretos, que ficaram conhecidos como os Mistérios de Elêusis.</p>
+
+        <p class="nota">O hino diz que Perséfone volta à superfície quando a terra se enche de flores na primavera. A ideia de que o mito explica o inverno é uma interpretação posterior, muito popular. Na versão do poeta romano Ovídio, ela come sete sementes e passa metade do ano em cada lugar.<br>
+        Fonte principal: Hino Homérico a Deméter (cerca do século VI a.C.).</p>
+
+        <!-- PERGUNTA -->
+        <div class="pergunta-leitura">
+            <span class="etiqueta etiqueta-ambar">VOCÊ PRESTOU ATENÇÃO?</span>
+            <h3>Quem contou a Deméter onde estava a filha?</h3>
+            <button class="opcao" onclick="responderLeitura('Hermes')">Hermes</button>
+            <button class="opcao" onclick="responderLeitura('Hélio')">Hélio, o Sol</button>
+            <button class="opcao" onclick="responderLeitura('Zeus')">Zeus</button>
+            <p id="mensagem_leitura"></p>
+        </div>
+
+        <div class="navegacao">
+            <a href="arquivo.html" class="botao-escuro">← Arquivo de histórias</a>
+            <a href="hades.html" class="botao">Conhecer Hades →</a>
+        </div>
+    </article>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+                <a href="arquivo.html">Arquivo de histórias</a>
+                <a href="desafio.html">Desafio do Guardião</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="painel.html">Meu painel</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MINI CERBERUS: clique nele para ele falar -->
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <script src="js/cerberus.js"></script>
+    <script src="js/historia.js"></script>
+</body>
+</html>

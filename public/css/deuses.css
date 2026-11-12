@@ -1,0 +1,384 @@
+/* Listas (Deuses, Heróis, Criaturas, Lugares) e páginas de detalhe (Hades, Héracles...)
+   Usar junto com o estilo.css (ele já tem menu, rodapé, botões, .container e .secao):
+   <link rel="stylesheet" href="css/estilo.css">
+   <link rel="stylesheet" href="css/deuses.css">
+*/
+
+/* FILTROS (Olimpianos, Submundo, Primordiais...) */
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.filtro {
+    padding: 10px 18px;
+    background-color: #ffffff;
+    border: 1px solid #cbc7bf;
+    border-radius: 999px;
+    color: #4e4a44;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.filtro:hover,
+.filtro-ativo {
+    background-color: #121417;
+    border-color: #121417;
+    color: #ffffff;
+}
+
+/* GRADE DE CARTÕES */
+
+.grade-deuses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.cartao-deus {
+    position: relative;
+    background-color: #f7f6f3;
+    border: 1px solid #d6d3cd;
+    border-radius: 16px;
+    overflow: hidden;
+    color: #1d1f24;
+    text-decoration: none;
+}
+
+/* só os cartões que são links (têm página própria) sobem ao passar o mouse */
+a.cartao-deus:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 45px #1a1c2117;
+    border-color: #c8693a;
+}
+
+.cartao-deus img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    background-color: #121417;
+}
+
+/* bolinha com a seta no canto da foto: aparece só nos cartões com página */
+.seta {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #c8693a;
+    color: #ffffff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartao-deus-texto {
+    padding: 24px;
+}
+
+.cartao-deus h3 {
+    font-size: 25px;
+    margin: 0 0 4px 0;
+}
+
+/* nome em grego, ex.: Ζεύς */
+.nome-grego {
+    color: #c8693a;
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    margin: 0 0 12px 0;
+}
+
+.dominio {
+    color: #4e4a44;
+    margin: 0 0 16px 0;
+}
+
+/* pequenas etiquetas com símbolos: raio, águia, tridente... */
+.simbolos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.simbolo {
+    background-color: #e7e2da;
+    border-radius: 99px;
+    padding: 5px 11px;
+    font-size: 12px;
+    color: #4e4a44;
+}
+
+/* ============ PÁGINA DE DETALHE ============ */
+
+.detalhe {
+    background-color: #121417;
+    color: #ffffff;
+    padding: 70px 0;
+}
+
+.detalhe .container {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 90px;
+    align-items: center;
+}
+
+.detalhe-foto {
+    position: relative;
+    height: 540px;
+}
+
+.detalhe-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.detalhe-foto .selo {
+    left: -12px;
+    bottom: 25px;
+}
+
+.detalhe h1 {
+    font-size: 72px;
+    margin: 0;
+}
+
+.detalhe .nome-grego {
+    color: #f2b632;
+    font-size: 18px;
+}
+
+.detalhe-texto > p {
+    color: #c3bcb3;
+    font-size: 20px;
+    max-width: 580px;
+    margin: 28px 0;
+}
+
+.favorito {
+    background-color: transparent;
+    border: 1px solid #ffffff55;
+    border-radius: 10px;
+    padding: 12px 18px;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.favorito-ativo {
+    background-color: #c8693a;
+    border-color: #c8693a;
+}
+
+/* FICHA (pais, irmãos, símbolos, nome romano...) */
+
+.grade-ficha {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.ficha {
+    border-top: 1px solid #bbb6ae;
+}
+
+.ficha-linha {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid #cfcac3;
+}
+
+.ficha-linha span {
+    color: #4e4a44;
+    font-size: 14px;
+}
+
+/* MITOS */
+
+.faixa-mitos {
+    background-color: #dfe1e3;
+}
+
+.grade-mitos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+/* cada mito é uma coluna: o link "Ler mais" vai sempre para o fim do cartão,
+   então os cartões ficam alinhados mesmo com títulos de tamanhos diferentes */
+.mito {
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f4f0;
+    border-top: 4px solid #c8693a;
+    border-radius: 16px;
+    padding: 30px;
+}
+
+.mito .numero {
+    color: #c8693a;
+    font-size: 13px;
+}
+
+.mito h3 {
+    font-size: 21px;
+    margin: 24px 0 12px 0;
+}
+
+.mito p {
+    color: #4e4a44;
+}
+
+.mito .fonte {
+    margin-top: auto;
+    color: #c8693a;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.mito a.fonte {
+    text-decoration: none;
+}
+
+.faixa-citacao {
+    background-color: #f5f3ef;
+}
+
+.faixa-citacao .citacao {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faixa-citacao .citacao p {
+    font-size: 23px;
+}
+
+/* seção colada na anterior, sem o espaço de cima */
+.sem-topo {
+    padding-top: 0;
+}
+
+/* lista dos doze trabalhos de Héracles */
+.trabalhos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    background-color: #c8693a;
+    color: #121417;
+    border-radius: 24px;
+    padding: 48px;
+}
+
+.contador {
+    width: 240px;
+    height: 240px;
+    border: 3px solid #121417;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+#contador_trabalhos {
+    font-family: 'Cinzel', serif;
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.trabalhos-texto {
+    flex: 1;
+    min-width: 280px;
+}
+
+.trabalhos-texto h2 {
+    font-size: 36px;
+}
+
+.trabalhos-texto ol {
+    columns: 2;
+    margin: 0;
+    padding-left: 22px;
+}
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+    .grade-deuses,
+    .detalhe .container,
+    .grade-ficha,
+    .grade-mitos {
+        grid-template-columns: 1fr;
+    }
+
+    .filtros {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 5px;
+    }
+
+    .filtro {
+        white-space: nowrap;
+    }
+
+    .detalhe {
+        padding: 45px 0;
+    }
+
+    .detalhe .container {
+        gap: 35px;
+    }
+
+    .detalhe-foto {
+        height: 380px;
+    }
+
+    .detalhe h1 {
+        font-size: 50px;
+    }
+
+    .detalhe-texto > p {
+        font-size: 17px;
+    }
+
+    .grade-ficha {
+        gap: 45px;
+    }
+
+    .ficha-linha {
+        grid-template-columns: 120px 1fr;
+    }
+
+    .trabalhos {
+        padding: 30px 22px;
+    }
+
+    .contador {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .trabalhos-texto ol {
+        columns: 1;
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Criar conta</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/conta.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+
+    <main class="portao-conta">
+        <!-- LADO ESCURO COM O CERBERUS -->
+        <aside class="lado-escuro">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <img src="img/cerberus.webp" alt="Cerberus, o cão de três cabeças">
+            <p class="fala-guia">Toda alma que chega ganha um lugar na minha memória. A sua também.</p>
+        </aside>
+
+        <!-- FORMULÁRIO -->
+        <section class="lado-formulario">
+            <a href="index.html" class="voltar">← Voltar ao início</a>
+            <div class="formulario">
+                <span class="etiqueta">PRIMEIRA TRAVESSIA</span>
+                <h1>Grave seu nome no portão.</h1>
+                <p>Crie sua conta para salvar favoritos, acompanhar leituras e desafiar sua memória.</p>
+                <label class="campo">
+                    <span>Nome</span>
+                    <input id="input_nome" type="text" placeholder="Como devo te chamar?" autocomplete="name">
+                </label>
+                <label class="campo">
+                    <span>E-mail</span>
+                    <input id="input_email" type="email" placeholder="voce@exemplo.com" autocomplete="email">
+                </label>
+                <label class="campo">
+                    <span>Senha</span>
+                    <input id="input_senha" type="password" placeholder="Mínimo de 8 caracteres" autocomplete="new-password">
+                </label>
+                <label class="campo">
+                    <span>Confirme a senha</span>
+                    <input id="input_confirmacao" type="password" placeholder="Repita a senha" autocomplete="new-password">
+                </label>
+
+                <div id="caixa_erro" class="erro">
+                    <img src="img/mini-cerberus.webp" alt="">
+                    <span id="texto_erro"></span>
+                </div>
+
+                <button class="botao" onclick="cadastrar()">Criar minha conta →</button>
+                <p class="trocar">Já tem uma conta? <a href="login.html">Entrar</a></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/conta.js"></script>
+</body>
+</html>

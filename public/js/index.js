@@ -1,4 +1,4 @@
-// ===== DESAFIO DO GUARDIÃO =====
+// ===== DESAFIO RÁPIDO =====
 var tentativas = 0;
 
 function responder(resposta) {
@@ -35,78 +35,16 @@ function atravessar() {
 }
 
 
-// ===== OS DOZE TRABALHOS DE HÉRACLES =====
-function contarTrabalhos() {
-    var trabalho = 1;
-    var texto = '';
-
-    while (trabalho <= 12) {
-        if (trabalho == 12) {
-            texto = texto + trabalho + ' (eu!)';
-        } else {
-            texto = texto + trabalho + ', ';
-        }
-        trabalho = trabalho + 1;
-    }
-
-    lista_trabalhos.innerHTML = 'Trabalhos: ' + texto;
-    animarContador();
-}
-
-
-// ===== TRECHO AVANÇADO 1: contador animado =====
-// setInterval repete uma função de tempos em tempos (aqui, a cada 150 milissegundos).
-// clearInterval para a repetição quando o número chega em 12.
-var intervalo;
-var numeroAtual = 0;
-
-function animarContador() {
-    numeroAtual = 0;
-    clearInterval(intervalo);
-
-    intervalo = setInterval(function () {
-        numeroAtual += 1;
-        contador_trabalhos.innerHTML = numeroAtual;
-
-        if (numeroAtual == 12) {
-            clearInterval(intervalo);
-            contador_trabalhos.innerHTML = 'XII';
-        }
-    }, 150);
-}
-
-
-// ===== TRECHO AVANÇADO 2: frase aleatória no título =====
+// ===== TRECHO AVANÇADO: frase aleatória no título =====
 // Um vetor (array) guarda várias frases numa variável só.
 // Math.random() sorteia um número entre 0 e 1; multiplicado pelo tamanho
 // do vetor e arredondado com Math.floor, vira uma posição válida do vetor.
+// A tag <em> deixa o final da frase em âmbar.
 var frases = [
-    'Nenhuma alma passa sem que eu saiba seu nome.',
-    'Três cabeças, mil histórias para contar.',
-    'Do Olimpo ao Tártaro, eu conheço o caminho.'
+    'Nenhuma alma passa sem que eu saiba <em>seu nome.</em>',
+    'Três cabeças, <em>mil histórias</em> para contar.',
+    'Do Olimpo ao Tártaro, <em>eu conheço o caminho.</em>'
 ];
 
 var sorteio = Math.floor(Math.random() * frases.length);
 titulo_hero.innerHTML = frases[sorteio];
-
-
-// ===== MINI CERBERUS =====
-// A cada clique ele fala a próxima frase da lista. Depois da última, volta para a primeira.
-var falas = [
-    'Au Au Auuuu!',
-    'Eu tenho três cabeças, mas só um rabo.',
-    'Guardo os portões do Hades há milênios.',
-    'Héracles foi o único que me levou para passear.',
-    'Orfeu me fez dormir com a música dele. Que vergonha.',
-    'Cada cabeça minha prefere um petisco diferente.'
-];
-var numeroFala = 0;
-
-function falarCerberus() {
-    fala_cerberus.innerHTML = falas[numeroFala];
-    numeroFala = numeroFala + 1;
-
-    if (numeroFala == falas.length) {
-        numeroFala = 0;
-    }
-}

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Rio Aqueronte</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/deuses.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <!-- MENU -->
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html">Deuses</a>
+                <a href="herois.html">Heróis</a>
+                <a href="criaturas.html">Criaturas</a>
+                <a href="lugares.html" class="ativo">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+            </nav>
+            <a href="login.html" class="botao-borda">Entrar</a>
+        </div>
+    </header>
+
+    <!-- APRESENTAÇÃO -->
+    <section class="detalhe">
+        <div class="container">
+            <div class="detalhe-foto">
+                <img src="img/lugares/aqueronte.webp" alt="Cânion do rio Aqueronte, no Épiro">
+                <span class="selo">LUGAR</span>
+            </div>
+            <div class="detalhe-texto">
+                <span class="etiqueta etiqueta-ambar">ARQUIVO · LUGARES</span>
+                <h1>Aqueronte</h1>
+                <p class="nome-grego">Ἀχέρων</p>
+                <p>Um dos rios do Submundo, onde as almas esperavam a travessia. E também um rio de verdade, no noroeste da Grécia, que ainda corre hoje.</p>
+                <button id="botao_favorito" class="favorito" onclick="favoritar()">♡ Adicionar aos favoritos</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <!-- FICHA -->
+    <section class="secao">
+        <div class="container grade-ficha">
+            <div>
+                <div class="titulo-secao">
+                    <span class="etiqueta">FICHA DO GUARDIÃO</span>
+                    <h2>O que os antigos registraram</h2>
+                </div>
+                <div class="ficha">
+                    <div class="ficha-linha">
+                        <span>Tipo</span>
+                        <strong>Rio do Submundo e rio real</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Onde fica</span>
+                        <strong>Épiro, noroeste da Grécia</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Barqueiro</span>
+                        <strong>Caronte, segundo muitos autores</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Recebe as águas de</span>
+                        <strong>Piriflegetonte e Cocito</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Nas margens</span>
+                        <strong>O Oráculo dos Mortos (Necromanteion)</strong>
+                    </div>
+                </div>
+            </div>
+            <p class="fala-guia fala-clara">O Aqueronte que você pode visitar fica no Épiro. O viajante Pausânias achava que Homero conheceu esses rios e usou os nomes deles para os rios do meu mundo.</p>
+        </div>
+    </section>
+
+    <!-- MITOS -->
+    <section class="secao faixa-mitos">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">RELATOS PRESERVADOS</span>
+                <h2>Seus mitos</h2>
+            </div>
+            <div class="grade-mitos">
+            <article class="mito">
+                <span class="numero">01</span>
+                <h3>Odisseu na entrada do Hades</h3>
+                <p>Seguindo as instruções da feiticeira Circe, Odisseu foi até onde os rios se encontram, cavou um buraco e ofereceu sangue para que as almas viessem falar com ele.</p>
+                <span class="fonte">Homero, Odisseia, cantos X e XI</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">02</span>
+                <h3>As almas na margem</h3>
+                <p>Caronte só leva na barca quem foi enterrado. As outras almas ficam cem anos vagando pela margem antes de poder atravessar.</p>
+                <span class="fonte">Virgílio, Eneida VI</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">03</span>
+                <h3>O Oráculo dos Mortos</h3>
+                <p>Heródoto conta que o tirano Periandro consultou um oráculo dos mortos às margens do Aqueronte. Ruínas perto do rio já foram apontadas como esse lugar, mas hoje muitos arqueólogos duvidam disso.</p>
+                <span class="fonte">Heródoto, Histórias V</span>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CITAÇÃO -->
+    <section class="secao faixa-citacao">
+        <div class="container">
+            <blockquote class="citacao">
+                <p>“Ali, no Aqueronte, deságuam o Piriflegetonte e o Cocito, que é um braço da água do Estige.”</p>
+                <cite>Circe, em Homero, Odisseia, canto X (tradução livre)</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- RELACIONADOS -->
+    <section class="secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">CONTINUE A JORNADA</span>
+                <h2>Relacionados</h2>
+            </div>
+            <div class="grade-deuses">
+            <a href="hades.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/deuses/hades.webp" alt="Estátua de Hades">
+                <div class="cartao-deus-texto">
+                    <h3>Hades</h3>
+                    <p class="nome-grego">ᾍδης</p>
+                    <p class="dominio">Soberano do mundo dos mortos.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">cetro</span>
+                        <span class="simbolo">chave</span>
+                    </div>
+                </div>
+            </a>
+            <a href="cerberus.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/criaturas/cerbero.webp" alt="Estátua de Cérbero, de Gortina">
+                <div class="cartao-deus-texto">
+                    <h3>Cérbero</h3>
+                    <p class="nome-grego">Κέρβερος</p>
+                    <p class="dominio">O cão de guarda dos portões do Hades.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">três cabeças</span>
+                        <span class="simbolo">portões</span>
+                    </div>
+                </div>
+            </a>
+            <a href="heracles.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/herois/heracles.webp" alt="Estátua de Héracles (Héracles Farnese)">
+                <div class="cartao-deus-texto">
+                    <h3>Héracles</h3>
+                    <p class="nome-grego">Ἡρακλῆς</p>
+                    <p class="dominio">Filho de Zeus e Alcmena, herói dos doze trabalhos.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">clava</span>
+                        <span class="simbolo">pele de leão</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+                <a href="arquivo.html">Arquivo de histórias</a>
+                <a href="desafio.html">Desafio do Guardião</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="painel.html">Meu painel</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MINI CERBERUS: clique nele para ele falar -->
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <script src="js/cerberus.js"></script>
+    <script src="js/favorito.js"></script>
+</body>
+</html>
