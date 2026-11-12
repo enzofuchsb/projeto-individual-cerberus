@@ -65,7 +65,7 @@ function animarContador() {
     clearInterval(intervalo);
 
     intervalo = setInterval(function () {
-        numeroAtual = numeroAtual + 1;
+        numeroAtual += 1;
         contador_trabalhos.innerHTML = numeroAtual;
 
         if (numeroAtual == 12) {
