@@ -48,3 +48,9 @@ var frases = [
 
 var sorteio = Math.floor(Math.random() * frases.length);
 titulo_hero.innerHTML = frases[sorteio];
+
+
+// ===== QUEM JÁ ENTROU NÃO PRECISA DO CONVITE PARA CRIAR CONTA =====
+if (sessionStorage.getItem('ID_USUARIO') != null) {
+    bloco_login.style.display = 'none';
+}

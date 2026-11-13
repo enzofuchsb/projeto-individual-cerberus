@@ -1,33 +1,24 @@
 // ===== DESAFIO DO GUARDIÃO =====
-// Cada pergunta usa a mesma posição nos vetores:
-// perguntas[0] combina com opcoes[0], certas[0] e explicacoes[0].
-var perguntas = [
-    'Quem é a deusa da sabedoria e da estratégia?',
-    'Qual herói me levou para fora do Submundo no último dos doze trabalhos?',
-    'Quem leva as almas na barca para atravessar o rio do Submundo?',
-    'Que fruto prendeu Perséfone ao Submundo?',
-    'Quantas cabeças Hesíodo deu ao Cérbero na Teogonia?'
-];
+// As perguntas de todos os quizzes ficam no perguntas.js.
+// A página de Quizzes guarda no sessionStorage qual quiz foi escolhido.
+// Se ninguém escolheu, abre o de Olimpianos (que é público).
+var chaveQuiz = sessionStorage.getItem('QUIZ_ESCOLHIDO');
+// apaga a escolha, para o próximo quiz aberto pelo rodapé ser o padrão
+sessionStorage.removeItem('QUIZ_ESCOLHIDO');
 
-// um vetor dentro de outro: as 4 opções de cada pergunta
-var opcoes = [
-    ['Atena', 'Hera', 'Afrodite', 'Deméter'],
-    ['Perseu', 'Teseu', 'Héracles', 'Odisseu'],
-    ['Hermes', 'Caronte', 'Orfeu', 'Tânato'],
-    ['Uva', 'Figo', 'Maçã', 'Romã'],
-    ['Três', 'Cinquenta', 'Cem', 'Uma']
-];
+if (chaveQuiz == null) {
+    chaveQuiz = 'olimpianos';
+}
 
-// posição da opção certa (0 = A, 1 = B, 2 = C, 3 = D)
-var certas = [0, 2, 1, 3, 1];
+var quiz = bancoQuizzes[chaveQuiz];
+nome_quiz.innerHTML = quiz.nome.toUpperCase();
+nome_quiz_historia.innerHTML = quiz.nome.toUpperCase() + ' · LEIA COM ATENÇÃO';
 
-var explicacoes = [
-    'Atena nasceu da cabeça de Zeus, já adulta e armada.',
-    'Héracles me venceu sem armas, como Hades exigiu.',
-    'Hermes guia as almas até a margem, mas quem as leva na barca é Caronte.',
-    'Ela comeu uma semente de romã e, por isso, passa parte do ano com Hades.',
-    'Hesíodo fala em cinquenta. As três cabeças vêm de outros autores e da arte grega.'
-];
+// perguntas[0] combina com opcoes[0], certas[0] e explicacoes[0]
+var perguntas = quiz.perguntas;
+var opcoes = quiz.opcoes;
+var certas = quiz.certas;
+var explicacoes = quiz.explicacoes;
 
 var atual = 0;
 var acertos = 0;
@@ -105,16 +96,80 @@ function mostrarResultado() {
     } else {
         frase_final.innerHTML = 'Os mitos ainda guardam segredos para você. Volte às histórias e tente de novo.';
     }
+
+    salvarTentativa();
+}
+
+
+// só salva se a pessoa estiver logada
+function salvarTentativa() {
+    var idUsuario = sessionStorage.getItem('ID_USUARIO');
+
+    if (idUsuario == null) {
+        mensagem_salvo.innerHTML = 'Entre na sua conta para guardar suas notas e completar os 12 Trabalhos.';
+        return;
+    }
+
+    // TRECHO AVANÇADO: fetch com POST envia o resultado para a API
+    fetch('/quiz/tentativa', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            idUsuarioServer: idUsuario,
+            categoriaServer: chaveQuiz,
+            acertosServer: acertos,
+            totalServer: perguntas.length
+        })
+    }).then(function (resposta) {
+        if (resposta.ok) {
+            mensagem_salvo.innerHTML = 'Resultado guardado no seu perfil.';
+        } else {
+            mensagem_salvo.innerHTML = 'Não consegui guardar o resultado.';
+        }
+    });
 }
 
 
 function jogarDeNovo() {
     atual = 0;
     acertos = 0;
+    mensagem_salvo.innerHTML = '';
     resultado.style.display = 'none';
     area_perguntas.style.display = 'flex';
     mostrarPergunta();
 }
 
 
-mostrarPergunta();
+// sair do quiz: quem está logado volta para a lista de quizzes,
+// quem não está volta para a página inicial
+function sairDoQuiz() {
+    if (sessionStorage.getItem('ID_USUARIO') == null) {
+        window.location.href = 'index.html';
+    } else {
+        window.location.href = 'quizzes.html';
+    }
+}
+
+
+// ===== HISTÓRIA ANTES DO QUIZ =====
+// Cada parágrafo da história vira uma tag <p>.
+function mostrarHistoria() {
+    titulo_historia.innerHTML = quiz.tituloHistoria;
+
+    var html = '';
+    for (var i = 0; i < quiz.historia.length; i++) {
+        html = html + '<p>' + quiz.historia[i] + '</p>';
+    }
+    texto_historia.innerHTML = html;
+}
+
+
+// esconde a história e mostra a primeira pergunta
+function comecarQuiz() {
+    area_historia.style.display = 'none';
+    area_perguntas.style.display = 'flex';
+    mostrarPergunta();
+}
+
+
+mostrarHistoria();

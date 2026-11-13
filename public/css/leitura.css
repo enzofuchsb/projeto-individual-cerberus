@@ -210,3 +210,9 @@
         font-size: 16px;
     }
 }
+
+/* botão "Marcar como lida" */
+.marcar-leitura {
+    margin: 40px 0;
+}
+

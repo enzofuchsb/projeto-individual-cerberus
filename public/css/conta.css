@@ -131,12 +131,6 @@
 
 /* PAINEL */
 
-.aviso-exemplo {
-    color: #4e4a44;
-    font-size: 14px;
-    margin: 0 0 20px 0;
-}
-
 .grade-numeros {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -186,50 +180,6 @@
     margin: 0 0 20px 0;
 }
 
-/* gráfico de barras feito só com HTML e CSS:
-   a altura de cada barra é a porcentagem escrita no style="height: ...%" */
-.barras {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    height: 220px;
-    border-bottom: 1px solid #aaaaaa;
-}
-
-.barra {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100%;
-    width: 60px;
-}
-
-.barra b {
-    font-size: 13px;
-    margin-bottom: 6px;
-}
-
-.barra i {
-    display: block;
-    width: 36px;
-    background-color: #c8693a;
-    border-radius: 5px 5px 0 0;
-}
-
-.rotulos {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 8px;
-    font-size: 13px;
-    color: #4e4a44;
-}
-
-.rotulos span {
-    width: 60px;
-    text-align: center;
-}
-
 .cabecalho-pagina .botao-borda {
     margin-top: 20px;
 }
@@ -271,8 +221,4 @@
         padding: 20px;
     }
 
-    .barra,
-    .rotulos span {
-        width: 50px;
-    }
 }

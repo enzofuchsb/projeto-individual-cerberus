@@ -614,6 +614,83 @@ img {
     text-decoration: none;
 }
 
+/* MAIS CONTEÚDOS */
+
+.grade-conteudos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.conteudo {
+    background-color: #f7f5f1;
+    border: 1px solid #d3cec6;
+    border-radius: 16px;
+    padding: 26px;
+    color: #1d1f24;
+    text-decoration: none;
+}
+
+.conteudo:hover {
+    transform: translateY(-5px);
+    border-color: #c8693a;
+}
+
+.conteudo h3 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.conteudo p {
+    color: #4e4a44;
+    margin: 0;
+}
+
+/* caixa escura com o que o login libera */
+.com-login {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 40px;
+    background-color: #121417;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 50px;
+}
+
+.com-login h2 {
+    font-size: 36px;
+    line-height: 1.15;
+}
+
+.com-login p {
+    color: #b9b2a7;
+}
+
+.lista-login {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.lista-login li {
+    display: flex;
+    gap: 18px;
+    padding: 14px 0;
+    border-bottom: 1px solid #ffffff17;
+}
+
+.lista-login .numero {
+    width: 40px;
+    flex: none;
+    font-size: 20px;
+}
+
+.lista-login p {
+    margin: 2px 0 0 0;
+    font-size: 15px;
+}
+
 /* CHAMADA FINAL (terracota) */
 
 .chamada {
@@ -767,53 +844,6 @@ img {
     cursor: pointer;
 }
 
-/* ============ PÁGINA 404 ============ */
-
-.nao-encontrada {
-    min-height: 720px;
-    background-color: #121417;
-    color: #ffffff;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 24px;
-    overflow: hidden;
-}
-
-.nao-encontrada div {
-    max-width: 650px;
-    position: relative;
-}
-
-/* o "404" gigante e bem apagado atrás do Cerberus.
-   clamp() escolhe um tamanho entre 120px e 240px conforme a largura da tela,
-   para ele nunca ficar maior que a tela do celular. */
-.numero-gigante {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: -40px;
-    font-family: 'Cinzel', serif;
-    font-size: clamp(120px, 30vw, 240px);
-    color: #ffffff0a;
-}
-
-.nao-encontrada img {
-    position: relative;
-    width: 300px;
-    margin: 0 auto 20px auto;
-}
-
-.nao-encontrada h1 {
-    font-size: 40px;
-}
-
-.nao-encontrada p {
-    color: #b9b2a7;
-    margin-bottom: 30px;
-}
-
 /* ============ CELULAR ============ */
 
 @media (max-width: 800px) {
@@ -890,6 +920,8 @@ img {
 
     .grade-tres,
     .grade-caminhos,
+    .grade-conteudos,
+    .com-login,
     .grade-historia,
     .grade-desafio,
     .rodape-grade {
@@ -935,6 +967,11 @@ img {
         gap: 35px;
     }
 
+    .com-login {
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
     .mini-cerberus {
         right: 12px;
         bottom: 12px;
@@ -942,13 +979,5 @@ img {
 
     .balao {
         max-width: 200px;
-    }
-
-    .nao-encontrada img {
-        width: 220px;
-    }
-
-    .nao-encontrada h1 {
-        font-size: 32px;
     }
 }

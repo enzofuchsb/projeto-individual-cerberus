@@ -1,6 +1,5 @@
 // ===== LOGIN E CADASTRO =====
-// Por enquanto não existe API, então o site só confere os campos.
-// Quando a API em Node.js ficar pronta, é aqui que ela vai ser chamada.
+// Primeiro o site confere os campos. Se estiver tudo certo, chama a API.
 
 function mostrarErro(texto) {
     texto_erro.innerHTML = texto;
@@ -14,11 +13,31 @@ function entrar() {
 
     if (email == '' || senha == '') {
         mostrarErro('Preencha o e-mail e a senha.');
-    } else if (senha.length < 8) {
-        mostrarErro('A senha tem pelo menos 8 caracteres.');
-    } else {
-        irParaPainel();
+        return;
     }
+
+    // TRECHO AVANÇADO: fetch com POST manda o e-mail e a senha para a API.
+    // JSON.stringify transforma o objeto em texto para ir pela internet.
+    fetch('/usuarios/autenticar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            emailServer: email,
+            senhaServer: senha
+        })
+    }).then(function (resposta) {
+        if (resposta.ok) {
+            resposta.json().then(function (usuario) {
+                // sessionStorage guarda os dados enquanto a aba estiver aberta
+                sessionStorage.setItem('ID_USUARIO', usuario.id);
+                sessionStorage.setItem('NOME_USUARIO', usuario.nome);
+                sessionStorage.setItem('EMAIL_USUARIO', usuario.email);
+                window.location.href = 'perfil.html';
+            });
+        } else {
+            mostrarErro('E-mail ou senha incorretos. Não reconheço essa alma.');
+        }
+    });
 }
 
 
@@ -30,21 +49,29 @@ function cadastrar() {
 
     if (nome == '' || email == '' || senha == '') {
         mostrarErro('Nenhuma alma passa sem preencher todos os campos.');
+        return;
     } else if (senha.length < 8) {
         mostrarErro('A senha precisa ter pelo menos 8 caracteres.');
+        return;
     } else if (senha != confirmacao) {
         mostrarErro('As duas senhas não são iguais.');
-    } else {
-        // TRECHO AVANÇADO: localStorage guarda um texto no navegador,
-        // e ele continua lá mesmo quando a pessoa muda de página.
-        // O painel lê esse nome para dar "Salve, ...".
-        localStorage.setItem('nome', nome);
-        irParaPainel();
+        return;
     }
-}
 
-
-// TRECHO AVANÇADO: window.location.href muda a página que está aberta.
-function irParaPainel() {
-    window.location.href = 'painel.html';
+    fetch('/usuarios/cadastrar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            nomeServer: nome,
+            emailServer: email,
+            senhaServer: senha
+        })
+    }).then(function (resposta) {
+        if (resposta.ok) {
+            // conta criada: vai para o login
+            window.location.href = 'login.html';
+        } else {
+            mostrarErro('Não deu para criar a conta. Esse e-mail já pode estar em uso.');
+        }
+    });
 }

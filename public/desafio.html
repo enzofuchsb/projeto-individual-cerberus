@@ -16,14 +16,25 @@
     <main class="container desafio">
         <div class="desafio-topo">
             <span class="etiqueta etiqueta-ambar">DESAFIO DO GUARDIÃO</span>
-            <a href="index.html" class="sair">SAIR ✕</a>
+            <a href="#" class="sair" onclick="sairDoQuiz()">SAIR ✕</a>
         </div>
-        <div class="progresso"><div id="barra_progresso"></div></div>
-        <p id="contagem"></p>
+        <!-- HISTÓRIA: aparece primeiro. As respostas do quiz estão nela. -->
+        <div id="area_historia" class="desafio-meio">
+            <span id="nome_quiz_historia" class="etiqueta">LEIA COM ATENÇÃO</span>
+            <h1 id="titulo_historia"></h1>
+            <div id="texto_historia" class="texto-historia"></div>
+            <div class="aviso-historia">
+                <img src="img/mini-cerberus.webp" alt="Mini Cerberus">
+                <p>Leu tudo? Todas as respostas estão nesta história.</p>
+                <button class="botao" onclick="comecarQuiz()">Começar o quiz →</button>
+            </div>
+        </div>
 
         <!-- PERGUNTAS (o texto é colocado pelo desafio.js) -->
         <div id="area_perguntas" class="desafio-meio">
-            <span class="etiqueta">MITOLOGIA GREGA</span>
+            <div class="progresso"><div id="barra_progresso"></div></div>
+            <p id="contagem"></p>
+            <span id="nome_quiz" class="etiqueta">MITOLOGIA GREGA</span>
             <h1 id="pergunta"></h1>
             <div class="opcoes-desafio">
                 <button id="opcao_0" class="opcao-desafio" onclick="responderPergunta(0)"></button>
@@ -48,13 +59,15 @@
             <span class="etiqueta etiqueta-ambar">SEU RESULTADO</span>
             <h1 id="nota_final"></h1>
             <p id="frase_final"></p>
+            <p id="mensagem_salvo"></p>
             <div class="botoes">
                 <button class="botao" onclick="jogarDeNovo()">Jogar de novo</button>
-                <a href="index.html" class="botao-borda">Voltar ao início</a>
+                <button class="botao-borda" onclick="sairDoQuiz()">Outros quizzes</button>
             </div>
         </div>
     </main>
 
+    <script src="js/perguntas.js"></script>
     <script src="js/desafio.js"></script>
 </body>
 </html>

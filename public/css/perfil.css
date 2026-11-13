@@ -1,0 +1,433 @@
+/* Área do perfil: Visão geral, Teste do Patrono, 12 Trabalhos, Quizzes e Configurações
+   Usar junto com o estilo.css e o conta.css (KPIs e cartões de gráfico)
+*/
+
+/* MENU LATERAL + CONTEÚDO */
+
+.area-perfil {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 40px;
+    align-items: start;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.menu-lateral {
+    position: sticky;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: #121417;
+    border-radius: 16px;
+    padding: 18px;
+}
+
+.menu-lateral .etiqueta {
+    margin: 6px 12px 12px 12px;
+}
+
+.item-lateral {
+    display: block;
+    padding: 11px 14px;
+    border-radius: 10px;
+    color: #d4d0c9;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 15px;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.item-lateral:hover,
+.item-ativo {
+    background-color: #202328;
+    color: #f2b632;
+}
+
+.item-sair {
+    margin-top: 14px;
+    border-top: 1px solid #ffffff17;
+    border-radius: 0 0 10px 10px;
+    padding-top: 16px;
+}
+
+.conteudo-perfil h2 {
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+.bloco {
+    margin-top: 45px;
+}
+
+.texto-apagado {
+    color: #4e4a44;
+}
+
+/* CABEÇALHO DO PERFIL (avatar, nome, título) */
+
+.cabecalho-perfil {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: #121417;
+    color: #ffffff;
+    border-radius: 18px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.avatar {
+    flex: none;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #c8693a;
+    background-color: #202328;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f2b632;
+    font-family: 'Cinzel', serif;
+    font-size: 44px;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.cabecalho-perfil h1 {
+    font-size: 40px;
+    line-height: 1.1;
+    margin: 0 0 10px 0;
+}
+
+.cabecalho-perfil .etiqueta {
+    margin-bottom: 8px;
+}
+
+.info-perfil {
+    flex: 1;
+}
+
+.info-perfil p {
+    color: #b9b2a7;
+    margin: 0 0 12px 0;
+}
+
+/* BARRA DE PROGRESSO (título e trabalhos) */
+
+.barra-progresso {
+    height: 8px;
+    background-color: #d8d3cb;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.cabecalho-perfil .barra-progresso {
+    background-color: #30343a;
+}
+
+.barra-progresso i {
+    display: block;
+    height: 100%;
+    background-color: #c8693a;
+    border-radius: 4px;
+}
+
+.texto-progresso {
+    font-size: 13px;
+}
+
+/* GRÁFICOS COM CHART.JS
+   o canvas ocupa a altura desta caixa */
+.area-canvas {
+    position: relative;
+    height: 260px;
+}
+
+
+/* card que aparece no lugar do radar quando não fez o teste */
+.convite-teste {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #121417;
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.convite-teste p {
+    color: #b9b2a7;
+}
+
+/* QUIZZES LIBERADOS E BLOQUEADOS */
+
+.grade-quizzes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.cartao-quiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 14px;
+    min-height: 140px;
+    background-color: #f7f5f1;
+    border: 1px solid #d3cec6;
+    border-radius: 15px;
+    padding: 22px;
+    font-family: inherit;
+    font-size: 16px;
+    text-align: left;
+    color: #1d1f24;
+}
+
+.cartao-quiz h3 {
+    font-size: 19px;
+    margin: 0;
+}
+
+button.cartao-quiz {
+    cursor: pointer;
+}
+
+button.cartao-quiz:hover {
+    border-color: #c8693a;
+    transform: translateY(-4px);
+}
+
+.cartao-quiz .status {
+    color: #c8693a;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.quiz-bloqueado {
+    background-color: #e3e0db;
+    color: #5a554e;
+}
+
+.quiz-bloqueado .status {
+    color: #5a554e;
+}
+
+/* 12 TRABALHOS */
+
+.grade-trabalhos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.trabalho {
+    background-color: #f7f5f1;
+    border: 1px solid #d3cec6;
+    border-radius: 15px;
+    padding: 24px;
+}
+
+.trabalho .medalhao {
+    width: 58px;
+    height: 58px;
+    margin: 0 0 18px 0;
+    font-size: 17px;
+}
+
+.trabalho h3 {
+    font-size: 19px;
+    margin-bottom: 4px;
+}
+
+.trabalho p {
+    color: #4e4a44;
+    font-size: 15px;
+}
+
+/* trabalho completo: borda terracota e medalhão aceso */
+.trabalho-completo {
+    border-color: #c8693a;
+    background-color: #ffffff;
+}
+
+.trabalho-completo .medalhao {
+    background-color: #c8693a;
+    color: #ffffff;
+}
+
+.selo-completo {
+    color: #c8693a;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* miniatura dos 12 trabalhos no perfil */
+.mini-trabalhos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.mini-trabalhos span {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #d8d3cb;
+    color: #5a554e;
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mini-trabalhos .mini-completo {
+    background-color: #121417;
+    color: #f2b632;
+}
+
+.link-terracota {
+    color: #c8693a;
+    font-weight: bold;
+}
+
+/* TESTE DO PATRONO */
+
+.cartao-teste {
+    background-color: #121417;
+    color: #ffffff;
+    border-radius: 18px;
+    padding: 40px;
+}
+
+.cartao-teste h2 {
+    font-size: 32px;
+    margin: 10px 0 30px 0;
+}
+
+.contagem-teste {
+    color: #b9b2a7;
+    margin: 0;
+}
+
+.opcoes-teste {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.opcao-teste {
+    min-height: 70px;
+    padding: 14px 20px;
+    background-color: #202328;
+    border: 1px solid #ffffff1c;
+    border-radius: 12px;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.opcao-teste:hover {
+    border-color: #c8693a;
+}
+
+#resultado_teste {
+    display: none;
+    text-align: center;
+}
+
+#resultado_teste .avatar {
+    width: 170px;
+    height: 170px;
+    margin: 0 auto 20px auto;
+}
+
+#resultado_teste h2 {
+    font-size: 48px;
+    margin: 0 0 10px 0;
+}
+
+#resultado_teste p {
+    color: #b9b2a7;
+}
+
+#resultado_teste .botoes {
+    justify-content: center;
+}
+
+/* CONFIGURAÇÕES */
+
+.dados-conta {
+    background-color: #f7f5f1;
+    border: 1px solid #d3cec6;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px 0;
+}
+
+.dados-conta p {
+    margin: 0 0 8px 0;
+}
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+    .area-perfil {
+        grid-template-columns: 1fr;
+        padding-top: 25px;
+    }
+
+    .menu-lateral {
+        position: static;
+        flex-direction: row;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .menu-lateral .etiqueta {
+        display: none;
+    }
+
+    .item-sair {
+        margin-top: 0;
+        border-top: none;
+        padding-top: 11px;
+    }
+
+    .cabecalho-perfil {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cabecalho-perfil h1 {
+        font-size: 30px;
+    }
+
+    .grade-quizzes,
+    .grade-trabalhos,
+    .opcoes-teste {
+        grid-template-columns: 1fr;
+    }
+
+    .cartao-teste {
+        padding: 25px;
+    }
+}
+

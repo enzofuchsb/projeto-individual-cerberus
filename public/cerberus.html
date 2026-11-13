@@ -25,8 +25,9 @@
                 <a href="criaturas.html" class="ativo">Criaturas</a>
                 <a href="lugares.html">Lugares</a>
                 <a href="historia.html">História do Dia</a>
+                <a href="mito.html">Mito no dia a dia</a>
             </nav>
-            <a href="login.html" class="botao-borda">Entrar</a>
+            <a id="botao_entrar" href="login.html" class="botao-borda">Entrar</a>
         </div>
     </header>
 
@@ -43,6 +44,7 @@
                 <p class="nome-grego">Κέρβερος · o Cerberus, seu guia</p>
                 <p>O cão de guarda dos portões do Hades: deixa as almas entrarem, mas não deixa ninguém sair.</p>
                 <button id="botao_favorito" class="favorito" onclick="favoritar()">♡ Adicionar aos favoritos</button>
+                <button id="botao_lida" class="favorito" onclick="marcarLeitura('cerberus')">✓ Marcar como lida</button>
             </div>
         </div>
     </section>
@@ -195,7 +197,7 @@
             </div>
             <div>
                 <span class="rodape-titulo">PROJETO</span>
-                <a href="painel.html">Meu painel</a>
+                <a href="perfil.html">Meu perfil</a>
                 <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
             </div>
         </div>
@@ -216,7 +218,9 @@
         <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
     </div>
 
+    <script src="js/menu.js"></script>
     <script src="js/cerberus.js"></script>
     <script src="js/favorito.js"></script>
+    <script src="js/leitura.js"></script>
 </body>
 </html>

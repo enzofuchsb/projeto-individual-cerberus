@@ -382,3 +382,8 @@ a.cartao-deus:hover {
         columns: 1;
     }
 }
+
+/* botão "Marcar como lida", ao lado do favorito */
+#botao_lida {
+    margin: 10px 0 0 8px;
+}

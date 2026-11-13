@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Meu perfil</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/conta.css">
+    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <!-- MENU -->
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html">Deuses</a>
+                <a href="herois.html">Heróis</a>
+                <a href="criaturas.html">Criaturas</a>
+                <a href="lugares.html">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+                <a href="mito.html">Mito no dia a dia</a>
+            </nav>
+            <a href="perfil.html" class="conta"><span>EU</span>Minha conta</a>
+        </div>
+    </header>
+
+    <div class="faixa-grega"></div>
+
+    <main class="container area-perfil">
+
+        <!-- MENU LATERAL (igual em todas as páginas do perfil) -->
+        <aside class="menu-lateral">
+            <span class="etiqueta etiqueta-ambar">MINHA JORNADA</span>
+            <a href="perfil.html" class="item-lateral item-ativo">Visão geral</a>
+            <a href="patrono.html" class="item-lateral">Teste do Patrono</a>
+            <a href="trabalhos.html" class="item-lateral">12 Trabalhos</a>
+            <a href="quizzes.html" class="item-lateral">Quizzes</a>
+            <a href="historia.html" class="item-lateral">História do dia</a>
+            <a href="configuracoes.html" class="item-lateral">Configurações</a>
+            <button class="item-lateral item-sair" onclick="sair()">Sair</button>
+        </aside>
+
+        <section class="conteudo-perfil">
+
+            <!-- CABEÇALHO: avatar do patrono, nome e título -->
+            <div class="cabecalho-perfil">
+                <div id="avatar" class="avatar"></div>
+                <div class="info-perfil">
+                    <span id="titulo_usuario" class="etiqueta etiqueta-ambar">MORTAL</span>
+                    <h1 id="nome_usuario">Viajante</h1>
+                    <p id="texto_historias"></p>
+                    <div class="barra-progresso"><i id="barra_titulo"></i></div>
+                    <p id="texto_titulo" class="texto-progresso"></p>
+                </div>
+            </div>
+
+            <!-- KPIs -->
+            <div class="grade-numeros">
+                <article class="numero-painel"><strong id="kpi_quizzes">0</strong><p>Quizzes feitos</p></article>
+                <article class="numero-painel"><strong id="kpi_media">–</strong><p>Média de acertos</p></article>
+                <article class="numero-painel"><strong id="kpi_melhor">–</strong><p>Melhor nota</p></article>
+                <article class="numero-painel"><strong id="kpi_historias">0</strong><p>Histórias lidas</p></article>
+            </div>
+
+            <!-- GRÁFICOS -->
+            <div class="grade-graficos">
+                <article id="area_radar" class="grafico">
+                    <span class="etiqueta">TESTE DO PATRONO</span>
+                    <h3>Afinidade divina</h3>
+                    <p class="eixo">Pontos de cada deus nas suas respostas</p>
+                    <div class="area-canvas"><canvas id="grafico_radar"></canvas></div>
+                </article>
+
+                <!-- aparece no lugar do radar se a pessoa ainda não fez o teste -->
+                <article id="convite_teste" class="convite-teste" style="display: none">
+                    <span class="etiqueta etiqueta-ambar">TESTE DO PATRONO</span>
+                    <h3>Qual deus olha por você?</h3>
+                    <p>Responda 5 perguntas e descubra seu deus patrono. Ele vira o seu avatar e libera um quiz exclusivo.</p>
+                    <a href="patrono.html" class="botao">Fazer o teste →</a>
+                </article>
+
+                <article class="grafico">
+                    <span class="etiqueta">TODAS AS RESPOSTAS</span>
+                    <h3>Acertos e erros</h3>
+                    <p id="eixo_rosca" class="eixo">Somando todos os quizzes que você fez</p>
+                    <div class="area-canvas"><canvas id="grafico_rosca"></canvas></div>
+                </article>
+            </div>
+
+            <article class="grafico bloco">
+                <span class="etiqueta">DESEMPENHO</span>
+                <h3>Sua evolução</h3>
+                <p id="eixo_linha" class="eixo">Porcentagem de acerto nos seus últimos 10 quizzes, do mais antigo ao mais novo</p>
+                <div class="area-canvas"><canvas id="grafico_linha"></canvas></div>
+            </article>
+
+            <!-- SEUS QUIZZES -->
+            <div class="bloco">
+                <span class="etiqueta">SEUS QUIZZES</span>
+                <h2>Liberados e bloqueados</h2>
+                <p class="texto-apagado">Complete trabalhos para subir de título e abrir novos quizzes.</p>
+                <div id="lista_quizzes" class="grade-quizzes"></div>
+            </div>
+
+            <!-- MINIATURA DOS 12 TRABALHOS -->
+            <div class="bloco">
+                <span class="etiqueta">CONQUISTAS</span>
+                <h2>Os 12 Trabalhos</h2>
+                <div id="mini_trabalhos" class="mini-trabalhos"></div>
+                <a href="trabalhos.html" class="link-terracota">Ver todos os trabalhos →</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MINI CERBERUS: clique nele para ele falar -->
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <!-- Chart.js: biblioteca que desenha os gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/sessao.js"></script>
+    <script src="js/jornada.js"></script>
+    <script src="js/cerberus.js"></script>
+    <script src="js/perfil.js"></script>
+</body>
+</html>

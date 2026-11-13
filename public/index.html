@@ -24,8 +24,9 @@
                 <a href="criaturas.html">Criaturas</a>
                 <a href="lugares.html">Lugares</a>
                 <a href="historia.html">História do Dia</a>
+                <a href="mito.html">Mito no dia a dia</a>
             </nav>
-            <a href="login.html" class="botao-borda">Entrar</a>
+            <a id="botao_entrar" href="login.html" class="botao-borda">Entrar</a>
         </div>
     </header>
 
@@ -157,6 +158,60 @@
         </div>
     </section>
 
+    <!-- MAIS CONTEÚDOS -->
+    <section class="secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">AINDA HÁ MAIS PORTÕES</span>
+                <h2>Mais conteúdos</h2>
+                <p class="subtitulo">Além dos quatro caminhos, guardo outras passagens. Algumas abertas para todos, outras só para quem diz o próprio nome.</p>
+            </div>
+
+            <div class="grade-conteudos">
+                <a href="mito.html" class="conteudo">
+                    <span class="etiqueta">ABERTO</span>
+                    <h3>O mito no seu dia a dia</h3>
+                    <p>Nike, pânico, eco, calcanhar de Aquiles: palavras, expressões e marcas que vieram dos mitos.</p>
+                </a>
+                <a href="historia.html" class="conteudo">
+                    <span class="etiqueta">ABERTO</span>
+                    <h3>História do Dia</h3>
+                    <p>Um mito curto por dia, com uma pergunta no final para ver se você prestou atenção.</p>
+                </a>
+                <a href="arquivo.html" class="conteudo">
+                    <span class="etiqueta">ABERTO</span>
+                    <h3>Arquivo de histórias</h3>
+                    <p>Todas as histórias que já passaram por aqui, guardadas para ler quando quiser.</p>
+                </a>
+                <a href="desafio.html" class="conteudo">
+                    <span class="etiqueta">ABERTO</span>
+                    <h3>Quizzes</h3>
+                    <p>Olimpianos e Heróis abertos para todos. Os outros, só atravessando o portão.</p>
+                </a>
+            </div>
+
+            <!-- O QUE O LOGIN LIBERA -->
+            <div id="bloco_login" class="com-login">
+                <div>
+                    <span class="etiqueta etiqueta-ambar">SÓ PARA QUEM TEM CONTA</span>
+                    <h2>Entre e sua jornada fica guardada</h2>
+                    <p>Com login, eu lembro de tudo o que você fez e te mostro o quanto já avançou.</p>
+                    <div class="botoes">
+                        <a href="cadastro.html" class="botao">Criar minha conta →</a>
+                        <a href="login.html" class="botao-borda">Já tenho conta</a>
+                    </div>
+                </div>
+                <ul class="lista-login">
+                    <li><span class="numero">I</span><div><b>Seu perfil com gráficos</b><p>Média de acertos, melhor nota e a sua evolução nos últimos quizzes.</p></div></li>
+                    <li><span class="numero">II</span><div><b>Teste do Deus Patrono</b><p>Descubra qual deus olha por você. Ele vira seu avatar.</p></div></li>
+                    <li><span class="numero">III</span><div><b>Os 12 Trabalhos</b><p>Conquistas que te levam de Mortal a Herói, Semideus e Olimpiano.</p></div></li>
+                    <li><span class="numero">IV</span><div><b>Quizzes exclusivos</b><p>Criaturas, Lugares, Titãs, o quiz do seu patrono e o Desafio do Olimpo.</p></div></li>
+                    <li><span class="numero">V</span><div><b>Sequência de leitura</b><p>Leia a história do dia e veja quantos dias seguidos você aguenta.</p></div></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <!-- CHAMADA FINAL -->
     <section id="portao" class="secao chamada">
         <div class="container">
@@ -191,7 +246,7 @@
             </div>
             <div>
                 <span class="rodape-titulo">PROJETO</span>
-                <a href="painel.html">Meu painel</a>
+                <a href="perfil.html">Meu perfil</a>
                 <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
             </div>
         </div>
@@ -212,6 +267,7 @@
         <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
     </div>
 
+    <script src="js/menu.js"></script>
     <script src="js/cerberus.js"></script>
     <script src="js/index.js"></script>
 </body>
