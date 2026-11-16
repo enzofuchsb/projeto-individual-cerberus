@@ -1,11 +1,3 @@
-/* Listas (Deuses, Heróis, Criaturas, Lugares) e páginas de detalhe (Hades, Héracles...)
-   Usar junto com o estilo.css (ele já tem menu, rodapé, botões, .container e .secao):
-   <link rel="stylesheet" href="css/estilo.css">
-   <link rel="stylesheet" href="css/deuses.css">
-*/
-
-/* FILTROS (Olimpianos, Submundo, Primordiais...) */
-
 .filtros {
     display: flex;
     flex-wrap: wrap;
@@ -32,8 +24,6 @@
     color: #ffffff;
 }
 
-/* GRADE DE CARTÕES */
-
 .grade-deuses {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -50,7 +40,6 @@
     text-decoration: none;
 }
 
-/* só os cartões que são links (têm página própria) sobem ao passar o mouse */
 a.cartao-deus:hover {
     transform: translateY(-5px);
     box-shadow: 0 20px 45px #1a1c2117;
@@ -64,7 +53,6 @@ a.cartao-deus:hover {
     background-color: #121417;
 }
 
-/* bolinha com a seta no canto da foto: aparece só nos cartões com página */
 .seta {
     position: absolute;
     top: 14px;
@@ -89,7 +77,6 @@ a.cartao-deus:hover {
     margin: 0 0 4px 0;
 }
 
-/* nome em grego, ex.: Ζεύς */
 .nome-grego {
     color: #c8693a;
     font-family: 'Cinzel', serif;
@@ -102,7 +89,6 @@ a.cartao-deus:hover {
     margin: 0 0 16px 0;
 }
 
-/* pequenas etiquetas com símbolos: raio, águia, tridente... */
 .simbolos {
     display: flex;
     flex-wrap: wrap;
@@ -116,8 +102,6 @@ a.cartao-deus:hover {
     font-size: 12px;
     color: #4e4a44;
 }
-
-/* ============ PÁGINA DE DETALHE ============ */
 
 .detalhe {
     background-color: #121417;
@@ -182,8 +166,6 @@ a.cartao-deus:hover {
     border-color: #c8693a;
 }
 
-/* FICHA (pais, irmãos, símbolos, nome romano...) */
-
 .grade-ficha {
     display: grid;
     grid-template-columns: 1.3fr 0.7fr;
@@ -208,8 +190,6 @@ a.cartao-deus:hover {
     font-size: 14px;
 }
 
-/* MITOS */
-
 .faixa-mitos {
     background-color: #dfe1e3;
 }
@@ -220,8 +200,6 @@ a.cartao-deus:hover {
     gap: 22px;
 }
 
-/* cada mito é uma coluna: o link "Ler mais" vai sempre para o fim do cartão,
-   então os cartões ficam alinhados mesmo com títulos de tamanhos diferentes */
 .mito {
     display: flex;
     flex-direction: column;
@@ -269,12 +247,10 @@ a.cartao-deus:hover {
     font-size: 23px;
 }
 
-/* seção colada na anterior, sem o espaço de cima */
 .sem-topo {
     padding-top: 0;
 }
 
-/* lista dos doze trabalhos de Héracles */
 .trabalhos {
     display: flex;
     flex-wrap: wrap;
@@ -319,8 +295,6 @@ a.cartao-deus:hover {
     margin: 0;
     padding-left: 22px;
 }
-
-/* CELULAR */
 
 @media (max-width: 800px) {
     .grade-deuses,
@@ -383,7 +357,6 @@ a.cartao-deus:hover {
     }
 }
 
-/* botão "Marcar como lida", ao lado do favorito */
 #botao_lida {
     margin: 10px 0 0 8px;
 }

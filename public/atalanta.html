@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Atalanta</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/deuses.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html">Deuses</a>
+                <a href="herois.html" class="ativo">Heróis</a>
+                <a href="criaturas.html">Criaturas</a>
+                <a href="lugares.html">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+                <a href="mito.html">Mito no dia a dia</a>
+            </nav>
+            <a id="botao_entrar" href="login.html" class="botao-borda">Entrar</a>
+        </div>
+    </header>
+
+    <section class="detalhe">
+        <div class="container">
+            <div class="detalhe-foto">
+                <img src="img/herois/atalanta.webp" alt="Estátua de Atalanta">
+                <span class="selo">HEROÍNA</span>
+            </div>
+            <div class="detalhe-texto">
+                <span class="etiqueta etiqueta-ambar">ARQUIVO · HERÓIS</span>
+                <h1>Atalanta</h1>
+                <p class="nome-grego">Ἀταλάντη</p>
+                <p>Abandonada pelo pai, que queria um filho homem, foi amamentada por uma ursa e criada por caçadores. Tornou-se a caçadora mais veloz da Grécia.</p>
+                <button id="botao_favorito" class="favorito" onclick="favoritar()">♡ Adicionar aos favoritos</button>
+                <button id="botao_lida" class="favorito" onclick="marcarLeitura('atalanta')">✓ Marcar como lida</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <section class="secao">
+        <div class="container grade-ficha">
+            <div>
+                <div class="titulo-secao">
+                    <span class="etiqueta">FICHA DO GUARDIÃO</span>
+                    <h2>O que os antigos registraram</h2>
+                </div>
+                <div class="ficha">
+                    <div class="ficha-linha">
+                        <span>Pai</span>
+                        <strong>Íaso (ou Esqueneu, em outra versão)</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Criada por</span>
+                        <strong>Uma ursa e, depois, caçadores</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Deusa</span>
+                        <strong>Ártemis</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Feito</span>
+                        <strong>Feriu primeiro o javali de Cálidon</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Marido</span>
+                        <strong>Hipômenes (ou Melânion)</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Símbolos</span>
+                        <strong>Arco e maçãs de ouro</strong>
+                    </div>
+                </div>
+            </div>
+            <p class="fala-guia fala-clara">Uma mortal que corria mais que qualquer homem. Eu tenho quatro patas e três cabeças, e mesmo assim não apostaria corrida com ela.</p>
+        </div>
+    </section>
+
+    <section class="secao faixa-mitos">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">RELATOS PRESERVADOS</span>
+                <h2>Seus mitos</h2>
+            </div>
+            <div class="grade-mitos">
+            <article class="mito">
+                <span class="numero">01</span>
+                <h3>Criada por uma ursa</h3>
+                <p>O pai queria um menino e deixou a recém-nascida no monte. Uma ursa a amamentou até que caçadores a encontraram e a criaram entre eles.</p>
+                <span class="fonte">Apolodoro, Biblioteca III</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">02</span>
+                <h3>O javali de Cálidon</h3>
+                <p>Os maiores heróis se reuniram para caçar o javali enviado por Ártemis. A primeira flecha a acertá-lo foi a de Atalanta, e Meleagro lhe deu a pele como prêmio.</p>
+                <span class="fonte">Apolodoro, Biblioteca I; Ovídio, Metamorfoses VIII</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">03</span>
+                <h3>A corrida das maçãs</h3>
+                <p>Atalanta só se casaria com quem a vencesse na corrida. Quem perdia, morria. Hipômenes jogou três maçãs de ouro, presente de Afrodite. Ela parou para pegá-las e perdeu.</p>
+                <span class="fonte">Ovídio, Metamorfoses X</span>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao faixa-citacao">
+        <div class="container">
+            <blockquote class="citacao">
+                <p>“Exposta pelo pai, que desejava filhos homens, foi amamentada por uma ursa, até que caçadores a encontraram e a criaram.”</p>
+                <cite>Apolodoro, Biblioteca III (tradução livre)</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">CONTINUE A JORNADA</span>
+                <h2>Relacionados</h2>
+            </div>
+            <div class="grade-deuses">
+            <a href="jasao.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/herois/jasao.webp" alt="Estátua de Jasão, de Bertel Thorvaldsen">
+                <div class="cartao-deus-texto">
+                    <h3>Jasão</h3>
+                    <p class="nome-grego">Ἰάσων</p>
+                    <p class="dominio">Liderou os Argonautas na busca pelo Velocino de Ouro.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">Velocino de Ouro</span>
+                        <span class="simbolo">Argo</span>
+                    </div>
+                </div>
+            </a>
+            <a href="teseu.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/herois/teseu.webp" alt="Estátua de Teseu lutando com o Minotauro">
+                <div class="cartao-deus-texto">
+                    <h3>Teseu</h3>
+                    <p class="nome-grego">Θησεύς</p>
+                    <p class="dominio">Herói de Atenas que matou o Minotauro com a ajuda de Ariadne.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">fio de Ariadne</span>
+                        <span class="simbolo">Labirinto</span>
+                    </div>
+                </div>
+            </a>
+            <a href="heracles.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/herois/heracles.webp" alt="Estátua de Héracles (Héracles Farnese)">
+                <div class="cartao-deus-texto">
+                    <h3>Héracles</h3>
+                    <p class="nome-grego">Ἡρακλῆς</p>
+                    <p class="dominio">Filho de Zeus e Alcmena, cumpriu os doze trabalhos. No último, me levou do Submundo.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">clava</span>
+                        <span class="simbolo">pele de leão</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+                <a href="arquivo.html">Arquivo de histórias</a>
+                <a href="desafio.html">Desafio do Guardião</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="perfil.html">Meu perfil</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/cerberus.js"></script>
+    <script src="js/favorito.js"></script>
+    <script src="js/leitura.js"></script>
+</body>
+</html>

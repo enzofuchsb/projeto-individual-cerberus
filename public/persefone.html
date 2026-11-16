@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Perséfone</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/deuses.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html" class="ativo">Deuses</a>
+                <a href="herois.html">Heróis</a>
+                <a href="criaturas.html">Criaturas</a>
+                <a href="lugares.html">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+                <a href="mito.html">Mito no dia a dia</a>
+            </nav>
+            <a id="botao_entrar" href="login.html" class="botao-borda">Entrar</a>
+        </div>
+    </header>
+
+    <section class="detalhe">
+        <div class="container">
+            <div class="detalhe-foto">
+                <img src="img/deuses/persefone.webp" alt="Estátua de Perséfone">
+                <span class="selo">DEUSA</span>
+            </div>
+            <div class="detalhe-texto">
+                <span class="etiqueta etiqueta-ambar">ARQUIVO · DEUSES</span>
+                <h1>Perséfone</h1>
+                <p class="nome-grego">Περσεφόνη</p>
+                <p>Filha de Zeus e Deméter. Colhia flores quando Hades a levou para o Submundo. Hoje é a rainha dos mortos: passa parte do ano embaixo da terra e parte com a mãe.</p>
+                <button id="botao_favorito" class="favorito" onclick="favoritar()">♡ Adicionar aos favoritos</button>
+                <button id="botao_lida" class="favorito" onclick="marcarLeitura('persefone')">✓ Marcar como lida</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <section class="secao">
+        <div class="container grade-ficha">
+            <div>
+                <div class="titulo-secao">
+                    <span class="etiqueta">FICHA DO GUARDIÃO</span>
+                    <h2>O que os antigos registraram</h2>
+                </div>
+                <div class="ficha">
+                    <div class="ficha-linha">
+                        <span>Pais</span>
+                        <strong>Zeus e Deméter</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Marido</span>
+                        <strong>Hades</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Outro nome</span>
+                        <strong>Core, “a moça”</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Reino</span>
+                        <strong>O Submundo, ao lado de Hades</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Nome romano</span>
+                        <strong>Prosérpina</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Símbolos</span>
+                        <strong>Romã, flores e tocha</strong>
+                    </div>
+                </div>
+            </div>
+            <p class="fala-guia fala-clara">É a minha rainha. Quando ela desce, o mundo lá em cima esfria. Quando sobe, tudo floresce. Eu abano o rabo nas duas vezes.</p>
+        </div>
+    </section>
+
+    <section class="secao faixa-mitos">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">RELATOS PRESERVADOS</span>
+                <h2>Seus mitos</h2>
+            </div>
+            <div class="grade-mitos">
+            <article class="mito">
+                <span class="numero">01</span>
+                <h3>O rapto</h3>
+                <p>Perséfone colhia flores num campo quando a terra se abriu. Hades surgiu em sua carruagem de ouro e a levou para o Submundo.</p>
+                <a href="historia.html" class="fonte">Ler a história →</a>
+            </article>
+
+            <article class="mito">
+                <span class="numero">02</span>
+                <h3>As sementes de romã</h3>
+                <p>Antes de deixá-la voltar, Hades lhe deu sementes de romã. Quem come no reino dos mortos fica preso a ele, e por isso ela volta para lá todos os anos.</p>
+                <span class="fonte">Hino Homérico a Deméter</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">03</span>
+                <h3>O pedido de Orfeu</h3>
+                <p>Quando Orfeu cantou pedindo Eurídice de volta, Perséfone se comoveu. Os reis do Submundo aceitaram devolvê-la, com uma condição.</p>
+                <a href="orfeu.html" class="fonte">Conhecer Orfeu →</a>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao faixa-citacao">
+        <div class="container">
+            <blockquote class="citacao">
+                <p>“Enquanto estiveres aqui, reinarás sobre tudo o que vive e se move, e terás as maiores honras entre os imortais.”</p>
+                <cite>Hades a Perséfone, no Hino Homérico a Deméter (tradução livre)</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">CONTINUE A JORNADA</span>
+                <h2>Relacionados</h2>
+            </div>
+            <div class="grade-deuses">
+            <a href="hades.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/deuses/hades.webp" alt="Estátua de Hades">
+                <div class="cartao-deus-texto">
+                    <h3>Hades</h3>
+                    <p class="nome-grego">ᾍδης</p>
+                    <p class="dominio">Soberano justo do mundo dos mortos.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">cetro</span>
+                        <span class="simbolo">chave</span>
+                    </div>
+                </div>
+            </a>
+            <a href="demeter.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/deuses/demeter.webp" alt="Estátua de Deméter">
+                <div class="cartao-deus-texto">
+                    <h3>Deméter</h3>
+                    <p class="nome-grego">Δημήτηρ</p>
+                    <p class="dominio">Deusa das colheitas e da terra cultivada.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">trigo</span>
+                        <span class="simbolo">tocha</span>
+                    </div>
+                </div>
+            </a>
+            <a href="orfeu.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/herois/orfeu.webp" alt="Relevo de Orfeu, Eurídice e Hermes">
+                <div class="cartao-deus-texto">
+                    <h3>Orfeu</h3>
+                    <p class="nome-grego">Ὀρφεύς</p>
+                    <p class="dominio">Músico que desceu ao Submundo para buscar Eurídice. Até eu parei para ouvir.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">lira</span>
+                        <span class="simbolo">Eurídice</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+                <a href="arquivo.html">Arquivo de histórias</a>
+                <a href="desafio.html">Desafio do Guardião</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="perfil.html">Meu perfil</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/cerberus.js"></script>
+    <script src="js/favorito.js"></script>
+    <script src="js/leitura.js"></script>
+</body>
+</html>

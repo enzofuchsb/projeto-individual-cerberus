@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Orfeu</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/deuses.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html">Deuses</a>
+                <a href="herois.html" class="ativo">Heróis</a>
+                <a href="criaturas.html">Criaturas</a>
+                <a href="lugares.html">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+                <a href="mito.html">Mito no dia a dia</a>
+            </nav>
+            <a id="botao_entrar" href="login.html" class="botao-borda">Entrar</a>
+        </div>
+    </header>
+
+    <section class="detalhe">
+        <div class="container">
+            <div class="detalhe-foto">
+                <img src="img/herois/orfeu.webp" alt="Relevo de Orfeu, Eurídice e Hermes">
+                <span class="selo">HERÓI</span>
+            </div>
+            <div class="detalhe-texto">
+                <span class="etiqueta etiqueta-ambar">ARQUIVO · HERÓIS</span>
+                <h1>Orfeu</h1>
+                <p class="nome-grego">Ὀρφεύς</p>
+                <p>Filho da musa Calíope, o maior músico da Grécia. Sua lira acalmava feras e movia árvores e pedras. Quando a esposa Eurídice morreu, ele desceu vivo ao Submundo para buscá-la.</p>
+                <button id="botao_favorito" class="favorito" onclick="favoritar()">♡ Adicionar aos favoritos</button>
+                <button id="botao_lida" class="favorito" onclick="marcarLeitura('orfeu')">✓ Marcar como lida</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <section class="secao">
+        <div class="container grade-ficha">
+            <div>
+                <div class="titulo-secao">
+                    <span class="etiqueta">FICHA DO GUARDIÃO</span>
+                    <h2>O que os antigos registraram</h2>
+                </div>
+                <div class="ficha">
+                    <div class="ficha-linha">
+                        <span>Pais</span>
+                        <strong>A musa Calíope e Eagro (ou Apolo)</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Origem</span>
+                        <strong>Trácia</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Instrumento</span>
+                        <strong>Lira</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Esposa</span>
+                        <strong>Eurídice</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Viagem</span>
+                        <strong>Foi um dos Argonautas</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Depois da morte</span>
+                        <strong>Sua lira virou uma constelação</strong>
+                    </div>
+                </div>
+            </div>
+            <p class="fala-guia fala-clara">Confesso: eu dormi. Três cabeças, seis orelhas, e a música dele entrou por todas. Meu senhor não pode reclamar: ele também não conseguiu dizer não.</p>
+        </div>
+    </section>
+
+    <section class="secao faixa-mitos">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">RELATOS PRESERVADOS</span>
+                <h2>Seus mitos</h2>
+            </div>
+            <div class="grade-mitos">
+            <article class="mito">
+                <span class="numero">01</span>
+                <h3>A descida</h3>
+                <p>Eurídice morreu picada por uma serpente. Orfeu desceu ao Submundo e cantou diante de Hades e Perséfone. Pela primeira vez, as Fúrias choraram.</p>
+                <span class="fonte">Ovídio, Metamorfoses X</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">02</span>
+                <h3>O olhar para trás</h3>
+                <p>Os reis do Submundo deixaram Eurídice voltar, desde que Orfeu não olhasse para trás até sair. Quase na saída, ele olhou, e ela se perdeu para sempre.</p>
+                <span class="fonte">Virgílio, Geórgicas IV; Ovídio, Metamorfoses X</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">03</span>
+                <h3>As sereias</h3>
+                <p>Na viagem dos Argonautas, Orfeu tocou a lira mais alto que o canto das sereias, e o navio passou sem que os heróis se jogassem ao mar.</p>
+                <a href="jasao.html" class="fonte">Conhecer Jasão →</a>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao faixa-citacao">
+        <div class="container">
+            <blockquote class="citacao">
+                <p>“Já não estavam longe da superfície quando, com medo de perdê-la e ansioso por vê-la, o amante voltou os olhos. No mesmo instante, ela caiu de volta.”</p>
+                <cite>Ovídio, Metamorfoses, livro X (tradução livre)</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">CONTINUE A JORNADA</span>
+                <h2>Relacionados</h2>
+            </div>
+            <div class="grade-deuses">
+            <a href="persefone.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/deuses/persefone.webp" alt="Estátua de Perséfone">
+                <div class="cartao-deus-texto">
+                    <h3>Perséfone</h3>
+                    <p class="nome-grego">Περσεφόνη</p>
+                    <p class="dominio">Rainha do Submundo, esposa de Hades.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">romã</span>
+                        <span class="simbolo">flores</span>
+                    </div>
+                </div>
+            </a>
+            <a href="cerberus.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/criaturas/cerbero.webp" alt="Estátua de Cérbero, de Gortina">
+                <div class="cartao-deus-texto">
+                    <h3>Cérbero</h3>
+                    <p class="nome-grego">Κέρβερος</p>
+                    <p class="dominio">Cão que guarda o Submundo. Hesíodo fala em cinquenta cabeças; a maioria dos autores, em três.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">Submundo</span>
+                        <span class="simbolo">Hades</span>
+                    </div>
+                </div>
+            </a>
+            <a href="jasao.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/herois/jasao.webp" alt="Estátua de Jasão, de Bertel Thorvaldsen">
+                <div class="cartao-deus-texto">
+                    <h3>Jasão</h3>
+                    <p class="nome-grego">Ἰάσων</p>
+                    <p class="dominio">Liderou os Argonautas na busca pelo Velocino de Ouro.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">Velocino de Ouro</span>
+                        <span class="simbolo">Argo</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+                <a href="arquivo.html">Arquivo de histórias</a>
+                <a href="desafio.html">Desafio do Guardião</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="perfil.html">Meu perfil</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/cerberus.js"></script>
+    <script src="js/favorito.js"></script>
+    <script src="js/leitura.js"></script>
+</body>
+</html>

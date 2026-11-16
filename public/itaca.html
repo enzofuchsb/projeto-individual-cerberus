@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Ítaca</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/deuses.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html">Deuses</a>
+                <a href="herois.html">Heróis</a>
+                <a href="criaturas.html">Criaturas</a>
+                <a href="lugares.html" class="ativo">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+                <a href="mito.html">Mito no dia a dia</a>
+            </nav>
+            <a id="botao_entrar" href="login.html" class="botao-borda">Entrar</a>
+        </div>
+    </header>
+
+    <section class="detalhe">
+        <div class="container">
+            <div class="detalhe-foto">
+                <img src="img/lugares/itaca.webp" alt="Vista da ilha de Ítaca">
+                <span class="selo">LUGAR</span>
+            </div>
+            <div class="detalhe-texto">
+                <span class="etiqueta etiqueta-ambar">ARQUIVO · LUGARES</span>
+                <h1>Ítaca</h1>
+                <p class="nome-grego">Ἰθάκη</p>
+                <p>Pequena ilha do mar Jônico, reino de Odisseu. Foi para voltar a ela, à esposa Penélope e ao filho Telêmaco que o herói enfrentou dez anos de viagem.</p>
+                <button id="botao_favorito" class="favorito" onclick="favoritar()">♡ Adicionar aos favoritos</button>
+                <button id="botao_lida" class="favorito" onclick="marcarLeitura('itaca')">✓ Marcar como lida</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <section class="secao">
+        <div class="container grade-ficha">
+            <div>
+                <div class="titulo-secao">
+                    <span class="etiqueta">FICHA DO GUARDIÃO</span>
+                    <h2>O que os antigos registraram</h2>
+                </div>
+                <div class="ficha">
+                    <div class="ficha-linha">
+                        <span>Tipo</span>
+                        <strong>Ilha</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Onde fica</span>
+                        <strong>Mar Jônico, oeste da Grécia</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Rei</span>
+                        <strong>Odisseu</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Rainha</span>
+                        <strong>Penélope</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Poema</span>
+                        <strong>Odisseia</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Debate</span>
+                        <strong>Alguns estudiosos acham que a Ítaca de Homero era outra ilha da região</strong>
+                    </div>
+                </div>
+            </div>
+            <p class="fala-guia fala-clara">Na casa de Odisseu havia um cão chamado Argos. Esperou o dono por vinte anos, foi o primeiro a reconhecê-lo disfarçado, abanou o rabo e morreu. Esse eu recebi no portão com respeito.</p>
+        </div>
+    </section>
+
+    <section class="secao faixa-mitos">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">RELATOS PRESERVADOS</span>
+                <h2>Seus mitos</h2>
+            </div>
+            <div class="grade-mitos">
+            <article class="mito">
+                <span class="numero">01</span>
+                <h3>O tear de Penélope</h3>
+                <p>Com Odisseu longe, os pretendentes exigiam que Penélope escolhesse um novo marido. Ela prometeu decidir quando terminasse um tecido. De dia, tecia; de noite, desfazia.</p>
+                <span class="fonte">Homero, Odisseia, canto II</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">02</span>
+                <h3>A prova do arco</h3>
+                <p>Penélope prometeu casar com quem armasse o arco de Odisseu e atravessasse doze machados com uma flecha. Só o mendigo recém-chegado conseguiu: era o próprio rei.</p>
+                <a href="odisseu.html" class="fonte">Conhecer Odisseu →</a>
+            </article>
+
+            <article class="mito">
+                <span class="numero">03</span>
+                <h3>O segredo da cama</h3>
+                <p>Para ter certeza de que era o marido, Penélope pediu que mudassem a cama de lugar. Odisseu se irritou: ele mesmo a tinha construído em volta de uma oliveira viva. Só os dois sabiam disso.</p>
+                <span class="fonte">Homero, Odisseia, canto XXIII</span>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao faixa-citacao">
+        <div class="container">
+            <blockquote class="citacao">
+                <p>“É áspera, mas boa criadora de jovens; e eu não consigo ver nada mais doce do que a própria terra.”</p>
+                <cite>Odisseu, em Homero, Odisseia, canto IX (tradução livre)</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">CONTINUE A JORNADA</span>
+                <h2>Relacionados</h2>
+            </div>
+            <div class="grade-deuses">
+            <a href="odisseu.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/herois/odisseu.webp" alt="Cabeça de Odisseu, de Sperlonga">
+                <div class="cartao-deus-texto">
+                    <h3>Odisseu</h3>
+                    <p class="nome-grego">Ὀδυσσεύς</p>
+                    <p class="dominio">Rei de Ítaca. Levou dez anos para voltar para casa depois da guerra.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">cavalo de madeira</span>
+                        <span class="simbolo">Odisseia</span>
+                    </div>
+                </div>
+            </a>
+            <a href="troia.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/lugares/troia.webp" alt="Muralhas de Troia, na Turquia">
+                <div class="cartao-deus-texto">
+                    <h3>Troia</h3>
+                    <p class="nome-grego">Τροία</p>
+                    <p class="dominio">Cidade do rei Príamo, cercada pelos gregos por dez anos.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">Príamo</span>
+                        <span class="simbolo">cavalo de madeira</span>
+                    </div>
+                </div>
+            </a>
+            <a href="atena.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/deuses/atena.webp" alt="Estátua de Atena">
+                <div class="cartao-deus-texto">
+                    <h3>Atena</h3>
+                    <p class="nome-grego">Ἀθηνᾶ</p>
+                    <p class="dominio">Deusa da sabedoria e da estratégia.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">coruja</span>
+                        <span class="simbolo">oliveira</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+                <a href="arquivo.html">Arquivo de histórias</a>
+                <a href="desafio.html">Desafio do Guardião</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="perfil.html">Meu perfil</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/cerberus.js"></script>
+    <script src="js/favorito.js"></script>
+    <script src="js/leitura.js"></script>
+</body>
+</html>

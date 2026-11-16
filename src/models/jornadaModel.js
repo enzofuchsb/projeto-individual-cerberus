@@ -1,17 +1,15 @@
 var database = require("../database/config");
 
-// ===== GRAVAR =====
-
-// guarda o patrono e os pontos de cada deus (refazer o teste só troca os valores)
-function salvarPatrono(idUsuario, patrono, pontos) {
+function salvarPatrono(idUsuario, patrono, pontosZeus, pontosPoseidon, pontosHades, pontosAtena, pontosAres, pontosApolo) {
+    console.log("ACESSEI O JORNADA MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function salvarPatrono():", idUsuario, patrono);
     var instrucaoSql = `
         UPDATE usuario SET patrono = '${patrono}',
-            pontos_zeus = ${pontos.zeus},
-            pontos_poseidon = ${pontos.poseidon},
-            pontos_hades = ${pontos.hades},
-            pontos_atena = ${pontos.atena},
-            pontos_ares = ${pontos.ares},
-            pontos_apolo = ${pontos.apolo}
+            pontos_zeus = ${pontosZeus},
+            pontos_poseidon = ${pontosPoseidon},
+            pontos_hades = ${pontosHades},
+            pontos_atena = ${pontosAtena},
+            pontos_ares = ${pontosAres},
+            pontos_apolo = ${pontosApolo}
         WHERE id = ${idUsuario};
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
@@ -19,6 +17,7 @@ function salvarPatrono(idUsuario, patrono, pontos) {
 }
 
 function registrarTentativa(idUsuario, categoria, acertos, total) {
+    console.log("ACESSEI O JORNADA MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function registrarTentativa():", idUsuario, categoria, acertos, total);
     var instrucaoSql = `
         INSERT INTO tentativa_quiz (fk_usuario, categoria, acertos, total)
         VALUES (${idUsuario}, '${categoria}', ${acertos}, ${total});
@@ -27,8 +26,8 @@ function registrarTentativa(idUsuario, categoria, acertos, total) {
     return database.executar(instrucaoSql);
 }
 
-// INSERT IGNORE: se a pessoa já leu essa história, o UNIQUE barra e o MySQL só ignora
 function registrarLeitura(idUsuario, historia) {
+    console.log("ACESSEI O JORNADA MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function registrarLeitura():", idUsuario, historia);
     var instrucaoSql = `
         INSERT IGNORE INTO leitura_historia (fk_usuario, historia) VALUES (${idUsuario}, '${historia}');
     `;
@@ -36,12 +35,8 @@ function registrarLeitura(idUsuario, historia) {
     return database.executar(instrucaoSql);
 }
 
-
-// ===== BUSCAR PARA O PERFIL =====
-
-// tudo o que o perfil precisa, em uma linha só
-// cada (SELECT ...) é uma pergunta pequena ao banco, e a resposta vira uma coluna
 function buscarDados(idUsuario) {
+    console.log("ACESSEI O JORNADA MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function buscarDados():", idUsuario);
     var instrucaoSql = `
         SELECT nome, patrono,
                pontos_zeus, pontos_poseidon, pontos_hades, pontos_atena, pontos_ares, pontos_apolo,
@@ -60,8 +55,8 @@ function buscarDados(idUsuario) {
     return database.executar(instrucaoSql);
 }
 
-// % de acerto dos últimos 10 quizzes (do mais novo para o mais antigo)
 function buscarEvolucao(idUsuario) {
+    console.log("ACESSEI O JORNADA MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function buscarEvolucao():", idUsuario);
     var instrucaoSql = `
         SELECT ROUND(acertos * 100 / total) AS porcentagem
           FROM tentativa_quiz

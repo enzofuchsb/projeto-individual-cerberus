@@ -13,7 +13,6 @@
 </head>
 <body>
 
-    <!-- MENU -->
     <header class="topo">
         <div class="container menu">
             <a href="index.html" class="logo">
@@ -36,7 +35,6 @@
 
     <main class="container area-perfil">
 
-        <!-- MENU LATERAL -->
         <aside class="menu-lateral">
             <span class="etiqueta etiqueta-ambar">MINHA JORNADA</span>
             <a href="perfil.html" class="item-lateral">Visão geral</a>
@@ -45,7 +43,7 @@
             <a href="quizzes.html" class="item-lateral">Quizzes</a>
             <a href="historia.html" class="item-lateral">História do dia</a>
             <a href="configuracoes.html" class="item-lateral">Configurações</a>
-            <button class="item-lateral item-sair" onclick="sair()">Sair</button>
+            <button class="item-lateral item-sair" onclick="limparSessao()">Sair</button>
         </aside>
 
         <section class="conteudo-perfil">
@@ -54,12 +52,10 @@
             <p class="texto-apagado">Héracles precisou de doze trabalhos para ganhar a imortalidade. Os seus valem títulos: Mortal, Herói, Semideus e, no fim, Olimpiano.</p>
             <p id="resumo_trabalhos" class="link-terracota"></p>
 
-            <!-- os cartões são montados pelo trabalhos.js -->
             <div id="lista_trabalhos" class="grade-trabalhos"></div>
         </section>
     </main>
 
-    <!-- RODAPÉ -->
     <footer class="rodape">
         <div class="container">
             <div class="direitos">
@@ -69,7 +65,6 @@
         </div>
     </footer>
 
-    <!-- MINI CERBERUS: clique nele para ele falar -->
     <div class="mini-cerberus">
         <p id="balao_cerberus" class="balao">
             <span id="texto_balao"></span>

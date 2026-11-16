@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Poseidon</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/deuses.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html" class="ativo">Deuses</a>
+                <a href="herois.html">Heróis</a>
+                <a href="criaturas.html">Criaturas</a>
+                <a href="lugares.html">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+                <a href="mito.html">Mito no dia a dia</a>
+            </nav>
+            <a id="botao_entrar" href="login.html" class="botao-borda">Entrar</a>
+        </div>
+    </header>
+
+    <section class="detalhe">
+        <div class="container">
+            <div class="detalhe-foto">
+                <img src="img/deuses/poseidon.webp" alt="Estátua de Poseidon">
+                <span class="selo">DEUS</span>
+            </div>
+            <div class="detalhe-texto">
+                <span class="etiqueta etiqueta-ambar">ARQUIVO · DEUSES</span>
+                <h1>Poseidon</h1>
+                <p class="nome-grego">Ποσειδῶν</p>
+                <p>Filho de Cronos e Reia, irmão de Zeus e de Hades. Na partilha do mundo, ficou com o mar. Com o tridente, levanta tempestades e faz a terra tremer.</p>
+                <button id="botao_favorito" class="favorito" onclick="favoritar()">♡ Adicionar aos favoritos</button>
+                <button id="botao_lida" class="favorito" onclick="marcarLeitura('poseidon')">✓ Marcar como lida</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <section class="secao">
+        <div class="container grade-ficha">
+            <div>
+                <div class="titulo-secao">
+                    <span class="etiqueta">FICHA DO GUARDIÃO</span>
+                    <h2>O que os antigos registraram</h2>
+                </div>
+                <div class="ficha">
+                    <div class="ficha-linha">
+                        <span>Pais</span>
+                        <strong>Cronos e Reia</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Irmãos</span>
+                        <strong>Zeus, Hades, Hera, Deméter e Héstia</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Esposa</span>
+                        <strong>Anfitrite</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Reino</span>
+                        <strong>O mar</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Nome romano</span>
+                        <strong>Netuno</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Símbolos</span>
+                        <strong>Tridente, cavalo e golfinho</strong>
+                    </div>
+                </div>
+            </div>
+            <p class="fala-guia fala-clara">Os gregos o chamavam de “Abalador da terra”. Quando o chão treme aqui embaixo, eu já sei: é o irmão do meu senhor de mau humor.</p>
+        </div>
+    </section>
+
+    <section class="secao faixa-mitos">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">RELATOS PRESERVADOS</span>
+                <h2>Seus mitos</h2>
+            </div>
+            <div class="grade-mitos">
+            <article class="mito">
+                <span class="numero">01</span>
+                <h3>A disputa por Atenas</h3>
+                <p>Poseidon bateu o tridente na Acrópole e fez brotar uma fonte de água salgada. Atena plantou uma oliveira. Os deuses que julgavam preferiram a oliveira, e a cidade ficou com ela.</p>
+                <span class="fonte">Apolodoro, Biblioteca III</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">02</span>
+                <h3>A ira contra Odisseu</h3>
+                <p>Odisseu cegou o ciclope Polifemo, filho de Poseidon. O deus se vingou com tempestades e naufrágios, e a volta para Ítaca levou dez anos.</p>
+                <a href="odisseu.html" class="fonte">Conhecer Odisseu →</a>
+            </article>
+
+            <article class="mito">
+                <span class="numero">03</span>
+                <h3>O susto de Hades</h3>
+                <p>Na batalha dos deuses em Troia, Poseidon sacudiu a terra com tanta força que Hades pulou do trono, com medo de o chão se abrir e mostrar o seu reino.</p>
+                <span class="fonte">Homero, Ilíada, canto XX</span>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao faixa-citacao">
+        <div class="container">
+            <blockquote class="citacao">
+                <p>“Os deuses te deram duas honras, ó Abalador da terra: ser domador de cavalos e salvador de navios.”</p>
+                <cite>Hino Homérico 22, a Poseidon (tradução livre)</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">CONTINUE A JORNADA</span>
+                <h2>Relacionados</h2>
+            </div>
+            <div class="grade-deuses">
+            <a href="zeus.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/deuses/zeus.webp" alt="Estátua de Zeus">
+                <div class="cartao-deus-texto">
+                    <h3>Zeus</h3>
+                    <p class="nome-grego">Ζεύς</p>
+                    <p class="dominio">Senhor dos céus e do trovão.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">raio</span>
+                        <span class="simbolo">águia</span>
+                    </div>
+                </div>
+            </a>
+            <a href="odisseu.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/herois/odisseu.webp" alt="Cabeça de Odisseu, de Sperlonga">
+                <div class="cartao-deus-texto">
+                    <h3>Odisseu</h3>
+                    <p class="nome-grego">Ὀδυσσεύς</p>
+                    <p class="dominio">Rei de Ítaca. Levou dez anos para voltar para casa depois da guerra.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">cavalo de madeira</span>
+                        <span class="simbolo">Odisseia</span>
+                    </div>
+                </div>
+            </a>
+            <a href="atenas.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/lugares/atenas.webp" alt="Partenon, na Acrópole de Atenas">
+                <div class="cartao-deus-texto">
+                    <h3>Atenas</h3>
+                    <p class="nome-grego">Ἀθῆναι</p>
+                    <p class="dominio">Cidade de Atena, que venceu Poseidon na disputa pela Ática.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">Partenon</span>
+                        <span class="simbolo">oliveira</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+                <a href="arquivo.html">Arquivo de histórias</a>
+                <a href="desafio.html">Desafio do Guardião</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="perfil.html">Meu perfil</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/cerberus.js"></script>
+    <script src="js/favorito.js"></script>
+    <script src="js/leitura.js"></script>
+</body>
+</html>

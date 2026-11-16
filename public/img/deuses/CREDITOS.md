@@ -13,3 +13,4 @@ Fotos do Wikimedia Commons, recortadas e convertidas para preto e branco.
 | persefone.webp | [Isis Persephone archmus Heraklion.jpg](https://commons.wikimedia.org/wiki/File:Isis_Persephone_archmus_Heraklion.jpg) | Jebulon | CC0 |
 | cronos.webp | [Head of Kronos or of Saturn (formerly considered "Euclid"), on a Modern Bust.jpg](https://commons.wikimedia.org/wiki/File:Head_of_Kronos_or_of_Saturn_(formerly_considered_%22Euclid%22),_on_a_Modern_Bust.jpg) | MumblerJamie | CC BY-SA 2.0 |
 | gaia.webp | [Gaia detail (5336861813).jpg](https://commons.wikimedia.org/wiki/File:Gaia_detail_(5336861813).jpg) | Miia Ranta from Finland | CC BY-SA 2.0 |
+| caos.webp | [The Untangling of Chaos, or the Creation of the Four Elements LACMA 54.70.1a.jpg](https://commons.wikimedia.org/wiki/File:The_Untangling_of_Chaos,_or_the_Creation_of_the_Four_Elements_LACMA_54.70.1a.jpg) | Hendrik Goltzius (a partir de), 1589 · Los Angeles County Museum of Art | Public domain |

@@ -1,13 +1,8 @@
-/* Desafio do Guardião
-   Usar junto com o estilo.css
-*/
-
 body {
     background-color: #121417;
     color: #ffffff;
 }
 
-/* a página ocupa a tela toda e o conteúdo fica no meio, na vertical */
 .desafio {
     min-height: 100vh;
     max-width: 898px;
@@ -94,7 +89,6 @@ body {
     border-color: #c8693a;
 }
 
-/* a letra A, B, C, D dentro de um círculo */
 .opcao-desafio span {
     flex: none;
     width: 34px;
@@ -117,7 +111,6 @@ body {
     background-color: #b0241b33;
 }
 
-/* resposta do Cerberus depois de cada pergunta. Começa escondida. */
 #resposta {
     display: none;
     grid-template-columns: 70px 1fr auto;
@@ -142,7 +135,6 @@ body {
     color: #cbc5bd;
 }
 
-/* tela final. Começa escondida. */
 #resultado {
     display: none;
     flex: 1;
@@ -167,8 +159,6 @@ body {
     font-size: 18px;
     max-width: 520px;
 }
-
-/* CELULAR */
 
 @media (max-width: 800px) {
     #pergunta {
@@ -200,9 +190,6 @@ body {
     }
 }
 
-/* HISTÓRIA ANTES DO QUIZ */
-
-/* as perguntas começam escondidas: primeiro vem a história */
 #area_perguntas {
     display: none;
 }

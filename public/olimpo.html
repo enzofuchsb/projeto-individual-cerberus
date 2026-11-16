@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Monte Olimpo</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/deuses.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html">Deuses</a>
+                <a href="herois.html">Heróis</a>
+                <a href="criaturas.html">Criaturas</a>
+                <a href="lugares.html" class="ativo">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+                <a href="mito.html">Mito no dia a dia</a>
+            </nav>
+            <a id="botao_entrar" href="login.html" class="botao-borda">Entrar</a>
+        </div>
+    </header>
+
+    <section class="detalhe">
+        <div class="container">
+            <div class="detalhe-foto">
+                <img src="img/lugares/olimpo.webp" alt="Pico do Monte Olimpo">
+                <span class="selo">LUGAR</span>
+            </div>
+            <div class="detalhe-texto">
+                <span class="etiqueta etiqueta-ambar">ARQUIVO · LUGARES</span>
+                <h1>Monte Olimpo</h1>
+                <p class="nome-grego">Ὄλυμπος</p>
+                <p>A montanha mais alta da Grécia, com 2.918 metros, entre a Tessália e a Macedônia. Para os gregos, era no alto dela, acima das nuvens, que moravam Zeus e os outros deuses.</p>
+                <button id="botao_favorito" class="favorito" onclick="favoritar()">♡ Adicionar aos favoritos</button>
+                <button id="botao_lida" class="favorito" onclick="marcarLeitura('olimpo')">✓ Marcar como lida</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <section class="secao">
+        <div class="container grade-ficha">
+            <div>
+                <div class="titulo-secao">
+                    <span class="etiqueta">FICHA DO GUARDIÃO</span>
+                    <h2>O que os antigos registraram</h2>
+                </div>
+                <div class="ficha">
+                    <div class="ficha-linha">
+                        <span>Tipo</span>
+                        <strong>Montanha real e morada dos deuses</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Onde fica</span>
+                        <strong>Entre a Tessália e a Macedônia</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Altura</span>
+                        <strong>2.918 m, no pico Mítikas</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Senhor</span>
+                        <strong>Zeus</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Moradores</span>
+                        <strong>Os deuses olimpianos</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Hoje</span>
+                        <strong>Parque nacional desde 1938</strong>
+                    </div>
+                </div>
+            </div>
+            <p class="fala-guia fala-clara">Eu moro no ponto mais baixo do mundo; eles, no mais alto. Hesíodo diz que uma bigorna de bronze levaria nove dias caindo do céu até a terra, e mais nove da terra até o Tártaro.</p>
+        </div>
+    </section>
+
+    <section class="secao faixa-mitos">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">RELATOS PRESERVADOS</span>
+                <h2>Seus mitos</h2>
+            </div>
+            <div class="grade-mitos">
+            <article class="mito">
+                <span class="numero">01</span>
+                <h3>O palácio dos deuses</h3>
+                <p>No alto do Olimpo, Hefesto construiu uma casa para cada deus. Eles se reúnem na sala de Zeus, onde comem ambrosia e bebem néctar.</p>
+                <span class="fonte">Homero, Ilíada, canto I</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">02</span>
+                <h3>A guerra dos Titãs</h3>
+                <p>Por dez anos, Zeus e seus irmãos lutaram a partir do Olimpo contra os Titãs, que ficavam no monte Ótris. A vitória deu aos olimpianos o governo do mundo.</p>
+                <span class="fonte">Hesíodo, Teogonia</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">03</span>
+                <h3>Oto e Efialtes</h3>
+                <p>Dois irmãos gigantes quiseram alcançar o céu empilhando montanhas: o Ossa sobre o Olimpo e o Pélion sobre o Ossa. Apolo os matou antes que crescessem.</p>
+                <span class="fonte">Homero, Odisseia, canto XI</span>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao faixa-citacao">
+        <div class="container">
+            <blockquote class="citacao">
+                <p>“Dizem que ali fica a morada eterna dos deuses: não é sacudida por ventos, nem molhada por chuvas, nem a neve chega perto.”</p>
+                <cite>Homero, Odisseia, canto VI (tradução livre)</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">CONTINUE A JORNADA</span>
+                <h2>Relacionados</h2>
+            </div>
+            <div class="grade-deuses">
+            <a href="zeus.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/deuses/zeus.webp" alt="Estátua de Zeus">
+                <div class="cartao-deus-texto">
+                    <h3>Zeus</h3>
+                    <p class="nome-grego">Ζεύς</p>
+                    <p class="dominio">Senhor dos céus e do trovão.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">raio</span>
+                        <span class="simbolo">águia</span>
+                    </div>
+                </div>
+            </a>
+            <a href="hera.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/deuses/hera.webp" alt="Estátua de Hera">
+                <div class="cartao-deus-texto">
+                    <h3>Hera</h3>
+                    <p class="nome-grego">Ἥρα</p>
+                    <p class="dominio">Rainha dos deuses e guardiã do matrimônio.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">pavão</span>
+                        <span class="simbolo">romã</span>
+                    </div>
+                </div>
+            </a>
+            <a href="atena.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/deuses/atena.webp" alt="Estátua de Atena">
+                <div class="cartao-deus-texto">
+                    <h3>Atena</h3>
+                    <p class="nome-grego">Ἀθηνᾶ</p>
+                    <p class="dominio">Deusa da sabedoria e da estratégia.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">coruja</span>
+                        <span class="simbolo">oliveira</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+                <a href="arquivo.html">Arquivo de histórias</a>
+                <a href="desafio.html">Desafio do Guardião</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="perfil.html">Meu perfil</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/cerberus.js"></script>
+    <script src="js/favorito.js"></script>
+    <script src="js/leitura.js"></script>
+</body>
+</html>

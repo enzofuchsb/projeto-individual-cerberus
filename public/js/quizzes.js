@@ -1,14 +1,23 @@
-// ===== QUIZZES =====
-// Busca os dados para saber o título e o patrono da pessoa.
-// As regras de cada quiz estão no jornada.js.
-fetch('/perfil/dados/' + idUsuario)
-    .then(function (resposta) {
-        return resposta.json();
-    })
-    .then(function (dados) {
-        var trabalhos = montarTrabalhos(dados);
-        var nivel = descobrirNivel(contarCompletos(trabalhos));
+function buscarQuizzes() {
+    fetch("/jornada/buscarDados/" + sessionStorage.ID_USUARIO, { cache: "no-store" }).then(function (resposta) {
+        if (resposta.status == 200) {
+            resposta.json().then(function (dados) {
+                console.log("Dados recebidos: ", JSON.stringify(dados));
 
-        titulo_atual.innerHTML = 'Seu título agora: ' + titulos[nivel];
-        lista_quizzes.innerHTML = montarCartoesQuizzes(nivel, dados.patrono);
+                var trabalhos = montarTrabalhos(dados);
+                var completos = contarCompletos(trabalhos);
+                var nivel = descobrirNivel(completos);
+
+                titulo_atual.innerHTML = "Seu título agora: " + titulos[nivel];
+                lista_quizzes.innerHTML = montarCartoesQuizzes(nivel, dados.patrono);
+            });
+        } else {
+            console.error("Nenhum dado encontrado ou erro na API");
+        }
+    }).catch(function (erro) {
+        console.error("Erro na obtenção dos dados dos quizzes: " + erro.message);
     });
+}
+
+validarSessao();
+buscarQuizzes();

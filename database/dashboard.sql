@@ -1,12 +1,5 @@
--- ===== CONSULTAS DA DASHBOARD (PERFIL) =====
--- Rode o script.sql antes.
--- São as mesmas consultas que a API usa (src/models/jornadaModel.js).
--- Troque o 1 por 2 para ver o outro usuário.
 USE cerberus;
 
-
--- ----- TUDO DO PERFIL EM UMA LINHA SÓ -----
--- cada (SELECT ...) é uma pergunta pequena ao banco, e a resposta vira uma coluna
 SELECT nome, patrono,
        pontos_zeus, pontos_poseidon, pontos_hades, pontos_atena, pontos_ares, pontos_apolo,
        (SELECT COUNT(*) FROM tentativa_quiz WHERE fk_usuario = 1) AS quizzes,
@@ -20,9 +13,6 @@ SELECT nome, patrono,
   FROM usuario
  WHERE id = 1;
 
-
--- ----- GRÁFICO DE LINHA: últimos 10 quizzes -----
--- vem do mais novo para o mais antigo; o JS lê de trás para frente
 SELECT ROUND(acertos * 100 / total) AS porcentagem
   FROM tentativa_quiz
  WHERE fk_usuario = 1

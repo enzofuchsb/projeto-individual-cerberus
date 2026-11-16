@@ -1,14 +1,13 @@
-// ===== SESSÃO (usado nas páginas de dentro do perfil) =====
-// O login guarda o ID e o nome no sessionStorage.
-// Se não tiver ID, a pessoa não entrou: volta para o login.
-var idUsuario = sessionStorage.getItem('ID_USUARIO');
-var nomeUsuario = sessionStorage.getItem('NOME_USUARIO');
+function validarSessao() {
+    var idUsuario = sessionStorage.ID_USUARIO;
+    var nome = sessionStorage.NOME_USUARIO;
 
-if (idUsuario == null) {
-    window.location.href = 'login.html';
+    if (idUsuario == undefined || nome == undefined) {
+        window.location = "login.html";
+    }
 }
 
-function sair() {
+function limparSessao() {
     sessionStorage.clear();
-    window.location.href = 'index.html';
+    window.location = "index.html";
 }

@@ -1,4 +1,7 @@
-// ===== CONFIGURAÇÕES =====
-// Mostra os dados que o login guardou no sessionStorage
-conf_nome.innerHTML = nomeUsuario;
-conf_email.innerHTML = sessionStorage.getItem('EMAIL_USUARIO');
+function mostrarConta() {
+    conf_nome.innerHTML = sessionStorage.NOME_USUARIO;
+    conf_email.innerHTML = sessionStorage.EMAIL_USUARIO;
+}
+
+validarSessao();
+mostrarConta();

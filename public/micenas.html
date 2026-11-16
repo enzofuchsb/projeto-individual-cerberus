@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Micenas</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/deuses.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html">Deuses</a>
+                <a href="herois.html">Heróis</a>
+                <a href="criaturas.html">Criaturas</a>
+                <a href="lugares.html" class="ativo">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+                <a href="mito.html">Mito no dia a dia</a>
+            </nav>
+            <a id="botao_entrar" href="login.html" class="botao-borda">Entrar</a>
+        </div>
+    </header>
+
+    <section class="detalhe">
+        <div class="container">
+            <div class="detalhe-foto">
+                <img src="img/lugares/micenas.webp" alt="Porta dos Leões, em Micenas">
+                <span class="selo">LUGAR</span>
+            </div>
+            <div class="detalhe-texto">
+                <span class="etiqueta etiqueta-ambar">ARQUIVO · LUGARES</span>
+                <h1>Micenas</h1>
+                <p class="nome-grego">Μυκῆναι</p>
+                <p>Cidade fortificada do Peloponeso, lar do rei Agamêmnon, chefe dos gregos na Guerra de Troia. As muralhas são tão grandes que os antigos diziam ter sido erguidas por ciclopes.</p>
+                <button id="botao_favorito" class="favorito" onclick="favoritar()">♡ Adicionar aos favoritos</button>
+                <button id="botao_lida" class="favorito" onclick="marcarLeitura('micenas')">✓ Marcar como lida</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <section class="secao">
+        <div class="container grade-ficha">
+            <div>
+                <div class="titulo-secao">
+                    <span class="etiqueta">FICHA DO GUARDIÃO</span>
+                    <h2>O que os antigos registraram</h2>
+                </div>
+                <div class="ficha">
+                    <div class="ficha-linha">
+                        <span>Tipo</span>
+                        <strong>Cidade fortificada</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Onde fica</span>
+                        <strong>Argólida, no Peloponeso</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Fundador</span>
+                        <strong>Perseu, segundo o mito</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Rei famoso</span>
+                        <strong>Agamêmnon</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Entrada</span>
+                        <strong>A Porta dos Leões</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Escavações</span>
+                        <strong>Heinrich Schliemann, em 1876</strong>
+                    </div>
+                </div>
+            </div>
+            <p class="fala-guia fala-clara">Foi para um rei de Micenas, Euristeu, que Héracles me levou. Os pintores de vasos mostram o rei escondido dentro de um jarro, com medo de mim. Eu só estava parado.</p>
+        </div>
+    </section>
+
+    <section class="secao faixa-mitos">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">RELATOS PRESERVADOS</span>
+                <h2>Seus mitos</h2>
+            </div>
+            <div class="grade-mitos">
+            <article class="mito">
+                <span class="numero">01</span>
+                <h3>A fundação por Perseu</h3>
+                <p>Pausânias conta que Perseu fundou a cidade no lugar onde caiu a ponta da bainha da sua espada, chamada mykes em grego. Os ciclopes teriam erguido as muralhas.</p>
+                <a href="perseu.html" class="fonte">Conhecer Perseu →</a>
+            </article>
+
+            <article class="mito">
+                <span class="numero">02</span>
+                <h3>O chefe dos gregos</h3>
+                <p>Rei de Micenas, Agamêmnon comandou todos os reis gregos na guerra contra Troia. Homero chama a sua cidade de “rica em ouro”.</p>
+                <span class="fonte">Homero, Ilíada, canto II</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">03</span>
+                <h3>A volta do rei</h3>
+                <p>Depois de dez anos, Agamêmnon voltou vitorioso e foi morto em casa pela esposa, Clitemnestra, que não perdoou o sacrifício da filha Ifigênia.</p>
+                <span class="fonte">Ésquilo, Agamêmnon</span>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao faixa-citacao">
+        <div class="container">
+            <blockquote class="citacao">
+                <p>“Os que habitavam Micenas, a cidade bem construída, a esses comandava, com cem navios, o poderoso Agamêmnon.”</p>
+                <cite>Homero, Ilíada, canto II (tradução livre)</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">CONTINUE A JORNADA</span>
+                <h2>Relacionados</h2>
+            </div>
+            <div class="grade-deuses">
+            <a href="troia.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/lugares/troia.webp" alt="Muralhas de Troia, na Turquia">
+                <div class="cartao-deus-texto">
+                    <h3>Troia</h3>
+                    <p class="nome-grego">Τροία</p>
+                    <p class="dominio">Cidade do rei Príamo, cercada pelos gregos por dez anos.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">Príamo</span>
+                        <span class="simbolo">cavalo de madeira</span>
+                    </div>
+                </div>
+            </a>
+            <a href="perseu.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/herois/perseu.webp" alt="Estátua de Perseu, de Antonio Canova">
+                <div class="cartao-deus-texto">
+                    <h3>Perseu</h3>
+                    <p class="nome-grego">Περσεύς</p>
+                    <p class="dominio">Filho de Zeus e Dânae, cortou a cabeça da Medusa.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">foice</span>
+                        <span class="simbolo">cabeça da Medusa</span>
+                    </div>
+                </div>
+            </a>
+            <a href="heracles.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/herois/heracles.webp" alt="Estátua de Héracles (Héracles Farnese)">
+                <div class="cartao-deus-texto">
+                    <h3>Héracles</h3>
+                    <p class="nome-grego">Ἡρακλῆς</p>
+                    <p class="dominio">Filho de Zeus e Alcmena, cumpriu os doze trabalhos. No último, me levou do Submundo.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">clava</span>
+                        <span class="simbolo">pele de leão</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+                <a href="arquivo.html">Arquivo de histórias</a>
+                <a href="desafio.html">Desafio do Guardião</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="perfil.html">Meu perfil</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/cerberus.js"></script>
+    <script src="js/favorito.js"></script>
+    <script src="js/leitura.js"></script>
+</body>
+</html>

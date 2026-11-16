@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Perseu</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/deuses.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html">Deuses</a>
+                <a href="herois.html" class="ativo">Heróis</a>
+                <a href="criaturas.html">Criaturas</a>
+                <a href="lugares.html">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+                <a href="mito.html">Mito no dia a dia</a>
+            </nav>
+            <a id="botao_entrar" href="login.html" class="botao-borda">Entrar</a>
+        </div>
+    </header>
+
+    <section class="detalhe">
+        <div class="container">
+            <div class="detalhe-foto">
+                <img src="img/herois/perseu.webp" alt="Estátua de Perseu, de Antonio Canova">
+                <span class="selo">HERÓI</span>
+            </div>
+            <div class="detalhe-texto">
+                <span class="etiqueta etiqueta-ambar">ARQUIVO · HERÓIS</span>
+                <h1>Perseu</h1>
+                <p class="nome-grego">Περσεύς</p>
+                <p>Filho de Zeus e da princesa Dânae. Com a ajuda de Atena e Hermes, cortou a cabeça da Medusa sem olhar para ela e depois salvou Andrômeda de um monstro marinho.</p>
+                <button id="botao_favorito" class="favorito" onclick="favoritar()">♡ Adicionar aos favoritos</button>
+                <button id="botao_lida" class="favorito" onclick="marcarLeitura('perseu')">✓ Marcar como lida</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <section class="secao">
+        <div class="container grade-ficha">
+            <div>
+                <div class="titulo-secao">
+                    <span class="etiqueta">FICHA DO GUARDIÃO</span>
+                    <h2>O que os antigos registraram</h2>
+                </div>
+                <div class="ficha">
+                    <div class="ficha-linha">
+                        <span>Pais</span>
+                        <strong>Zeus e Dânae</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Esposa</span>
+                        <strong>Andrômeda</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Protetores</span>
+                        <strong>Atena e Hermes</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Armas</span>
+                        <strong>Foice, escudo de bronze, sandálias aladas e o elmo de Hades</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Feito</span>
+                        <strong>Cortou a cabeça da Medusa</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Descendente</span>
+                        <strong>Héracles, seu bisneto</strong>
+                    </div>
+                </div>
+            </div>
+            <p class="fala-guia fala-clara">O elmo que deixava Perseu invisível leva o nome do meu senhor: o elmo de Hades. Depois da missão, ele devolveu tudo o que tinha recebido. Poucos mortais fazem isso.</p>
+        </div>
+    </section>
+
+    <section class="secao faixa-mitos">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">RELATOS PRESERVADOS</span>
+                <h2>Seus mitos</h2>
+            </div>
+            <div class="grade-mitos">
+            <article class="mito">
+                <span class="numero">01</span>
+                <h3>A arca no mar</h3>
+                <p>Um oráculo avisou o rei Acrísio de que o neto o mataria. Ele trancou a filha Dânae, mas Zeus chegou até ela como chuva de ouro. Acrísio jogou mãe e bebê ao mar, numa arca.</p>
+                <span class="fonte">Apolodoro, Biblioteca II</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">02</span>
+                <h3>A cabeça da Medusa</h3>
+                <p>Perseu se aproximou das Górgonas adormecidas olhando só o reflexo no escudo de bronze. Cortou a cabeça da Medusa e fugiu invisível, com o elmo de Hades.</p>
+                <a href="medusa.html" class="fonte">Conhecer a Medusa →</a>
+            </article>
+
+            <article class="mito">
+                <span class="numero">03</span>
+                <h3>Andrômeda</h3>
+                <p>Na volta, viu Andrômeda acorrentada a uma rocha, oferecida a um monstro marinho. Perseu matou o monstro e se casou com ela.</p>
+                <span class="fonte">Apolodoro, Biblioteca II</span>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao faixa-citacao">
+        <div class="container">
+            <blockquote class="citacao">
+                <p>“Com Atena guiando a sua mão, ele olhou para o escudo de bronze, onde via a imagem da Górgona, e cortou-lhe a cabeça.”</p>
+                <cite>Apolodoro, Biblioteca II (tradução livre)</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">CONTINUE A JORNADA</span>
+                <h2>Relacionados</h2>
+            </div>
+            <div class="grade-deuses">
+            <a href="medusa.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/criaturas/medusa.webp" alt="Máscara da Medusa (Medusa Rondanini)">
+                <div class="cartao-deus-texto">
+                    <h3>Medusa</h3>
+                    <p class="nome-grego">Μέδουσα</p>
+                    <p class="dominio">A única Górgona mortal. Quem olhava para ela virava pedra.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">serpentes</span>
+                        <span class="simbolo">olhar de pedra</span>
+                    </div>
+                </div>
+            </a>
+            <a href="atena.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/deuses/atena.webp" alt="Estátua de Atena">
+                <div class="cartao-deus-texto">
+                    <h3>Atena</h3>
+                    <p class="nome-grego">Ἀθηνᾶ</p>
+                    <p class="dominio">Deusa da sabedoria e da estratégia.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">coruja</span>
+                        <span class="simbolo">oliveira</span>
+                    </div>
+                </div>
+            </a>
+            <a href="micenas.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/lugares/micenas.webp" alt="Porta dos Leões, em Micenas">
+                <div class="cartao-deus-texto">
+                    <h3>Micenas</h3>
+                    <p class="nome-grego">Μυκῆναι</p>
+                    <p class="dominio">Cidade de Agamêmnon, líder dos gregos na Guerra de Troia.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">Agamêmnon</span>
+                        <span class="simbolo">Porta dos Leões</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+                <a href="arquivo.html">Arquivo de histórias</a>
+                <a href="desafio.html">Desafio do Guardião</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="perfil.html">Meu perfil</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/cerberus.js"></script>
+    <script src="js/favorito.js"></script>
+    <script src="js/leitura.js"></script>
+</body>
+</html>

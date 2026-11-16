@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Medusa</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/deuses.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html">Deuses</a>
+                <a href="herois.html">Heróis</a>
+                <a href="criaturas.html" class="ativo">Criaturas</a>
+                <a href="lugares.html">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+                <a href="mito.html">Mito no dia a dia</a>
+            </nav>
+            <a id="botao_entrar" href="login.html" class="botao-borda">Entrar</a>
+        </div>
+    </header>
+
+    <section class="detalhe">
+        <div class="container">
+            <div class="detalhe-foto">
+                <img src="img/criaturas/medusa.webp" alt="Máscara da Medusa (Medusa Rondanini)">
+                <span class="selo">CRIATURA</span>
+            </div>
+            <div class="detalhe-texto">
+                <span class="etiqueta etiqueta-ambar">ARQUIVO · CRIATURAS</span>
+                <h1>Medusa</h1>
+                <p class="nome-grego">Μέδουσα</p>
+                <p>A única mortal das três Górgonas. Tinha serpentes no lugar dos cabelos, e quem olhava para o seu rosto virava pedra. Perseu cortou a cabeça dela com a ajuda de Atena.</p>
+                <button id="botao_favorito" class="favorito" onclick="favoritar()">♡ Adicionar aos favoritos</button>
+                <button id="botao_lida" class="favorito" onclick="marcarLeitura('medusa')">✓ Marcar como lida</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <section class="secao">
+        <div class="container grade-ficha">
+            <div>
+                <div class="titulo-secao">
+                    <span class="etiqueta">FICHA DO GUARDIÃO</span>
+                    <h2>O que os antigos registraram</h2>
+                </div>
+                <div class="ficha">
+                    <div class="ficha-linha">
+                        <span>Pais</span>
+                        <strong>Fórcis e Ceto</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Irmãs</span>
+                        <strong>Esteno e Euríale, imortais</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Tipo</span>
+                        <strong>Górgona</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Poder</span>
+                        <strong>Transformar em pedra quem a olha</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Morta por</span>
+                        <strong>Perseu</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Filhos</span>
+                        <strong>Pégaso e Crisaor, nascidos do seu pescoço</strong>
+                    </div>
+                </div>
+            </div>
+            <p class="fala-guia fala-clara">A sombra dela mora aqui. Quando Héracles desceu para me buscar, puxou a espada ao vê-la, e Hermes teve de avisar que era só um fantasma, sem perigo nenhum.</p>
+        </div>
+    </section>
+
+    <section class="secao faixa-mitos">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">RELATOS PRESERVADOS</span>
+                <h2>Seus mitos</h2>
+            </div>
+            <div class="grade-mitos">
+            <article class="mito">
+                <span class="numero">01</span>
+                <h3>A única mortal</h3>
+                <p>Hesíodo conta que as Górgonas viviam além do Oceano, perto da Noite. Esteno e Euríale não envelheciam nem morriam. Só Medusa era mortal.</p>
+                <span class="fonte">Hesíodo, Teogonia</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">02</span>
+                <h3>O castigo de Atena</h3>
+                <p>Na versão de Ovídio, Medusa era uma moça de cabelos lindos. Poseidon a atacou dentro do templo de Atena, e a deusa transformou os cabelos dela em serpentes.</p>
+                <span class="fonte">Ovídio, Metamorfoses IV</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">03</span>
+                <h3>O escudo de Perseu</h3>
+                <p>Perseu chegou enquanto as Górgonas dormiam e olhou só o reflexo no escudo. Do pescoço cortado saltaram o cavalo alado Pégaso e o guerreiro Crisaor.</p>
+                <a href="perseu.html" class="fonte">Conhecer Perseu →</a>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao faixa-citacao">
+        <div class="container">
+            <blockquote class="citacao">
+                <p>“Medusa, que sofreu um destino cruel: ela era mortal, mas as outras duas não morriam nem envelheciam.”</p>
+                <cite>Hesíodo, Teogonia (tradução livre)</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">CONTINUE A JORNADA</span>
+                <h2>Relacionados</h2>
+            </div>
+            <div class="grade-deuses">
+            <a href="perseu.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/herois/perseu.webp" alt="Estátua de Perseu, de Antonio Canova">
+                <div class="cartao-deus-texto">
+                    <h3>Perseu</h3>
+                    <p class="nome-grego">Περσεύς</p>
+                    <p class="dominio">Filho de Zeus e Dânae, cortou a cabeça da Medusa.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">foice</span>
+                        <span class="simbolo">cabeça da Medusa</span>
+                    </div>
+                </div>
+            </a>
+            <a href="atena.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/deuses/atena.webp" alt="Estátua de Atena">
+                <div class="cartao-deus-texto">
+                    <h3>Atena</h3>
+                    <p class="nome-grego">Ἀθηνᾶ</p>
+                    <p class="dominio">Deusa da sabedoria e da estratégia.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">coruja</span>
+                        <span class="simbolo">oliveira</span>
+                    </div>
+                </div>
+            </a>
+            <a href="belerofonte.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/herois/belerofonte.webp" alt="Relevo de Belerofonte com Pégaso">
+                <div class="cartao-deus-texto">
+                    <h3>Belerofonte</h3>
+                    <p class="nome-grego">Βελλεροφόντης</p>
+                    <p class="dominio">Montado em Pégaso, matou a Quimera.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">Pégaso</span>
+                        <span class="simbolo">Quimera</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+                <a href="arquivo.html">Arquivo de histórias</a>
+                <a href="desafio.html">Desafio do Guardião</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="perfil.html">Meu perfil</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/cerberus.js"></script>
+    <script src="js/favorito.js"></script>
+    <script src="js/leitura.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Gaia</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/deuses.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html" class="ativo">Deuses</a>
+                <a href="herois.html">Heróis</a>
+                <a href="criaturas.html">Criaturas</a>
+                <a href="lugares.html">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+                <a href="mito.html">Mito no dia a dia</a>
+            </nav>
+            <a id="botao_entrar" href="login.html" class="botao-borda">Entrar</a>
+        </div>
+    </header>
+
+    <section class="detalhe">
+        <div class="container">
+            <div class="detalhe-foto">
+                <img src="img/deuses/gaia.webp" alt="Estátua de Gaia">
+                <span class="selo">PRIMORDIAL</span>
+            </div>
+            <div class="detalhe-texto">
+                <span class="etiqueta etiqueta-ambar">ARQUIVO · DEUSES</span>
+                <h1>Gaia</h1>
+                <p class="nome-grego">Γαῖα</p>
+                <p>A Terra. Surgiu logo depois do Caos e é a base firme de tudo. Sozinha, gerou Urano, o Céu, as Montanhas e o Mar. Com Urano, teve os Titãs.</p>
+                <button id="botao_favorito" class="favorito" onclick="favoritar()">♡ Adicionar aos favoritos</button>
+                <button id="botao_lida" class="favorito" onclick="marcarLeitura('gaia')">✓ Marcar como lida</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <section class="secao">
+        <div class="container grade-ficha">
+            <div>
+                <div class="titulo-secao">
+                    <span class="etiqueta">FICHA DO GUARDIÃO</span>
+                    <h2>O que os antigos registraram</h2>
+                </div>
+                <div class="ficha">
+                    <div class="ficha-linha">
+                        <span>Origem</span>
+                        <strong>Surgiu depois do Caos</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Companheiro</span>
+                        <strong>Urano, o Céu</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Filhos</span>
+                        <strong>Os Titãs, os Ciclopes e os gigantes de cem braços</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Tipo</span>
+                        <strong>Divindade primordial</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Nome romano</span>
+                        <strong>Terra</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Símbolos</span>
+                        <strong>Terra e frutos</strong>
+                    </div>
+                </div>
+            </div>
+            <p class="fala-guia fala-clara">É minha avó: meu pai, Tífon, é filho dela com o Tártaro. Somos uma família grande e complicada.</p>
+        </div>
+    </section>
+
+    <section class="secao faixa-mitos">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">RELATOS PRESERVADOS</span>
+                <h2>Seus mitos</h2>
+            </div>
+            <div class="grade-mitos">
+            <article class="mito">
+                <span class="numero">01</span>
+                <h3>O nascimento do Céu</h3>
+                <p>Gaia gerou Urano, o Céu estrelado, do mesmo tamanho que ela, para cobri-la por inteiro e ser a morada segura dos deuses.</p>
+                <span class="fonte">Hesíodo, Teogonia</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">02</span>
+                <h3>A foice</h3>
+                <p>Cansada de Urano esconder os filhos dentro dela, Gaia fabricou uma grande foice e a entregou a Cronos, o mais novo dos Titãs.</p>
+                <a href="cronos.html" class="fonte">Conhecer Cronos →</a>
+            </article>
+
+            <article class="mito">
+                <span class="numero">03</span>
+                <h3>Tífon</h3>
+                <p>Depois da derrota dos Titãs, Gaia gerou com o Tártaro o monstro Tífon, que desafiou Zeus e quase venceu. Tífon é o pai de Cérbero.</p>
+                <span class="fonte">Hesíodo, Teogonia</span>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao faixa-citacao">
+        <div class="container">
+            <blockquote class="citacao">
+                <p>“Cantarei a Terra, mãe de todos, de firmes alicerces, a mais antiga, que alimenta tudo o que existe no mundo.”</p>
+                <cite>Hino Homérico 30, à Terra (tradução livre)</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">CONTINUE A JORNADA</span>
+                <h2>Relacionados</h2>
+            </div>
+            <div class="grade-deuses">
+            <a href="caos.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/deuses/caos.webp" alt="Gravura da separação do Caos, a partir de Hendrik Goltzius (1589)">
+                <div class="cartao-deus-texto">
+                    <h3>Caos</h3>
+                    <p class="nome-grego">Χάος</p>
+                    <p class="dominio">O vazio que existia antes de tudo. Dele nasceram a Escuridão e a Noite.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">vazio</span>
+                        <span class="simbolo">origem</span>
+                    </div>
+                </div>
+            </a>
+            <a href="cronos.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/deuses/cronos.webp" alt="Estátua de Cronos">
+                <div class="cartao-deus-texto">
+                    <h3>Cronos</h3>
+                    <p class="nome-grego">Κρόνος</p>
+                    <p class="dominio">Titã que reinou antes de Zeus.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">foice</span>
+                    </div>
+                </div>
+            </a>
+            <a href="cerberus.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/criaturas/cerbero.webp" alt="Estátua de Cérbero, de Gortina">
+                <div class="cartao-deus-texto">
+                    <h3>Cérbero</h3>
+                    <p class="nome-grego">Κέρβερος</p>
+                    <p class="dominio">Cão que guarda o Submundo. Hesíodo fala em cinquenta cabeças; a maioria dos autores, em três.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">Submundo</span>
+                        <span class="simbolo">Hades</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+                <a href="arquivo.html">Arquivo de histórias</a>
+                <a href="desafio.html">Desafio do Guardião</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="perfil.html">Meu perfil</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/cerberus.js"></script>
+    <script src="js/favorito.js"></script>
+    <script src="js/leitura.js"></script>
+</body>
+</html>

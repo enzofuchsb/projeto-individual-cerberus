@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Troia</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/deuses.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html">Deuses</a>
+                <a href="herois.html">Heróis</a>
+                <a href="criaturas.html">Criaturas</a>
+                <a href="lugares.html" class="ativo">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+                <a href="mito.html">Mito no dia a dia</a>
+            </nav>
+            <a id="botao_entrar" href="login.html" class="botao-borda">Entrar</a>
+        </div>
+    </header>
+
+    <section class="detalhe">
+        <div class="container">
+            <div class="detalhe-foto">
+                <img src="img/lugares/troia.webp" alt="Muralhas de Troia, na Turquia">
+                <span class="selo">LUGAR</span>
+            </div>
+            <div class="detalhe-texto">
+                <span class="etiqueta etiqueta-ambar">ARQUIVO · LUGARES</span>
+                <h1>Troia</h1>
+                <p class="nome-grego">Τροία</p>
+                <p>Cidade do rei Príamo, na costa da atual Turquia. Os gregos a cercaram por dez anos para recuperar Helena. As ruínas ficam na colina de Hisarlik.</p>
+                <button id="botao_favorito" class="favorito" onclick="favoritar()">♡ Adicionar aos favoritos</button>
+                <button id="botao_lida" class="favorito" onclick="marcarLeitura('troia')">✓ Marcar como lida</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <section class="secao">
+        <div class="container grade-ficha">
+            <div>
+                <div class="titulo-secao">
+                    <span class="etiqueta">FICHA DO GUARDIÃO</span>
+                    <h2>O que os antigos registraram</h2>
+                </div>
+                <div class="ficha">
+                    <div class="ficha-linha">
+                        <span>Tipo</span>
+                        <strong>Cidade</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Onde fica</span>
+                        <strong>Hisarlik, noroeste da Turquia</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Outro nome</span>
+                        <strong>Ílion</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Rei</span>
+                        <strong>Príamo</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Herói</span>
+                        <strong>Heitor</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Escavações</span>
+                        <strong>Frank Calvert e Heinrich Schliemann, no século XIX</strong>
+                    </div>
+                </div>
+            </div>
+            <p class="fala-guia fala-clara">Durante dez anos, essa guerra me deu muito trabalho. Chegava tanta alma ao portão que eu mal tinha tempo de abanar o rabo.</p>
+        </div>
+    </section>
+
+    <section class="secao faixa-mitos">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">RELATOS PRESERVADOS</span>
+                <h2>Seus mitos</h2>
+            </div>
+            <div class="grade-mitos">
+            <article class="mito">
+                <span class="numero">01</span>
+                <h3>O rapto de Helena</h3>
+                <p>Páris, príncipe de Troia, levou Helena, esposa do rei Menelau, de Esparta. Agamêmnon, irmão de Menelau, reuniu os reis gregos e mais de mil navios para buscá-la.</p>
+                <span class="fonte">Apolodoro, Epítome</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">02</span>
+                <h3>Heitor e Aquiles</h3>
+                <p>Heitor, o maior guerreiro troiano, matou Pátroclo. Aquiles o venceu diante das muralhas, e o velho Príamo foi sozinho ao acampamento grego pedir o corpo do filho.</p>
+                <a href="aquiles.html" class="fonte">Conhecer Aquiles →</a>
+            </article>
+
+            <article class="mito">
+                <span class="numero">03</span>
+                <h3>O cavalo de madeira</h3>
+                <p>Os gregos fingiram partir e deixaram um cavalo de madeira na praia. Os troianos o puseram para dentro. À noite, os soldados escondidos abriram os portões.</p>
+                <span class="fonte">Virgílio, Eneida II</span>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao faixa-citacao">
+        <div class="container">
+            <blockquote class="citacao">
+                <p>“Chegará o dia em que a sagrada Ílion será destruída, e Príamo, e o povo de Príamo.”</p>
+                <cite>Heitor, em Homero, Ilíada, canto VI (tradução livre)</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">CONTINUE A JORNADA</span>
+                <h2>Relacionados</h2>
+            </div>
+            <div class="grade-deuses">
+            <a href="aquiles.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/herois/aquiles.webp" alt="Busto de Aquiles">
+                <div class="cartao-deus-texto">
+                    <h3>Aquiles</h3>
+                    <p class="nome-grego">Ἀχιλλεύς</p>
+                    <p class="dominio">Filho de Peleu e Tétis, o maior guerreiro grego em Troia.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">lança</span>
+                        <span class="simbolo">Ilíada</span>
+                    </div>
+                </div>
+            </a>
+            <a href="odisseu.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/herois/odisseu.webp" alt="Cabeça de Odisseu, de Sperlonga">
+                <div class="cartao-deus-texto">
+                    <h3>Odisseu</h3>
+                    <p class="nome-grego">Ὀδυσσεύς</p>
+                    <p class="dominio">Rei de Ítaca. Levou dez anos para voltar para casa depois da guerra.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">cavalo de madeira</span>
+                        <span class="simbolo">Odisseia</span>
+                    </div>
+                </div>
+            </a>
+            <a href="micenas.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/lugares/micenas.webp" alt="Porta dos Leões, em Micenas">
+                <div class="cartao-deus-texto">
+                    <h3>Micenas</h3>
+                    <p class="nome-grego">Μυκῆναι</p>
+                    <p class="dominio">Cidade de Agamêmnon, líder dos gregos na Guerra de Troia.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">Agamêmnon</span>
+                        <span class="simbolo">Porta dos Leões</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+                <a href="arquivo.html">Arquivo de histórias</a>
+                <a href="desafio.html">Desafio do Guardião</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="perfil.html">Meu perfil</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/cerberus.js"></script>
+    <script src="js/favorito.js"></script>
+    <script src="js/leitura.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Odisseu</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/deuses.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html">Deuses</a>
+                <a href="herois.html" class="ativo">Heróis</a>
+                <a href="criaturas.html">Criaturas</a>
+                <a href="lugares.html">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+                <a href="mito.html">Mito no dia a dia</a>
+            </nav>
+            <a id="botao_entrar" href="login.html" class="botao-borda">Entrar</a>
+        </div>
+    </header>
+
+    <section class="detalhe">
+        <div class="container">
+            <div class="detalhe-foto">
+                <img src="img/herois/odisseu.webp" alt="Cabeça de Odisseu, de Sperlonga">
+                <span class="selo">HERÓI</span>
+            </div>
+            <div class="detalhe-texto">
+                <span class="etiqueta etiqueta-ambar">ARQUIVO · HERÓIS</span>
+                <h1>Odisseu</h1>
+                <p class="nome-grego">Ὀδυσσεύς</p>
+                <p>Rei de Ítaca, marido de Penélope e pai de Telêmaco. O mais esperto dos gregos: teve a ideia do cavalo de madeira e levou dez anos para voltar para casa.</p>
+                <button id="botao_favorito" class="favorito" onclick="favoritar()">♡ Adicionar aos favoritos</button>
+                <button id="botao_lida" class="favorito" onclick="marcarLeitura('odisseu')">✓ Marcar como lida</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <section class="secao">
+        <div class="container grade-ficha">
+            <div>
+                <div class="titulo-secao">
+                    <span class="etiqueta">FICHA DO GUARDIÃO</span>
+                    <h2>O que os antigos registraram</h2>
+                </div>
+                <div class="ficha">
+                    <div class="ficha-linha">
+                        <span>Pais</span>
+                        <strong>Laerte e Anticleia</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Esposa</span>
+                        <strong>Penélope</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Filho</span>
+                        <strong>Telêmaco</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Reino</span>
+                        <strong>Ítaca</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Protetora</span>
+                        <strong>Atena</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Nome romano</span>
+                        <strong>Ulisses</strong>
+                    </div>
+                </div>
+            </div>
+            <p class="fala-guia fala-clara">Ele veio até a entrada do meu mundo para ouvir o adivinho Tirésias. Ofereceu sangue às almas e foi embora sem tentar levar ninguém. Um visitante educado, para variar.</p>
+        </div>
+    </section>
+
+    <section class="secao faixa-mitos">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">RELATOS PRESERVADOS</span>
+                <h2>Seus mitos</h2>
+            </div>
+            <div class="grade-mitos">
+            <article class="mito">
+                <span class="numero">01</span>
+                <h3>O cavalo de madeira</h3>
+                <p>Depois de dez anos de cerco, os gregos fingiram ir embora e deixaram um grande cavalo de madeira, cheio de soldados. Os troianos o levaram para dentro das muralhas.</p>
+                <a href="troia.html" class="fonte">Conhecer Troia →</a>
+            </article>
+
+            <article class="mito">
+                <span class="numero">02</span>
+                <h3>Ninguém</h3>
+                <p>Preso na caverna do ciclope Polifemo, Odisseu disse que se chamava “Ninguém”. Depois de cegá-lo, fugiu: o gigante gritava que Ninguém o tinha ferido, e os vizinhos não vieram ajudar.</p>
+                <span class="fonte">Homero, Odisseia, canto IX</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">03</span>
+                <h3>A volta para casa</h3>
+                <p>Em Ítaca, disfarçado de mendigo, Odisseu foi o único capaz de armar o próprio arco. Venceu os pretendentes que queriam o seu trono e reencontrou Penélope.</p>
+                <a href="itaca.html" class="fonte">Conhecer Ítaca →</a>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao faixa-citacao">
+        <div class="container">
+            <blockquote class="citacao">
+                <p>“Fala-me, Musa, do homem astuto que tanto vagueou, depois de destruir a cidade sagrada de Troia.”</p>
+                <cite>Homero, Odisseia, canto I (tradução livre)</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">CONTINUE A JORNADA</span>
+                <h2>Relacionados</h2>
+            </div>
+            <div class="grade-deuses">
+            <a href="itaca.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/lugares/itaca.webp" alt="Vista da ilha de Ítaca">
+                <div class="cartao-deus-texto">
+                    <h3>Ítaca</h3>
+                    <p class="nome-grego">Ἰθάκη</p>
+                    <p class="dominio">Ilha de Odisseu e Penélope. Se é a mesma Ítaca de hoje, ainda se discute.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">Odisseu</span>
+                        <span class="simbolo">Penélope</span>
+                    </div>
+                </div>
+            </a>
+            <a href="troia.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/lugares/troia.webp" alt="Muralhas de Troia, na Turquia">
+                <div class="cartao-deus-texto">
+                    <h3>Troia</h3>
+                    <p class="nome-grego">Τροία</p>
+                    <p class="dominio">Cidade do rei Príamo, cercada pelos gregos por dez anos.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">Príamo</span>
+                        <span class="simbolo">cavalo de madeira</span>
+                    </div>
+                </div>
+            </a>
+            <a href="aqueronte.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/lugares/aqueronte.webp" alt="Cânion do rio Aqueronte, no Épiro">
+                <div class="cartao-deus-texto">
+                    <h3>Rio Aqueronte</h3>
+                    <p class="nome-grego">Ἀχέρων</p>
+                    <p class="dominio">Rio real do Épiro. No mito, um dos rios do Submundo, cruzado na barca de Caronte.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">Caronte</span>
+                        <span class="simbolo">Épiro</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+                <a href="arquivo.html">Arquivo de histórias</a>
+                <a href="desafio.html">Desafio do Guardião</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="perfil.html">Meu perfil</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/cerberus.js"></script>
+    <script src="js/favorito.js"></script>
+    <script src="js/leitura.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Cronos</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/deuses.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html" class="ativo">Deuses</a>
+                <a href="herois.html">Heróis</a>
+                <a href="criaturas.html">Criaturas</a>
+                <a href="lugares.html">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+                <a href="mito.html">Mito no dia a dia</a>
+            </nav>
+            <a id="botao_entrar" href="login.html" class="botao-borda">Entrar</a>
+        </div>
+    </header>
+
+    <section class="detalhe">
+        <div class="container">
+            <div class="detalhe-foto">
+                <img src="img/deuses/cronos.webp" alt="Estátua de Cronos">
+                <span class="selo">TITÃ</span>
+            </div>
+            <div class="detalhe-texto">
+                <span class="etiqueta etiqueta-ambar">ARQUIVO · DEUSES</span>
+                <h1>Cronos</h1>
+                <p class="nome-grego">Κρόνος</p>
+                <p>O mais novo dos Titãs, filho de Urano, o Céu, e de Gaia, a Terra. Tomou o poder do pai com uma foice e reinou até ser derrubado pelo próprio filho, Zeus.</p>
+                <button id="botao_favorito" class="favorito" onclick="favoritar()">♡ Adicionar aos favoritos</button>
+                <button id="botao_lida" class="favorito" onclick="marcarLeitura('cronos')">✓ Marcar como lida</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <section class="secao">
+        <div class="container grade-ficha">
+            <div>
+                <div class="titulo-secao">
+                    <span class="etiqueta">FICHA DO GUARDIÃO</span>
+                    <h2>O que os antigos registraram</h2>
+                </div>
+                <div class="ficha">
+                    <div class="ficha-linha">
+                        <span>Pais</span>
+                        <strong>Urano e Gaia</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Esposa</span>
+                        <strong>Reia</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Filhos</span>
+                        <strong>Héstia, Deméter, Hera, Hades, Poseidon e Zeus</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Tipo</span>
+                        <strong>Titã</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Nome romano</span>
+                        <strong>Saturno</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Símbolo</span>
+                        <strong>Foice</strong>
+                    </div>
+                </div>
+            </div>
+            <p class="fala-guia fala-clara">É o pai do meu senhor. Hades passou a infância dentro da barriga dele, junto com os irmãos. Talvez por isso não reclame da escuridão.</p>
+        </div>
+    </section>
+
+    <section class="secao faixa-mitos">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">RELATOS PRESERVADOS</span>
+                <h2>Seus mitos</h2>
+            </div>
+            <div class="grade-mitos">
+            <article class="mito">
+                <span class="numero">01</span>
+                <h3>A foice contra Urano</h3>
+                <p>Urano escondia os filhos dentro da terra, e Gaia sofria. Ela fez uma foice e pediu ajuda aos filhos: só Cronos aceitou. Ele esperou o pai, o feriu e ficou com o trono.</p>
+                <span class="fonte">Hesíodo, Teogonia</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">02</span>
+                <h3>O pai que engolia os filhos</h3>
+                <p>Avisado de que um filho o derrubaria, Cronos engolia cada bebê que Reia dava à luz. No lugar de Zeus, engoliu uma pedra enrolada em panos.</p>
+                <span class="fonte">Hesíodo, Teogonia</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">03</span>
+                <h3>A queda</h3>
+                <p>Já adulto, Zeus fez o pai devolver os irmãos. Juntos, eles venceram os Titãs depois de dez anos de guerra e os prenderam no Tártaro.</p>
+                <a href="zeus.html" class="fonte">Conhecer Zeus →</a>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao faixa-citacao">
+        <div class="container">
+            <blockquote class="citacao">
+                <p>“Depois deles nasceu o mais novo, Cronos de mente tortuosa, o mais terrível dos filhos, e ele odiou o pai vigoroso.”</p>
+                <cite>Hesíodo, Teogonia (tradução livre)</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">CONTINUE A JORNADA</span>
+                <h2>Relacionados</h2>
+            </div>
+            <div class="grade-deuses">
+            <a href="zeus.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/deuses/zeus.webp" alt="Estátua de Zeus">
+                <div class="cartao-deus-texto">
+                    <h3>Zeus</h3>
+                    <p class="nome-grego">Ζεύς</p>
+                    <p class="dominio">Senhor dos céus e do trovão.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">raio</span>
+                        <span class="simbolo">águia</span>
+                    </div>
+                </div>
+            </a>
+            <a href="gaia.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/deuses/gaia.webp" alt="Estátua de Gaia">
+                <div class="cartao-deus-texto">
+                    <h3>Gaia</h3>
+                    <p class="nome-grego">Γαῖα</p>
+                    <p class="dominio">A Terra, mãe de todos os seres.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">terra</span>
+                        <span class="simbolo">frutos</span>
+                    </div>
+                </div>
+            </a>
+            <a href="hades.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/deuses/hades.webp" alt="Estátua de Hades">
+                <div class="cartao-deus-texto">
+                    <h3>Hades</h3>
+                    <p class="nome-grego">ᾍδης</p>
+                    <p class="dominio">Soberano justo do mundo dos mortos.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">cetro</span>
+                        <span class="simbolo">chave</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+                <a href="arquivo.html">Arquivo de histórias</a>
+                <a href="desafio.html">Desafio do Guardião</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="perfil.html">Meu perfil</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/cerberus.js"></script>
+    <script src="js/favorito.js"></script>
+    <script src="js/leitura.js"></script>
+</body>
+</html>

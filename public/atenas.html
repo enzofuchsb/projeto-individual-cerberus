@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Atenas</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/deuses.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html">Deuses</a>
+                <a href="herois.html">Heróis</a>
+                <a href="criaturas.html">Criaturas</a>
+                <a href="lugares.html" class="ativo">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+                <a href="mito.html">Mito no dia a dia</a>
+            </nav>
+            <a id="botao_entrar" href="login.html" class="botao-borda">Entrar</a>
+        </div>
+    </header>
+
+    <section class="detalhe">
+        <div class="container">
+            <div class="detalhe-foto">
+                <img src="img/lugares/atenas.webp" alt="Partenon, na Acrópole de Atenas">
+                <span class="selo">LUGAR</span>
+            </div>
+            <div class="detalhe-texto">
+                <span class="etiqueta etiqueta-ambar">ARQUIVO · LUGARES</span>
+                <h1>Atenas</h1>
+                <p class="nome-grego">Ἀθῆναι</p>
+                <p>A cidade de Atena. No alto da Acrópole fica o Partenon, o templo da deusa. No mito, ela ganhou a cidade ao oferecer uma oliveira.</p>
+                <button id="botao_favorito" class="favorito" onclick="favoritar()">♡ Adicionar aos favoritos</button>
+                <button id="botao_lida" class="favorito" onclick="marcarLeitura('atenas')">✓ Marcar como lida</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <section class="secao">
+        <div class="container grade-ficha">
+            <div>
+                <div class="titulo-secao">
+                    <span class="etiqueta">FICHA DO GUARDIÃO</span>
+                    <h2>O que os antigos registraram</h2>
+                </div>
+                <div class="ficha">
+                    <div class="ficha-linha">
+                        <span>Tipo</span>
+                        <strong>Cidade</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Onde fica</span>
+                        <strong>Ática</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Deusa protetora</span>
+                        <strong>Atena</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Rochedo sagrado</span>
+                        <strong>Acrópole</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Templo</span>
+                        <strong>Partenon, do século V a.C.</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Herói</span>
+                        <strong>Teseu</strong>
+                    </div>
+                </div>
+            </div>
+            <p class="fala-guia fala-clara">A oliveira de Atena ficava na Acrópole. Heródoto conta que os persas a queimaram junto com o templo e que, no dia seguinte, ela já tinha um broto novo.</p>
+        </div>
+    </section>
+
+    <section class="secao faixa-mitos">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">RELATOS PRESERVADOS</span>
+                <h2>Seus mitos</h2>
+            </div>
+            <div class="grade-mitos">
+            <article class="mito">
+                <span class="numero">01</span>
+                <h3>A disputa pela cidade</h3>
+                <p>Poseidon fez brotar na Acrópole uma fonte de água salgada. Atena plantou uma oliveira. Os deuses deram a vitória a ela, e a cidade recebeu o seu nome.</p>
+                <a href="atena.html" class="fonte">Conhecer Atena →</a>
+            </article>
+
+            <article class="mito">
+                <span class="numero">02</span>
+                <h3>O tributo a Minos</h3>
+                <p>Atenas era obrigada a mandar sete rapazes e sete moças para o Minotauro, em Creta. Teseu se ofereceu para ir e acabou com o tributo.</p>
+                <a href="teseu.html" class="fonte">Conhecer Teseu →</a>
+            </article>
+
+            <article class="mito">
+                <span class="numero">03</span>
+                <h3>O julgamento de Orestes</h3>
+                <p>Perseguido pelas Fúrias por ter matado a mãe, Orestes foi julgado em Atenas, no Areópago. Os votos empataram, e Atena decidiu a favor dele.</p>
+                <span class="fonte">Ésquilo, Eumênides</span>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao faixa-citacao">
+        <div class="container">
+            <blockquote class="citacao">
+                <p>“Ó brilhante, coroada de violetas, celebrada em canções, baluarte da Grécia, ilustre Atenas, cidade divina.”</p>
+                <cite>Píndaro, fragmento 76 (tradução livre)</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">CONTINUE A JORNADA</span>
+                <h2>Relacionados</h2>
+            </div>
+            <div class="grade-deuses">
+            <a href="atena.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/deuses/atena.webp" alt="Estátua de Atena">
+                <div class="cartao-deus-texto">
+                    <h3>Atena</h3>
+                    <p class="nome-grego">Ἀθηνᾶ</p>
+                    <p class="dominio">Deusa da sabedoria e da estratégia.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">coruja</span>
+                        <span class="simbolo">oliveira</span>
+                    </div>
+                </div>
+            </a>
+            <a href="teseu.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/herois/teseu.webp" alt="Estátua de Teseu lutando com o Minotauro">
+                <div class="cartao-deus-texto">
+                    <h3>Teseu</h3>
+                    <p class="nome-grego">Θησεύς</p>
+                    <p class="dominio">Herói de Atenas que matou o Minotauro com a ajuda de Ariadne.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">fio de Ariadne</span>
+                        <span class="simbolo">Labirinto</span>
+                    </div>
+                </div>
+            </a>
+            <a href="poseidon.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/deuses/poseidon.webp" alt="Estátua de Poseidon">
+                <div class="cartao-deus-texto">
+                    <h3>Poseidon</h3>
+                    <p class="nome-grego">Ποσειδῶν</p>
+                    <p class="dominio">Deus do mar, dos terremotos e dos cavalos.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">tridente</span>
+                        <span class="simbolo">cavalo</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+                <a href="arquivo.html">Arquivo de histórias</a>
+                <a href="desafio.html">Desafio do Guardião</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="perfil.html">Meu perfil</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/cerberus.js"></script>
+    <script src="js/favorito.js"></script>
+    <script src="js/leitura.js"></script>
+</body>
+</html>

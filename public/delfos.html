@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Delfos</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/deuses.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html">Deuses</a>
+                <a href="herois.html">Heróis</a>
+                <a href="criaturas.html">Criaturas</a>
+                <a href="lugares.html" class="ativo">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+                <a href="mito.html">Mito no dia a dia</a>
+            </nav>
+            <a id="botao_entrar" href="login.html" class="botao-borda">Entrar</a>
+        </div>
+    </header>
+
+    <section class="detalhe">
+        <div class="container">
+            <div class="detalhe-foto">
+                <img src="img/lugares/delfos.webp" alt="Tholos do santuário de Atena Pronaia, em Delfos">
+                <span class="selo">LUGAR</span>
+            </div>
+            <div class="detalhe-texto">
+                <span class="etiqueta etiqueta-ambar">ARQUIVO · LUGARES</span>
+                <h1>Delfos</h1>
+                <p class="nome-grego">Δελφοί</p>
+                <p>Santuário de Apolo nas encostas do monte Parnaso. Ali a sacerdotisa Pítia dava as respostas do deus. Para os gregos, era o centro do mundo.</p>
+                <button id="botao_favorito" class="favorito" onclick="favoritar()">♡ Adicionar aos favoritos</button>
+                <button id="botao_lida" class="favorito" onclick="marcarLeitura('delfos')">✓ Marcar como lida</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <section class="secao">
+        <div class="container grade-ficha">
+            <div>
+                <div class="titulo-secao">
+                    <span class="etiqueta">FICHA DO GUARDIÃO</span>
+                    <h2>O que os antigos registraram</h2>
+                </div>
+                <div class="ficha">
+                    <div class="ficha-linha">
+                        <span>Tipo</span>
+                        <strong>Santuário e oráculo</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Onde fica</span>
+                        <strong>Fócida, no monte Parnaso</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Deus</span>
+                        <strong>Apolo</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Sacerdotisa</span>
+                        <strong>A Pítia</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Centro do mundo</span>
+                        <strong>Marcado pela pedra ônfalo, o “umbigo”</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Jogos</span>
+                        <strong>Jogos Píticos, a cada quatro anos</strong>
+                    </div>
+                </div>
+            </div>
+            <p class="fala-guia fala-clara">Reis atravessavam o mar para fazer uma pergunta aqui, e as respostas vinham difíceis de entender. Eu prefiro o meu trabalho: no meu portão, a regra é clara.</p>
+        </div>
+    </section>
+
+    <section class="secao faixa-mitos">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">RELATOS PRESERVADOS</span>
+                <h2>Seus mitos</h2>
+            </div>
+            <div class="grade-mitos">
+            <article class="mito">
+                <span class="numero">01</span>
+                <h3>Apolo e a serpente Píton</h3>
+                <p>Antes de Apolo, uma serpente enorme vivia no lugar. O deus a matou com as suas flechas e fundou ali o seu oráculo. Do nome dela vem o da Pítia.</p>
+                <span class="fonte">Hino Homérico a Apolo</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">02</span>
+                <h3>O umbigo do mundo</h3>
+                <p>Zeus soltou duas águias, uma de cada ponta do mundo. Elas se encontraram em Delfos, e uma pedra, o ônfalo, marcou o centro da terra.</p>
+                <span class="fonte">Estrabão, Geografia IX</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">03</span>
+                <h3>A resposta a Creso</h3>
+                <p>O rei Creso perguntou se devia atacar os persas. O oráculo disse que ele destruiria um grande império. Ele atacou, e o império destruído foi o dele.</p>
+                <span class="fonte">Heródoto, Histórias I</span>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao faixa-citacao">
+        <div class="container">
+            <blockquote class="citacao">
+                <p>“Conhece-te a ti mesmo.”</p>
+                <cite>Inscrição do templo de Apolo em Delfos, citada por Pausânias, Descrição da Grécia X</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">CONTINUE A JORNADA</span>
+                <h2>Relacionados</h2>
+            </div>
+            <div class="grade-deuses">
+            <a href="olimpo.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/lugares/olimpo.webp" alt="Pico do Monte Olimpo">
+                <div class="cartao-deus-texto">
+                    <h3>Monte Olimpo</h3>
+                    <p class="nome-grego">Ὄλυμπος</p>
+                    <p class="dominio">A montanha mais alta da Grécia, morada dos deuses olimpianos.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">Zeus</span>
+                        <span class="simbolo">2.918 m</span>
+                    </div>
+                </div>
+            </a>
+            <a href="atenas.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/lugares/atenas.webp" alt="Partenon, na Acrópole de Atenas">
+                <div class="cartao-deus-texto">
+                    <h3>Atenas</h3>
+                    <p class="nome-grego">Ἀθῆναι</p>
+                    <p class="dominio">Cidade de Atena, que venceu Poseidon na disputa pela Ática.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">Partenon</span>
+                        <span class="simbolo">oliveira</span>
+                    </div>
+                </div>
+            </a>
+            <a href="heracles.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/herois/heracles.webp" alt="Estátua de Héracles (Héracles Farnese)">
+                <div class="cartao-deus-texto">
+                    <h3>Héracles</h3>
+                    <p class="nome-grego">Ἡρακλῆς</p>
+                    <p class="dominio">Filho de Zeus e Alcmena, cumpriu os doze trabalhos. No último, me levou do Submundo.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">clava</span>
+                        <span class="simbolo">pele de leão</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+                <a href="arquivo.html">Arquivo de histórias</a>
+                <a href="desafio.html">Desafio do Guardião</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="perfil.html">Meu perfil</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/cerberus.js"></script>
+    <script src="js/favorito.js"></script>
+    <script src="js/leitura.js"></script>
+</body>
+</html>

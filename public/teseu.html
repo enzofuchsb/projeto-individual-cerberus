@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Teseu</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/deuses.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html">Deuses</a>
+                <a href="herois.html" class="ativo">Heróis</a>
+                <a href="criaturas.html">Criaturas</a>
+                <a href="lugares.html">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+                <a href="mito.html">Mito no dia a dia</a>
+            </nav>
+            <a id="botao_entrar" href="login.html" class="botao-borda">Entrar</a>
+        </div>
+    </header>
+
+    <section class="detalhe">
+        <div class="container">
+            <div class="detalhe-foto">
+                <img src="img/herois/teseu.webp" alt="Estátua de Teseu lutando com o Minotauro">
+                <span class="selo">HERÓI</span>
+            </div>
+            <div class="detalhe-texto">
+                <span class="etiqueta etiqueta-ambar">ARQUIVO · HERÓIS</span>
+                <h1>Teseu</h1>
+                <p class="nome-grego">Θησεύς</p>
+                <p>Filho de Etra e do rei Egeu, de Atenas (alguns dizem que de Poseidon). Limpou as estradas de bandidos, matou o Minotauro no Labirinto e se tornou o grande rei de Atenas.</p>
+                <button id="botao_favorito" class="favorito" onclick="favoritar()">♡ Adicionar aos favoritos</button>
+                <button id="botao_lida" class="favorito" onclick="marcarLeitura('teseu')">✓ Marcar como lida</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <section class="secao">
+        <div class="container grade-ficha">
+            <div>
+                <div class="titulo-secao">
+                    <span class="etiqueta">FICHA DO GUARDIÃO</span>
+                    <h2>O que os antigos registraram</h2>
+                </div>
+                <div class="ficha">
+                    <div class="ficha-linha">
+                        <span>Pais</span>
+                        <strong>Etra e Egeu (ou Poseidon)</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Cidade</span>
+                        <strong>Atenas</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Feito</span>
+                        <strong>Matou o Minotauro</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Ajuda</span>
+                        <strong>Ariadne e o seu fio</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Amigo</span>
+                        <strong>Pirítoo</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>No Submundo</span>
+                        <strong>Ficou preso até Héracles soltá-lo</strong>
+                    </div>
+                </div>
+            </div>
+            <p class="fala-guia fala-clara">Este eu conheci de perto. Desceu com o amigo Pirítoo para raptar a minha rainha. Hades os convidou a sentar, e eles não conseguiram mais levantar. Héracles soltou só Teseu.</p>
+        </div>
+    </section>
+
+    <section class="secao faixa-mitos">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">RELATOS PRESERVADOS</span>
+                <h2>Seus mitos</h2>
+            </div>
+            <div class="grade-mitos">
+            <article class="mito">
+                <span class="numero">01</span>
+                <h3>A espada sob a pedra</h3>
+                <p>Egeu deixou uma espada e um par de sandálias debaixo de uma rocha. Quando o filho conseguisse erguê-la, deveria ir a Atenas. Teseu ergueu e foi por terra, vencendo bandidos pelo caminho.</p>
+                <span class="fonte">Plutarco, Vida de Teseu</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">02</span>
+                <h3>O Minotauro</h3>
+                <p>Atenas mandava a Creta sete rapazes e sete moças para o Minotauro. Teseu foi como um deles, entrou no Labirinto com o fio de Ariadne, matou o monstro e achou a saída.</p>
+                <a href="cnossos.html" class="fonte">Conhecer Cnossos →</a>
+            </article>
+
+            <article class="mito">
+                <span class="numero">03</span>
+                <h3>As velas negras</h3>
+                <p>Teseu prometeu trocar as velas negras por brancas se voltasse vivo, mas esqueceu. Egeu viu o navio de luto, pensou que o filho tinha morrido e se jogou ao mar, que ganhou o seu nome.</p>
+                <span class="fonte">Plutarco, Vida de Teseu</span>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao faixa-citacao">
+        <div class="container">
+            <blockquote class="citacao">
+                <p>“Ele prendeu a ponta do fio à porta e entrou, puxando-o atrás de si. Encontrou o Minotauro no fundo do Labirinto e o matou a socos.”</p>
+                <cite>Apolodoro, Epítome (tradução livre)</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">CONTINUE A JORNADA</span>
+                <h2>Relacionados</h2>
+            </div>
+            <div class="grade-deuses">
+            <a href="cnossos.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/lugares/cnossos.webp" alt="Entrada norte do palácio de Cnossos">
+                <div class="cartao-deus-texto">
+                    <h3>Cnossos</h3>
+                    <p class="nome-grego">Κνωσός</p>
+                    <p class="dominio">Cidade do rei Minos, em Creta, segundo Homero.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">Minos</span>
+                        <span class="simbolo">Minotauro</span>
+                    </div>
+                </div>
+            </a>
+            <a href="atenas.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/lugares/atenas.webp" alt="Partenon, na Acrópole de Atenas">
+                <div class="cartao-deus-texto">
+                    <h3>Atenas</h3>
+                    <p class="nome-grego">Ἀθῆναι</p>
+                    <p class="dominio">Cidade de Atena, que venceu Poseidon na disputa pela Ática.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">Partenon</span>
+                        <span class="simbolo">oliveira</span>
+                    </div>
+                </div>
+            </a>
+            <a href="heracles.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/herois/heracles.webp" alt="Estátua de Héracles (Héracles Farnese)">
+                <div class="cartao-deus-texto">
+                    <h3>Héracles</h3>
+                    <p class="nome-grego">Ἡρακλῆς</p>
+                    <p class="dominio">Filho de Zeus e Alcmena, cumpriu os doze trabalhos. No último, me levou do Submundo.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">clava</span>
+                        <span class="simbolo">pele de leão</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+                <a href="arquivo.html">Arquivo de histórias</a>
+                <a href="desafio.html">Desafio do Guardião</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="perfil.html">Meu perfil</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/cerberus.js"></script>
+    <script src="js/favorito.js"></script>
+    <script src="js/leitura.js"></script>
+</body>
+</html>
