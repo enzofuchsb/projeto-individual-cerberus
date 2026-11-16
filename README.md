@@ -87,10 +87,10 @@ O Cerberus do site é um cão de três cabeças com coleiras vermelhas, apresent
 - [x] Estrutura inicial do repositório
 - [x] README e identidade visual
 - [x] Página inicial com a apresentação do Cerberus
-- [ ] Páginas de deuses, heróis, criaturas e lugares
-- [ ] Interações em JavaScript
-- [ ] Modelagem do banco de dados
-- [ ] API em Node.js
+- [x] Páginas de deuses, heróis, criaturas e lugares
+- [x] Interações em JavaScript
+- [x] Modelagem do banco de dados
+- [x] API em Node.js
 
 <img src="docs/assets/divisor.svg" width="100%"/>
 
