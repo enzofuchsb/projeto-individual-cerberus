@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Sereia</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/deuses.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html">Deuses</a>
+                <a href="herois.html">Heróis</a>
+                <a href="criaturas.html" class="ativo">Criaturas</a>
+                <a href="lugares.html">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+                <a href="mito.html">Mito no dia a dia</a>
+            </nav>
+            <a id="botao_entrar" href="login.html" class="botao-borda">Entrar</a>
+        </div>
+    </header>
+
+    <section class="detalhe">
+        <div class="container">
+            <div class="detalhe-foto">
+                <img src="img/criaturas/sereia.webp" alt="Estátua funerária de uma sereia">
+                <span class="selo">CRIATURA</span>
+            </div>
+            <div class="detalhe-texto">
+                <span class="etiqueta etiqueta-ambar">ARQUIVO · CRIATURAS</span>
+                <h1>Sereia</h1>
+                <p class="nome-grego">Σειρήν</p>
+                <p>Na arte grega, as sereias não eram mulheres-peixe: tinham corpo de pássaro e rosto de mulher. Cantavam numa ilha, e os marinheiros que as ouviam esqueciam de voltar para casa.</p>
+                <button id="botao_favorito" class="favorito" onclick="favoritar(36)">♡ Adicionar aos favoritos</button>
+                <button id="botao_lida" class="favorito" onclick="marcarLeitura(36)">✓ Marcar como lida</button>
+                <div id="area_nota" class="area-nota">
+                    <p>Que nota você dá? Clique nos cerberinhos:</p>
+                    <img id="cerberinho_1" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 1" onclick="avaliar(36, 1)">
+                    <img id="cerberinho_2" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 2" onclick="avaliar(36, 2)">
+                    <img id="cerberinho_3" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 3" onclick="avaliar(36, 3)">
+                    <img id="cerberinho_4" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 4" onclick="avaliar(36, 4)">
+                    <img id="cerberinho_5" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 5" onclick="avaliar(36, 5)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <section class="secao">
+        <div class="container grade-ficha">
+            <div>
+                <div class="titulo-secao">
+                    <span class="etiqueta">FICHA DO GUARDIÃO</span>
+                    <h2>O que os antigos registraram</h2>
+                </div>
+                <div class="ficha">
+                    <div class="ficha-linha">
+                        <span>Pai</span>
+                        <strong>Aqueloo, um deus-rio</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Quantas</span>
+                        <strong>Duas em Homero; três em autores mais tarde</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Morada</span>
+                        <strong>Uma ilha cercada de ossos</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Corpo</span>
+                        <strong>Pássaro com cabeça de mulher</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Poder</span>
+                        <strong>Um canto que faz esquecer tudo</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Vencidas por</span>
+                        <strong>Odisseu e Orfeu</strong>
+                    </div>
+                </div>
+            </div>
+            <p class="fala-guia fala-clara">Orfeu passou por elas tocando mais alto: música contra música. Comigo ele fez parecido, só que me pôs para dormir.</p>
+        </div>
+    </section>
+
+    <section class="secao faixa-mitos">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">RELATOS PRESERVADOS</span>
+                <h2>Seus mitos</h2>
+            </div>
+            <div class="grade-mitos">
+            <article class="mito">
+                <span class="numero">01</span>
+                <h3>O aviso de Circe</h3>
+                <p>A feiticeira Circe contou a Odisseu que quem ouvisse as sereias nunca mais voltaria para a mulher e os filhos. Em volta delas, só havia ossos.</p>
+                <span class="fonte">Homero, Odisseia XII</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">02</span>
+                <h3>Amarrado ao mastro</h3>
+                <p>Odisseu tapou com cera os ouvidos dos remadores e pediu para ser amarrado ao mastro. Ouviu o canto, implorou para ser solto, mas o navio passou.</p>
+                <a href="odisseu.html" class="fonte">Conhecer Odisseu →</a>
+            </article>
+
+            <article class="mito">
+                <span class="numero">03</span>
+                <h3>A lira de Orfeu</h3>
+                <p>Quando os Argonautas passaram pela ilha, Orfeu tocou a lira tão alto que ninguém ouviu as sereias. Só um remador pulou no mar.</p>
+                <a href="orfeu.html" class="fonte">Conhecer Orfeu →</a>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao faixa-citacao">
+        <div class="container">
+            <blockquote class="citacao">
+                <p>“Elas encantam todos os homens que chegam até elas.”</p>
+                <cite>Homero, Odisseia XII (tradução livre)</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">CONTINUE A JORNADA</span>
+                <h2>Relacionados</h2>
+            </div>
+            <div class="grade-deuses">
+            <a href="odisseu.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/herois/odisseu.webp" alt="Cabeça de Odisseu, de Sperlonga">
+                <div class="cartao-deus-texto">
+                    <h3>Odisseu</h3>
+                    <p class="nome-grego">Ὀδυσσεύς</p>
+                    <p class="dominio">Rei de Ítaca. Levou dez anos para voltar para casa depois da guerra.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">cavalo de madeira</span>
+                        <span class="simbolo">Odisseia</span>
+                    </div>
+                </div>
+            </a>
+            <a href="orfeu.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/herois/orfeu.webp" alt="Relevo de Orfeu, Eurídice e Hermes">
+                <div class="cartao-deus-texto">
+                    <h3>Orfeu</h3>
+                    <p class="nome-grego">Ὀρφεύς</p>
+                    <p class="dominio">Músico que desceu ao Submundo para buscar Eurídice. Até eu parei para ouvir.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">lira</span>
+                        <span class="simbolo">Eurídice</span>
+                    </div>
+                </div>
+            </a>
+            <a href="itaca.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/lugares/itaca.webp" alt="Vista da ilha de Ítaca">
+                <div class="cartao-deus-texto">
+                    <h3>Ítaca</h3>
+                    <p class="nome-grego">Ἰθάκη</p>
+                    <p class="dominio">Ilha de Odisseu e Penélope. Se é a mesma Ítaca de hoje, ainda se discute.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">Odisseu</span>
+                        <span class="simbolo">Penélope</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="perfil.html">Meu perfil</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/cerberus.js"></script>
+    <script src="js/historia-acoes.js"></script>
+    <script>buscarEstado(36);</script>
+</body>
+</html>

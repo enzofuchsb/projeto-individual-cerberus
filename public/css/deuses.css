@@ -150,22 +150,6 @@ a.cartao-deus:hover {
     margin: 28px 0;
 }
 
-.favorito {
-    background-color: transparent;
-    border: 1px solid #ffffff55;
-    border-radius: 10px;
-    padding: 12px 18px;
-    color: #ffffff;
-    font-family: inherit;
-    font-size: 15px;
-    cursor: pointer;
-}
-
-.favorito-ativo {
-    background-color: #c8693a;
-    border-color: #c8693a;
-}
-
 .grade-ficha {
     display: grid;
     grid-template-columns: 1.3fr 0.7fr;

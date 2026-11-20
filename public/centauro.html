@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Centauro</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/deuses.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html">Deuses</a>
+                <a href="herois.html">Heróis</a>
+                <a href="criaturas.html" class="ativo">Criaturas</a>
+                <a href="lugares.html">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+                <a href="mito.html">Mito no dia a dia</a>
+            </nav>
+            <a id="botao_entrar" href="login.html" class="botao-borda">Entrar</a>
+        </div>
+    </header>
+
+    <section class="detalhe">
+        <div class="container">
+            <div class="detalhe-foto">
+                <img src="img/criaturas/centauro.webp" alt="Estátua de um centauro">
+                <span class="selo">CRIATURA</span>
+            </div>
+            <div class="detalhe-texto">
+                <span class="etiqueta etiqueta-ambar">ARQUIVO · CRIATURAS</span>
+                <h1>Centauro</h1>
+                <p class="nome-grego">Κένταυρος</p>
+                <p>Metade homem, metade cavalo. A maioria dos centauros era selvagem e briguenta, mas Quíron era sábio e foi professor de heróis como Aquiles e Jasão.</p>
+                <button id="botao_favorito" class="favorito" onclick="favoritar(34)">♡ Adicionar aos favoritos</button>
+                <button id="botao_lida" class="favorito" onclick="marcarLeitura(34)">✓ Marcar como lida</button>
+                <div id="area_nota" class="area-nota">
+                    <p>Que nota você dá? Clique nos cerberinhos:</p>
+                    <img id="cerberinho_1" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 1" onclick="avaliar(34, 1)">
+                    <img id="cerberinho_2" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 2" onclick="avaliar(34, 2)">
+                    <img id="cerberinho_3" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 3" onclick="avaliar(34, 3)">
+                    <img id="cerberinho_4" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 4" onclick="avaliar(34, 4)">
+                    <img id="cerberinho_5" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 5" onclick="avaliar(34, 5)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <section class="secao">
+        <div class="container grade-ficha">
+            <div>
+                <div class="titulo-secao">
+                    <span class="etiqueta">FICHA DO GUARDIÃO</span>
+                    <h2>O que os antigos registraram</h2>
+                </div>
+                <div class="ficha">
+                    <div class="ficha-linha">
+                        <span>Origem</span>
+                        <strong>Descendentes de Ixíon e de uma nuvem com a forma de Hera</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Morada</span>
+                        <strong>Tessália, no monte Pélion</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Corpo</span>
+                        <strong>Tronco de homem, corpo de cavalo</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>O mais sábio</span>
+                        <strong>Quíron, filho de Cronos</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Alunos de Quíron</span>
+                        <strong>Aquiles, Jasão e Asclépio</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Inimigos</span>
+                        <strong>Os lápitas</strong>
+                    </div>
+                </div>
+            </div>
+            <p class="fala-guia fala-clara">Quíron era imortal, mas abriu mão disso por causa de uma ferida que nunca sarava. Até eu, que não sou de chorar, acho isso triste.</p>
+        </div>
+    </section>
+
+    <section class="secao faixa-mitos">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">RELATOS PRESERVADOS</span>
+                <h2>Seus mitos</h2>
+            </div>
+            <div class="grade-mitos">
+            <article class="mito">
+                <span class="numero">01</span>
+                <h3>Lápitas e centauros</h3>
+                <p>No casamento de Pirítoo, rei dos lápitas, os centauros beberam vinho demais e tentaram raptar a noiva. A festa virou uma batalha.</p>
+                <span class="fonte">Ovídio, Metamorfoses XII</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">02</span>
+                <h3>O professor Quíron</h3>
+                <p>Quíron criou Aquiles no monte Pélion. Ensinou o menino a caçar, a tocar lira e a cuidar de feridas.</p>
+                <span class="fonte">Apolodoro, Biblioteca III</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">03</span>
+                <h3>A flecha de Héracles</h3>
+                <p>Héracles atingiu Quíron sem querer com uma flecha envenenada pelo sangue da Hidra. A dor não passava, e Quíron entregou a sua imortalidade para poder morrer.</p>
+                <a href="heracles.html" class="fonte">Conhecer Héracles →</a>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao faixa-citacao">
+        <div class="container">
+            <blockquote class="citacao">
+                <p>“Quíron, o mais justo dos centauros.”</p>
+                <cite>Homero, Ilíada XI (tradução livre)</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">CONTINUE A JORNADA</span>
+                <h2>Relacionados</h2>
+            </div>
+            <div class="grade-deuses">
+            <a href="aquiles.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/herois/aquiles.webp" alt="Busto de Aquiles">
+                <div class="cartao-deus-texto">
+                    <h3>Aquiles</h3>
+                    <p class="nome-grego">Ἀχιλλεύς</p>
+                    <p class="dominio">Filho de Peleu e Tétis, o maior guerreiro grego em Troia.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">lança</span>
+                        <span class="simbolo">Ilíada</span>
+                    </div>
+                </div>
+            </a>
+            <a href="jasao.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/herois/jasao.webp" alt="Estátua de Jasão, de Bertel Thorvaldsen">
+                <div class="cartao-deus-texto">
+                    <h3>Jasão</h3>
+                    <p class="nome-grego">Ἰάσων</p>
+                    <p class="dominio">Liderou os Argonautas na busca pelo Velocino de Ouro.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">Velocino de Ouro</span>
+                        <span class="simbolo">Argo</span>
+                    </div>
+                </div>
+            </a>
+            <a href="cronos.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/deuses/cronos.webp" alt="Estátua de Cronos">
+                <div class="cartao-deus-texto">
+                    <h3>Cronos</h3>
+                    <p class="nome-grego">Κρόνος</p>
+                    <p class="dominio">Titã que reinou antes de Zeus.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">foice</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="perfil.html">Meu perfil</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/cerberus.js"></script>
+    <script src="js/historia-acoes.js"></script>
+    <script>buscarEstado(34);</script>
+</body>
+</html>

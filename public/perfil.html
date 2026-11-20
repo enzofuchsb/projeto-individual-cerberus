@@ -38,76 +38,47 @@
         <aside class="menu-lateral">
             <span class="etiqueta etiqueta-ambar">MINHA JORNADA</span>
             <a href="perfil.html" class="item-lateral item-ativo">Visão geral</a>
-            <a href="patrono.html" class="item-lateral">Teste do Patrono</a>
-            <a href="trabalhos.html" class="item-lateral">12 Trabalhos</a>
-            <a href="quizzes.html" class="item-lateral">Quizzes</a>
             <a href="historia.html" class="item-lateral">História do dia</a>
-            <a href="configuracoes.html" class="item-lateral">Configurações</a>
             <button class="item-lateral item-sair" onclick="limparSessao()">Sair</button>
         </aside>
 
         <section class="conteudo-perfil">
 
             <div class="cabecalho-perfil">
-                <div id="avatar" class="avatar"></div>
+                <div class="avatar"><img src="img/mini-cerberus.webp" alt=""></div>
                 <div class="info-perfil">
-                    <span id="titulo_usuario" class="etiqueta etiqueta-ambar">MORTAL</span>
+                    <span class="etiqueta etiqueta-ambar">MINHA JORNADA</span>
                     <h1 id="nome_usuario">Viajante</h1>
-                    <p id="texto_historias"></p>
-                    <div class="barra-progresso"><i id="barra_titulo"></i></div>
-                    <p id="texto_titulo" class="texto-progresso"></p>
+                    <p>Tudo o que você já leu, avaliou e guardou pelos mitos.</p>
                 </div>
             </div>
 
             <div class="grade-numeros">
-                <article class="numero-painel"><strong id="kpi_quizzes">0</strong><p>Quizzes feitos</p></article>
-                <article class="numero-painel"><strong id="kpi_media">–</strong><p>Média de acertos</p></article>
-                <article class="numero-painel"><strong id="kpi_melhor">–</strong><p>Melhor nota</p></article>
-                <article class="numero-painel"><strong id="kpi_historias">0</strong><p>Histórias lidas</p></article>
+                <article class="numero-painel"><strong id="kpi_lidas">0</strong><p>Histórias lidas</p></article>
+                <article class="numero-painel"><strong id="kpi_favoritos">0</strong><p>Favoritos</p></article>
+                <article class="numero-painel"><strong id="kpi_media">–</strong><p>Média das suas notas</p></article>
             </div>
 
             <div class="grade-graficos">
-                <article id="area_radar" class="grafico">
-                    <span class="etiqueta">TESTE DO PATRONO</span>
-                    <h3>Afinidade divina</h3>
-                    <p class="eixo">Pontos de cada deus nas suas respostas</p>
-                    <div class="area-canvas"><canvas id="grafico_radar"></canvas></div>
-                </article>
-
-                <article id="convite_teste" class="convite-teste" style="display: none">
-                    <span class="etiqueta etiqueta-ambar">TESTE DO PATRONO</span>
-                    <h3>Qual deus olha por você?</h3>
-                    <p>Responda 5 perguntas e descubra seu deus patrono. Ele vira o seu avatar e libera um quiz exclusivo.</p>
-                    <a href="patrono.html" class="botao">Fazer o teste →</a>
+                <article class="grafico">
+                    <span class="etiqueta">SUAS LEITURAS</span>
+                    <h3>Lidas por categoria</h3>
+                    <p class="eixo">Deuses, heróis, criaturas e lugares que você já leu</p>
+                    <div class="area-canvas"><canvas id="grafico_rosca"></canvas></div>
                 </article>
 
                 <article class="grafico">
-                    <span class="etiqueta">TODAS AS RESPOSTAS</span>
-                    <h3>Acertos e erros</h3>
-                    <p id="eixo_rosca" class="eixo">Somando todos os quizzes que você fez</p>
-                    <div class="area-canvas"><canvas id="grafico_rosca"></canvas></div>
+                    <span class="etiqueta">TODO O SITE</span>
+                    <h3>As 5 mais bem avaliadas</h3>
+                    <p class="eixo">Média de cerberinhos dada por todos os viajantes</p>
+                    <div class="area-canvas"><canvas id="grafico_barras"></canvas></div>
                 </article>
             </div>
 
-            <article class="grafico bloco">
-                <span class="etiqueta">DESEMPENHO</span>
-                <h3>Sua evolução</h3>
-                <p id="eixo_linha" class="eixo">Porcentagem de acerto nos seus últimos 10 quizzes, do mais antigo ao mais novo</p>
-                <div class="area-canvas"><canvas id="grafico_linha"></canvas></div>
-            </article>
-
             <div class="bloco">
-                <span class="etiqueta">SEUS QUIZZES</span>
-                <h2>Liberados e bloqueados</h2>
-                <p class="texto-apagado">Complete trabalhos para subir de título e abrir novos quizzes.</p>
-                <div id="lista_quizzes" class="grade-quizzes"></div>
-            </div>
-
-            <div class="bloco">
-                <span class="etiqueta">CONQUISTAS</span>
-                <h2>Os 12 Trabalhos</h2>
-                <div id="mini_trabalhos" class="mini-trabalhos"></div>
-                <a href="trabalhos.html" class="link-terracota">Ver todos os trabalhos →</a>
+                <span class="etiqueta">GUARDADOS</span>
+                <h2>Seus favoritos</h2>
+                <ul id="lista_favoritos" class="lista-favoritos"></ul>
             </div>
         </section>
     </main>
@@ -131,7 +102,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/sessao.js"></script>
-    <script src="js/jornada.js"></script>
     <script src="js/cerberus.js"></script>
     <script src="js/perfil.js"></script>
 </body>

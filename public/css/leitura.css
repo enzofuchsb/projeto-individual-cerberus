@@ -108,49 +108,6 @@
     border: 1px solid #cbc7bf;
 }
 
-.lista-arquivo {
-    border-top: 1px solid #bdb8b0;
-}
-
-.item-arquivo {
-    display: grid;
-    grid-template-columns: 80px 1fr 120px 30px;
-    gap: 25px;
-    align-items: center;
-    padding: 24px 10px;
-    border-bottom: 1px solid #c9c4bc;
-    color: #1d1f24;
-    text-decoration: none;
-}
-
-.item-arquivo:hover {
-    background-color: #ffffff88;
-}
-
-.item-arquivo .numero {
-    color: #c8693a;
-    font-size: 22px;
-}
-
-.item-arquivo small {
-    color: #c8693a;
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.item-arquivo strong {
-    display: block;
-    font-family: 'Cinzel', serif;
-    font-size: 20px;
-}
-
-.item-arquivo p {
-    margin: 4px 0 0 0;
-    color: #4e4a44;
-    font-size: 15px;
-}
-
 .tempo {
     color: #4e4a44;
     font-size: 14px;
@@ -182,17 +139,8 @@
         width: 100%;
     }
 
-    .item-arquivo {
-        grid-template-columns: 44px 1fr 20px;
-        gap: 12px;
-    }
-
     .tempo {
         display: none;
-    }
-
-    .item-arquivo strong {
-        font-size: 16px;
     }
 }
 

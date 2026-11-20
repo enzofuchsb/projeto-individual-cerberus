@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Esfinge</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/deuses.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html">Deuses</a>
+                <a href="herois.html">Heróis</a>
+                <a href="criaturas.html" class="ativo">Criaturas</a>
+                <a href="lugares.html">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+                <a href="mito.html">Mito no dia a dia</a>
+            </nav>
+            <a id="botao_entrar" href="login.html" class="botao-borda">Entrar</a>
+        </div>
+    </header>
+
+    <section class="detalhe">
+        <div class="container">
+            <div class="detalhe-foto">
+                <img src="img/criaturas/esfinge.webp" alt="Estátua de uma esfinge">
+                <span class="selo">CRIATURA</span>
+            </div>
+            <div class="detalhe-texto">
+                <span class="etiqueta etiqueta-ambar">ARQUIVO · CRIATURAS</span>
+                <h1>Esfinge</h1>
+                <p class="nome-grego">Σφίγξ</p>
+                <p>Tinha corpo de leão, asas de pássaro e rosto de mulher. Ficava num monte perto de Tebas e devorava quem não resolvesse o seu enigma, até Édipo dar a resposta certa.</p>
+                <button id="botao_favorito" class="favorito" onclick="favoritar(33)">♡ Adicionar aos favoritos</button>
+                <button id="botao_lida" class="favorito" onclick="marcarLeitura(33)">✓ Marcar como lida</button>
+                <div id="area_nota" class="area-nota">
+                    <p>Que nota você dá? Clique nos cerberinhos:</p>
+                    <img id="cerberinho_1" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 1" onclick="avaliar(33, 1)">
+                    <img id="cerberinho_2" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 2" onclick="avaliar(33, 2)">
+                    <img id="cerberinho_3" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 3" onclick="avaliar(33, 3)">
+                    <img id="cerberinho_4" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 4" onclick="avaliar(33, 4)">
+                    <img id="cerberinho_5" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 5" onclick="avaliar(33, 5)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <section class="secao">
+        <div class="container grade-ficha">
+            <div>
+                <div class="titulo-secao">
+                    <span class="etiqueta">FICHA DO GUARDIÃO</span>
+                    <h2>O que os antigos registraram</h2>
+                </div>
+                <div class="ficha">
+                    <div class="ficha-linha">
+                        <span>Pais</span>
+                        <strong>Tífon e Equidna, segundo Apolodoro</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Enviada por</span>
+                        <strong>Hera, para castigar Tebas</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Morada</span>
+                        <strong>Um monte perto de Tebas</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Corpo</span>
+                        <strong>Leão com asas e rosto de mulher</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Arma</span>
+                        <strong>Um enigma</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Vencida por</span>
+                        <strong>Édipo</strong>
+                    </div>
+                </div>
+            </div>
+            <p class="fala-guia fala-clara">Ela também fazia perguntas na porta de uma cidade. Eu sou mais simples: não pergunto nada, só não deixo ninguém sair.</p>
+        </div>
+    </section>
+
+    <section class="secao faixa-mitos">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">RELATOS PRESERVADOS</span>
+                <h2>Seus mitos</h2>
+            </div>
+            <div class="grade-mitos">
+            <article class="mito">
+                <span class="numero">01</span>
+                <h3>O enigma</h3>
+                <p>A Esfinge perguntava: qual ser tem uma só voz e anda com quatro pés, depois com dois e depois com três? Quem errava era devorado.</p>
+                <span class="fonte">Apolodoro, Biblioteca III</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">02</span>
+                <h3>A resposta de Édipo</h3>
+                <p>Édipo respondeu: o ser humano. Engatinha quando é bebê, anda em dois pés quando adulto e usa bengala na velhice. Derrotada, a Esfinge se jogou do alto do monte.</p>
+                <span class="fonte">Apolodoro, Biblioteca III</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">03</span>
+                <h3>Grega ou egípcia?</h3>
+                <p>A esfinge do Egito é um leão com cabeça de homem que guarda templos. A grega é feminina, tem asas e é perigosa. As duas têm o mesmo nome, mas não são o mesmo ser.</p>
+                <span class="fonte">Arte grega e egípcia</span>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao faixa-citacao">
+        <div class="container">
+            <blockquote class="citacao">
+                <p>“E ela gerou a funesta Esfinge, a ruína dos cadmeus.”</p>
+                <cite>Hesíodo, Teogonia (tradução livre)</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">CONTINUE A JORNADA</span>
+                <h2>Relacionados</h2>
+            </div>
+            <div class="grade-deuses">
+            <a href="hera.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/deuses/hera.webp" alt="Estátua de Hera">
+                <div class="cartao-deus-texto">
+                    <h3>Hera</h3>
+                    <p class="nome-grego">Ἥρα</p>
+                    <p class="dominio">Rainha dos deuses e guardiã do matrimônio.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">pavão</span>
+                        <span class="simbolo">romã</span>
+                    </div>
+                </div>
+            </a>
+            <a href="quimera.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/criaturas/quimera.webp" alt="Quimera de Arezzo, estátua de bronze">
+                <div class="cartao-deus-texto">
+                    <h3>Quimera</h3>
+                    <p class="nome-grego">Χίμαιρα</p>
+                    <p class="dominio">Cuspia fogo e tinha partes de leão, cabra e serpente.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">fogo</span>
+                        <span class="simbolo">Lícia</span>
+                    </div>
+                </div>
+            </a>
+            <a href="cerberus.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/criaturas/cerbero.webp" alt="Estátua de Cérbero, de Gortina">
+                <div class="cartao-deus-texto">
+                    <h3>Cérbero</h3>
+                    <p class="nome-grego">Κέρβερος</p>
+                    <p class="dominio">Cão que guarda o Submundo. Hesíodo fala em cinquenta cabeças; a maioria dos autores, em três.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">Submundo</span>
+                        <span class="simbolo">Hades</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="perfil.html">Meu perfil</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/cerberus.js"></script>
+    <script src="js/historia-acoes.js"></script>
+    <script>buscarEstado(33);</script>
+</body>
+</html>

@@ -41,8 +41,16 @@
                 <h1>Zeus</h1>
                 <p class="nome-grego">Ζεύς</p>
                 <p>Filho mais novo de Cronos e Reia. Escapou de ser engolido pelo pai, libertou os irmãos e venceu os Titãs. Desde então reina sobre deuses e homens, do alto do Olimpo.</p>
-                <button id="botao_favorito" class="favorito" onclick="favoritar()">♡ Adicionar aos favoritos</button>
-                <button id="botao_lida" class="favorito" onclick="marcarLeitura('zeus')">✓ Marcar como lida</button>
+                <button id="botao_favorito" class="favorito" onclick="favoritar(30)">♡ Adicionar aos favoritos</button>
+                <button id="botao_lida" class="favorito" onclick="marcarLeitura(30)">✓ Marcar como lida</button>
+                <div id="area_nota" class="area-nota">
+                    <p>Que nota você dá? Clique nos cerberinhos:</p>
+                    <img id="cerberinho_1" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 1" onclick="avaliar(30, 1)">
+                    <img id="cerberinho_2" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 2" onclick="avaliar(30, 2)">
+                    <img id="cerberinho_3" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 3" onclick="avaliar(30, 3)">
+                    <img id="cerberinho_4" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 4" onclick="avaliar(30, 4)">
+                    <img id="cerberinho_5" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 5" onclick="avaliar(30, 5)">
+                </div>
             </div>
         </div>
     </section>
@@ -188,8 +196,6 @@
             <div>
                 <span class="rodape-titulo">EXPLORE</span>
                 <a href="historia.html">História do Dia</a>
-                <a href="arquivo.html">Arquivo de histórias</a>
-                <a href="desafio.html">Desafio do Guardião</a>
             </div>
             <div>
                 <span class="rodape-titulo">PROJETO</span>
@@ -215,7 +221,7 @@
 
     <script src="js/menu.js"></script>
     <script src="js/cerberus.js"></script>
-    <script src="js/favorito.js"></script>
-    <script src="js/leitura.js"></script>
+    <script src="js/historia-acoes.js"></script>
+    <script>buscarEstado(30);</script>
 </body>
 </html>

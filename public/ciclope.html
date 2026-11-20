@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Ciclope</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/deuses.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html">Deuses</a>
+                <a href="herois.html">Heróis</a>
+                <a href="criaturas.html" class="ativo">Criaturas</a>
+                <a href="lugares.html">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+                <a href="mito.html">Mito no dia a dia</a>
+            </nav>
+            <a id="botao_entrar" href="login.html" class="botao-borda">Entrar</a>
+        </div>
+    </header>
+
+    <section class="detalhe">
+        <div class="container">
+            <div class="detalhe-foto">
+                <img src="img/criaturas/ciclope.webp" alt="Cabeça do ciclope Polifemo">
+                <span class="selo">CRIATURA</span>
+            </div>
+            <div class="detalhe-texto">
+                <span class="etiqueta etiqueta-ambar">ARQUIVO · CRIATURAS</span>
+                <h1>Ciclope</h1>
+                <p class="nome-grego">Κύκλωψ</p>
+                <p>Gigantes com um olho só, no meio da testa. Hesíodo fala de três ciclopes ferreiros que fizeram o raio de Zeus. Homero conta a história de Polifemo, o pastor que prendeu Odisseu.</p>
+                <button id="botao_favorito" class="favorito" onclick="favoritar(37)">♡ Adicionar aos favoritos</button>
+                <button id="botao_lida" class="favorito" onclick="marcarLeitura(37)">✓ Marcar como lida</button>
+                <div id="area_nota" class="area-nota">
+                    <p>Que nota você dá? Clique nos cerberinhos:</p>
+                    <img id="cerberinho_1" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 1" onclick="avaliar(37, 1)">
+                    <img id="cerberinho_2" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 2" onclick="avaliar(37, 2)">
+                    <img id="cerberinho_3" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 3" onclick="avaliar(37, 3)">
+                    <img id="cerberinho_4" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 4" onclick="avaliar(37, 4)">
+                    <img id="cerberinho_5" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 5" onclick="avaliar(37, 5)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <section class="secao">
+        <div class="container grade-ficha">
+            <div>
+                <div class="titulo-secao">
+                    <span class="etiqueta">FICHA DO GUARDIÃO</span>
+                    <h2>O que os antigos registraram</h2>
+                </div>
+                <div class="ficha">
+                    <div class="ficha-linha">
+                        <span>Os três ferreiros</span>
+                        <strong>Brontes, Estéropes e Arges</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Pais dos ferreiros</span>
+                        <strong>Urano e Gaia</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Presentes</span>
+                        <strong>O raio de Zeus, o tridente de Poseidon e o elmo de Hades</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Polifemo</span>
+                        <strong>Filho de Poseidon</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Morada de Polifemo</span>
+                        <strong>Uma caverna na ilha dos ciclopes</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Cegado por</span>
+                        <strong>Odisseu</strong>
+                    </div>
+                </div>
+            </div>
+            <p class="fala-guia fala-clara">Foram os ciclopes que fizeram o elmo do meu dono, Hades. Com ele, Hades fica invisível, o que me deixa sem saber se ele está me olhando.</p>
+        </div>
+    </section>
+
+    <section class="secao faixa-mitos">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">RELATOS PRESERVADOS</span>
+                <h2>Seus mitos</h2>
+            </div>
+            <div class="grade-mitos">
+            <article class="mito">
+                <span class="numero">01</span>
+                <h3>Os ferreiros de Zeus</h3>
+                <p>Os três ciclopes foram presos pelo pai, Urano. Zeus os libertou, e em troca eles forjaram o trovão e o raio que o ajudaram a vencer os Titãs.</p>
+                <span class="fonte">Hesíodo, Teogonia</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">02</span>
+                <h3>Meu nome é Ninguém</h3>
+                <p>Odisseu disse a Polifemo que se chamava Ninguém e furou o olho dele. Quando os outros ciclopes perguntaram o que houve, Polifemo gritou: Ninguém está me ferindo!</p>
+                <a href="odisseu.html" class="fonte">Conhecer Odisseu →</a>
+            </article>
+
+            <article class="mito">
+                <span class="numero">03</span>
+                <h3>A raiva de Poseidon</h3>
+                <p>Polifemo pediu vingança ao pai, Poseidon. Por isso o deus do mar atrasou por anos a volta de Odisseu para casa.</p>
+                <span class="fonte">Homero, Odisseia IX</span>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao faixa-citacao">
+        <div class="container">
+            <blockquote class="citacao">
+                <p>“Ninguém é o meu nome. Ninguém me chamam a minha mãe, o meu pai e todos os companheiros.”</p>
+                <cite>Homero, Odisseia IX (tradução livre)</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">CONTINUE A JORNADA</span>
+                <h2>Relacionados</h2>
+            </div>
+            <div class="grade-deuses">
+            <a href="odisseu.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/herois/odisseu.webp" alt="Cabeça de Odisseu, de Sperlonga">
+                <div class="cartao-deus-texto">
+                    <h3>Odisseu</h3>
+                    <p class="nome-grego">Ὀδυσσεύς</p>
+                    <p class="dominio">Rei de Ítaca. Levou dez anos para voltar para casa depois da guerra.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">cavalo de madeira</span>
+                        <span class="simbolo">Odisseia</span>
+                    </div>
+                </div>
+            </a>
+            <a href="poseidon.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/deuses/poseidon.webp" alt="Estátua de Poseidon">
+                <div class="cartao-deus-texto">
+                    <h3>Poseidon</h3>
+                    <p class="nome-grego">Ποσειδῶν</p>
+                    <p class="dominio">Deus do mar, dos terremotos e dos cavalos.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">tridente</span>
+                        <span class="simbolo">cavalo</span>
+                    </div>
+                </div>
+            </a>
+            <a href="zeus.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/deuses/zeus.webp" alt="Estátua de Zeus">
+                <div class="cartao-deus-texto">
+                    <h3>Zeus</h3>
+                    <p class="nome-grego">Ζεύς</p>
+                    <p class="dominio">Senhor dos céus e do trovão.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">raio</span>
+                        <span class="simbolo">águia</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="perfil.html">Meu perfil</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/cerberus.js"></script>
+    <script src="js/historia-acoes.js"></script>
+    <script>buscarEstado(37);</script>
+</body>
+</html>

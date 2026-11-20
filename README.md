@@ -32,10 +32,47 @@ Quem conduz o visitante é o **Cerberus**, o cão de três cabeças que guarda o
   <tr>
     <td align="center" width="25%"><b>Deuses</b><br/><sub>Zeus, Hades, Poseidon e os olimpianos</sub></td>
     <td align="center" width="25%"><b>Heróis</b><br/><sub>Héracles, Perseu, Aquiles, Odisseu</sub></td>
-    <td align="center" width="25%"><b>Criaturas</b><br/><sub>Medusa, Hidra, Minotauro e o próprio Cerberus</sub></td>
-    <td align="center" width="25%"><b>Lugares</b><br/><sub>Olimpo, Submundo, Tártaro, Campos Elísios</sub></td>
+    <td align="center" width="25%"><b>Criaturas</b><br/><sub>Medusa, Minotauro, Hidra, Quimera e o próprio Cerberus</sub></td>
+    <td align="center" width="25%"><b>Lugares</b><br/><sub>Olimpo, Delfos, Troia, Ítaca, Aqueronte</sub></td>
   </tr>
 </table>
+
+<img src="docs/assets/divisor.svg" width="100%"/>
+
+## Funcionalidades
+
+**Para todos**
+- Página inicial com o Cerberus, um desafio rápido e o portão que pede o seu nome.
+- Listas de **deuses, heróis, criaturas e lugares**, com uma página de história para cada um (37 histórias).
+- **História do Dia** (Perséfone e a romã), com uma pergunta no final.
+- **Mito no dia a dia**: palavras e marcas que vieram dos mitos, com filtro.
+- **Mini Cerberus** no canto da tela, que fala uma frase a cada clique.
+
+**Com login** (cadastro e login guardados no banco)
+- **Marcar como lida** cada história.
+- **Avaliar de 1 a 5 cerberinhos** depois de ler: clicar no 3º acende os 3 primeiros.
+- **Favoritar e desfavoritar** histórias.
+- Perfil **Minha Jornada**: total de lidas, de favoritos e média das notas; gráfico de rosca com as lidas por categoria; gráfico de barras com as 5 histórias mais bem avaliadas do site; e a lista dos favoritos.
+
+<img src="docs/assets/divisor.svg" width="100%"/>
+
+## Banco de dados
+
+Script completo em [`database/script.sql`](database/script.sql) (tabelas, dados de teste e os SELECTs do dashboard).
+
+```
+usuario 1 ───< N leitura  N >─── 1 historia
+usuario 1 ───< N favorito N >─── 1 historia
+
+usuario  (id PK, nome, email UNIQUE, senha)
+historia (id PK, nome, categoria, pagina)
+leitura  (fk_usuario + fk_historia = PK, nota INT NULL de 1 a 5, data_hora)
+favorito (fk_usuario + fk_historia = PK, data_hora)
+```
+
+`usuario` e `historia` têm relacionamento **N:N** duas vezes: pela tabela `leitura` (quem leu e que nota deu) e pela tabela `favorito`.
+
+Usuário de teste: `teste@cerberus.com` / `12345678`.
 
 <img src="docs/assets/divisor.svg" width="100%"/>
 
@@ -43,12 +80,16 @@ Quem conduz o visitante é o **Cerberus**, o cão de três cabeças que guarda o
 
 ```
 projeto-individual-cerberus/
-├── public/          # frontend (index.html)
+├── app.js           # servidor Express
+├── public/          # frontend: páginas HTML
 │   ├── css/         # estilos
 │   ├── img/         # imagens
-│   └── js/          # scripts
+│   └── js/          # historia-acoes.js, perfil.js, conta.js, cerberus.js...
 ├── src/             # API em Node.js
-├── database/        # scripts SQL (modelo e comandos)
+│   ├── routes/      # usuarios.js e historias.js
+│   ├── controllers/ # usuarioController e historiaController
+│   └── models/      # usuarioModel e historiaModel
+├── database/        # script.sql (modelo, dados de teste e SELECTs)
 └── docs/            # documentação, assets e Diário de Prompts
 ```
 
@@ -62,7 +103,8 @@ projeto-individual-cerberus/
 | Estilo | CSS3 |
 | Interação | JavaScript |
 | Servidor | Node.js |
-| Banco de dados | SQL |
+| Banco de dados | MySQL |
+| Gráficos | Chart.js |
 
 <img src="docs/assets/divisor.svg" width="100%"/>
 

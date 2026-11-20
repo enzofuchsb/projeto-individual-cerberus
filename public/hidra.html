@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerberus | Hidra de Lerna</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/deuses.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="container menu">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="" class="logo-imagem">
+                CERBERUS
+            </a>
+            <nav class="menu-links">
+                <a href="deuses.html">Deuses</a>
+                <a href="herois.html">Heróis</a>
+                <a href="criaturas.html" class="ativo">Criaturas</a>
+                <a href="lugares.html">Lugares</a>
+                <a href="historia.html">História do Dia</a>
+                <a href="mito.html">Mito no dia a dia</a>
+            </nav>
+            <a id="botao_entrar" href="login.html" class="botao-borda">Entrar</a>
+        </div>
+    </header>
+
+    <section class="detalhe">
+        <div class="container">
+            <div class="detalhe-foto">
+                <img src="img/criaturas/hidra.webp" alt="Estátua de Héracles matando a Hidra">
+                <span class="selo">CRIATURA</span>
+            </div>
+            <div class="detalhe-texto">
+                <span class="etiqueta etiqueta-ambar">ARQUIVO · CRIATURAS</span>
+                <h1>Hidra de Lerna</h1>
+                <p class="nome-grego">Ὕδρα</p>
+                <p>Serpente de muitas cabeças que vivia no pântano de Lerna. Quando uma cabeça era cortada, nasciam outras no lugar. Vencê-la foi o segundo trabalho de Héracles.</p>
+                <button id="botao_favorito" class="favorito" onclick="favoritar(35)">♡ Adicionar aos favoritos</button>
+                <button id="botao_lida" class="favorito" onclick="marcarLeitura(35)">✓ Marcar como lida</button>
+                <div id="area_nota" class="area-nota">
+                    <p>Que nota você dá? Clique nos cerberinhos:</p>
+                    <img id="cerberinho_1" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 1" onclick="avaliar(35, 1)">
+                    <img id="cerberinho_2" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 2" onclick="avaliar(35, 2)">
+                    <img id="cerberinho_3" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 3" onclick="avaliar(35, 3)">
+                    <img id="cerberinho_4" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 4" onclick="avaliar(35, 4)">
+                    <img id="cerberinho_5" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 5" onclick="avaliar(35, 5)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="faixa-grega"></div>
+
+    <section class="secao">
+        <div class="container grade-ficha">
+            <div>
+                <div class="titulo-secao">
+                    <span class="etiqueta">FICHA DO GUARDIÃO</span>
+                    <h2>O que os antigos registraram</h2>
+                </div>
+                <div class="ficha">
+                    <div class="ficha-linha">
+                        <span>Pais</span>
+                        <strong>Tífon e Equidna</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Criada por</span>
+                        <strong>Hera, para enfrentar Héracles</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Morada</span>
+                        <strong>O pântano de Lerna, perto de Argos</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Cabeças</span>
+                        <strong>Nove, segundo Apolodoro, uma delas imortal</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Poder</span>
+                        <strong>Veneno e cabeças que renascem</strong>
+                    </div>
+                    <div class="ficha-linha">
+                        <span>Vencida por</span>
+                        <strong>Héracles, com a ajuda de Iolau</strong>
+                    </div>
+                </div>
+            </div>
+            <p class="fala-guia fala-clara">Minha irmã de muitas cabeças. Eu tenho só três e já acho difícil as três concordarem sobre o jantar.</p>
+        </div>
+    </section>
+
+    <section class="secao faixa-mitos">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">RELATOS PRESERVADOS</span>
+                <h2>Seus mitos</h2>
+            </div>
+            <div class="grade-mitos">
+            <article class="mito">
+                <span class="numero">01</span>
+                <h3>Cabeças que voltam</h3>
+                <p>Héracles atacou a Hidra com uma clava, mas cada cabeça esmagada dava lugar a duas novas. Do jeito normal, a luta não ia acabar nunca.</p>
+                <span class="fonte">Apolodoro, Biblioteca II</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">02</span>
+                <h3>O fogo de Iolau</h3>
+                <p>Iolau, sobrinho de Héracles, queimava cada pescoço cortado com uma tocha, e assim as cabeças não voltavam. A cabeça imortal foi enterrada debaixo de uma pedra.</p>
+                <span class="fonte">Apolodoro, Biblioteca II</span>
+            </article>
+
+            <article class="mito">
+                <span class="numero">03</span>
+                <h3>O caranguejo de Hera</h3>
+                <p>Hera mandou um caranguejo morder o pé de Héracles no meio da luta. Ele esmagou o bicho, e a deusa o colocou no céu como a constelação de Câncer.</p>
+                <a href="heracles.html" class="fonte">Conhecer Héracles →</a>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao faixa-citacao">
+        <div class="container">
+            <blockquote class="citacao">
+                <p>“Depois gerou a terrível Hidra de Lerna, que Hera, deusa de braços brancos, criou.”</p>
+                <cite>Hesíodo, Teogonia (tradução livre)</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="secao">
+        <div class="container">
+            <div class="titulo-secao">
+                <span class="etiqueta">CONTINUE A JORNADA</span>
+                <h2>Relacionados</h2>
+            </div>
+            <div class="grade-deuses">
+            <a href="heracles.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/herois/heracles.webp" alt="Estátua de Héracles (Héracles Farnese)">
+                <div class="cartao-deus-texto">
+                    <h3>Héracles</h3>
+                    <p class="nome-grego">Ἡρακλῆς</p>
+                    <p class="dominio">Filho de Zeus e Alcmena, cumpriu os doze trabalhos. No último, me levou do Submundo.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">clava</span>
+                        <span class="simbolo">pele de leão</span>
+                    </div>
+                </div>
+            </a>
+            <a href="hera.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/deuses/hera.webp" alt="Estátua de Hera">
+                <div class="cartao-deus-texto">
+                    <h3>Hera</h3>
+                    <p class="nome-grego">Ἥρα</p>
+                    <p class="dominio">Rainha dos deuses e guardiã do matrimônio.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">pavão</span>
+                        <span class="simbolo">romã</span>
+                    </div>
+                </div>
+            </a>
+            <a href="cerberus.html" class="cartao-deus">
+                <span class="seta">↗</span>
+                <img src="img/criaturas/cerbero.webp" alt="Estátua de Cérbero, de Gortina">
+                <div class="cartao-deus-texto">
+                    <h3>Cérbero</h3>
+                    <p class="nome-grego">Κέρβερος</p>
+                    <p class="dominio">Cão que guarda o Submundo. Hesíodo fala em cinquenta cabeças; a maioria dos autores, em três.</p>
+                    <div class="simbolos">
+                        <span class="simbolo">Submundo</span>
+                        <span class="simbolo">Hades</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <span class="logo">
+                    <img src="img/logo.svg" alt="" class="logo-imagem">
+                    CERBERUS
+                </span>
+                <p>Os mitos atravessam eras. Eu guardo suas histórias.</p>
+            </div>
+            <div>
+                <span class="rodape-titulo">EXPLORE</span>
+                <a href="historia.html">História do Dia</a>
+            </div>
+            <div>
+                <span class="rodape-titulo">PROJETO</span>
+                <a href="perfil.html">Meu perfil</a>
+                <a href="https://github.com/enzofuchsb/projeto-individual-cerberus">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="direitos">
+                <span>CERBERUS · Mitologia grega para viajantes curiosos</span>
+                <span>Projeto Individual · enzofuchsb</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mini-cerberus">
+        <p id="balao_cerberus" class="balao">
+            <span id="texto_balao"></span>
+            <button onclick="fecharBalao()" aria-label="Fechar balão">×</button>
+        </p>
+        <img src="img/mini-cerberus.webp" alt="Mini Cerberus: clique para ele falar" onclick="falarCerberus()">
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/cerberus.js"></script>
+    <script src="js/historia-acoes.js"></script>
+    <script>buscarEstado(35);</script>
+</body>
+</html>

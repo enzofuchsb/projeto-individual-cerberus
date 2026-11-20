@@ -561,15 +561,9 @@ img {
     margin: 18px 0;
 }
 
-.link-ambar {
-    color: #f2b632;
-    font-weight: bold;
-    text-decoration: none;
-}
-
 .grade-conteudos {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
 }
 
@@ -919,4 +913,41 @@ img {
     .balao {
         max-width: 200px;
     }
+}
+
+/* Botões das páginas de história (favoritar e marcar como lida) */
+.favorito {
+    background-color: #00000050;
+    border: 1px solid #ffffff55;
+    border-radius: 10px;
+    padding: 12px 18px;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.favorito-ativo {
+    background-color: #c8693a;
+    border-color: #c8693a;
+}
+
+/* Avaliação com cerberinhos: só aparece depois de marcar como lida */
+.area-nota {
+    display: none;
+    margin-top: 18px;
+}
+
+.area-nota p {
+    margin-bottom: 8px;
+}
+
+.cerberinho {
+    width: 48px;
+    cursor: pointer;
+    opacity: 0.25;
+}
+
+.cerberinho.aceso {
+    opacity: 1;
 }
