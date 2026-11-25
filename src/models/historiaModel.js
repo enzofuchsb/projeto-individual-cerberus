@@ -49,7 +49,8 @@ function buscarResumo(idUsuario) {
         SELECT
             (SELECT COUNT(*) FROM leitura WHERE fk_usuario = ${idUsuario}) AS lidas,
             (SELECT COUNT(*) FROM favorito WHERE fk_usuario = ${idUsuario}) AS favoritos,
-            (SELECT AVG(nota) FROM leitura WHERE fk_usuario = ${idUsuario} AND nota IS NOT NULL) AS media;
+            (SELECT ROUND(AVG(nota), 1) FROM leitura WHERE fk_usuario = ${idUsuario} AND nota IS NOT NULL) AS media,
+            (SELECT COUNT(*) FROM historia) AS total;
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);

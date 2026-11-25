@@ -1,0 +1,7 @@
+[   13453ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://localhost:8765/login.html:1
+[   13604ms] [LOG] Dados de resumo/1:  [Object] @ http://localhost:8765/js/perfil.js:24
+[   13605ms] [LOG] Dados de porCategoria/1:  [Object, Object] @ http://localhost:8765/js/perfil.js:24
+[   13624ms] [LOG] Dados de maisBemAvaliadas:  [Object] @ http://localhost:8765/js/perfil.js:24
+[   13641ms] [LOG] Dados de favoritos/1:  [Object] @ http://localhost:8765/js/perfil.js:24
+[   16536ms] [LOG] Dados de resumo/undefined:  [Object] @ http://localhost:8765/js/perfil.js:24
+[   17145ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://localhost:8765/login.html:1

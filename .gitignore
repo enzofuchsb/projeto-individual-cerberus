@@ -1,5 +1,5 @@
 node_modules/
 .env
+.env.dev
 CLAUDE.md
 package-lock.json
-.env.dev

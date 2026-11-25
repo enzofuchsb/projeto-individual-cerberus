@@ -915,7 +915,6 @@ img {
     }
 }
 
-/* Botões das páginas de história (favoritar e marcar como lida) */
 .favorito {
     background-color: #00000050;
     border: 1px solid #ffffff55;
@@ -932,7 +931,6 @@ img {
     border-color: #c8693a;
 }
 
-/* Avaliação com cerberinhos: só aparece depois de marcar como lida */
 .area-nota {
     display: none;
     margin-top: 18px;

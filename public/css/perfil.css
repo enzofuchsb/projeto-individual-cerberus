@@ -128,6 +128,65 @@
     text-decoration: none;
 }
 
+.grade-numeros {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.texto-trabalhos {
+    color: #4e4a44;
+    margin-bottom: 18px;
+}
+
+.lista-trabalhos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 0;
+    list-style: none;
+}
+
+.trabalho {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+}
+
+.trabalho span {
+    flex: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+
+.trabalho-concluido {
+    background-color: #121417;
+    color: #f2b632;
+    border: 1px solid #c8693a;
+}
+
+.trabalho-concluido span {
+    background-color: #c8693a;
+    color: #ffffff;
+}
+
+.trabalho-bloqueado {
+    background-color: #f7f5f1;
+    color: #8a857c;
+    border: 1px dashed #d3cec6;
+}
+
+.trabalho-bloqueado span {
+    border: 1px solid #d3cec6;
+}
+
 @media (max-width: 800px) {
     .area-perfil {
         grid-template-columns: 1fr;
@@ -162,5 +221,13 @@
 
     .lista-favoritos {
         grid-template-columns: 1fr;
+    }
+
+    .grade-numeros {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .lista-trabalhos {
+        grid-template-columns: 1fr 1fr;
     }
 }

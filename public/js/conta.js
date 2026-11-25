@@ -12,6 +12,11 @@ function entrar() {
         return false;
     }
 
+    if (emailVar.includes("@") == false || emailVar.includes(".") == false) {
+        mostrarErro("Nenhuma alma passa sem um e-mail válido, com @ e ponto.");
+        return false;
+    }
+
     console.log("FORM LOGIN: ", emailVar);
 
     fetch("/usuarios/autenticar", {
@@ -56,6 +61,9 @@ function cadastrar() {
 
     if (nomeVar == "" || emailVar == "" || senhaVar == "") {
         mostrarErro("Nenhuma alma passa sem preencher todos os campos.");
+        return false;
+    } else if (emailVar.includes("@") == false || emailVar.includes(".") == false) {
+        mostrarErro("Nenhuma alma passa sem um e-mail válido, com @ e ponto.");
         return false;
     } else if (senhaVar.length < 8) {
         mostrarErro("A senha precisa ter pelo menos 8 caracteres.");

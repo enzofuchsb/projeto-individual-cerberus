@@ -1,9 +1,7 @@
--- Banco do projeto Cerberus
 DROP DATABASE IF EXISTS cerberus;
 CREATE DATABASE cerberus;
 USE cerberus;
 
--- Quem usa o site
 CREATE TABLE usuario (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(60) NOT NULL,
@@ -11,7 +9,6 @@ CREATE TABLE usuario (
     senha VARCHAR(60) NOT NULL
 );
 
--- Cada página de história do site
 CREATE TABLE historia (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(60) NOT NULL,
@@ -20,7 +17,6 @@ CREATE TABLE historia (
     CHECK (categoria IN ('deuses', 'herois', 'criaturas', 'lugares'))
 );
 
--- Usuário leu a história (N:N), com nota opcional de 1 a 5
 CREATE TABLE leitura (
     fk_usuario INT,
     fk_historia INT,
@@ -32,7 +28,6 @@ CREATE TABLE leitura (
     CHECK (nota BETWEEN 1 AND 5)
 );
 
--- Usuário favoritou a história (N:N)
 CREATE TABLE favorito (
     fk_usuario INT,
     fk_historia INT,
@@ -42,7 +37,6 @@ CREATE TABLE favorito (
     FOREIGN KEY (fk_historia) REFERENCES historia(id)
 );
 
--- Todas as histórias que existem como página (o id é usado no HTML)
 INSERT INTO historia (nome, categoria, pagina) VALUES
     ('Aqueronte', 'lugares', 'aqueronte.html'),
     ('Aquiles', 'herois', 'aquiles.html'),
@@ -82,12 +76,10 @@ INSERT INTO historia (nome, categoria, pagina) VALUES
     ('Sereia', 'criaturas', 'sereia.html'),
     ('Ciclope', 'criaturas', 'ciclope.html');
 
--- Usuários de teste
 INSERT INTO usuario (nome, email, senha) VALUES
     ('Viajante Teste', 'teste@cerberus.com', '12345678'),
     ('Alma Nova', 'nova@cerberus.com', '12345678');
 
--- Leituras e notas (14 = Hades, 16 = Héracles, 8 = Cérbero, 25 = Perséfone, 30 = Zeus, 23 = Olimpo)
 INSERT INTO leitura (fk_usuario, fk_historia, nota) VALUES
     (1, 14, 5),
     (1, 16, 4),
@@ -105,23 +97,18 @@ INSERT INTO favorito (fk_usuario, fk_historia) VALUES
     (1, 23),
     (2, 25);
 
--- ===== SELECTs do dashboard (perfil "Minha Jornada") =====
--- Troque o 1 pelo id do usuário que quiser testar
-
--- 1. Os 3 números: lidas, favoritos e média das notas
 SELECT
     (SELECT COUNT(*) FROM leitura WHERE fk_usuario = 1) AS lidas,
     (SELECT COUNT(*) FROM favorito WHERE fk_usuario = 1) AS favoritos,
-    (SELECT AVG(nota) FROM leitura WHERE fk_usuario = 1 AND nota IS NOT NULL) AS media;
+    (SELECT ROUND(AVG(nota), 1) FROM leitura WHERE fk_usuario = 1 AND nota IS NOT NULL) AS media,
+    (SELECT COUNT(*) FROM historia) AS total;
 
--- 2. Gráfico de rosca: histórias lidas por categoria
 SELECT h.categoria, COUNT(*) AS quantidade
   FROM leitura l
   JOIN historia h ON l.fk_historia = h.id
  WHERE l.fk_usuario = 1
  GROUP BY h.categoria;
 
--- 3. Gráfico de barras: 5 histórias mais bem avaliadas do site
 SELECT h.nome, AVG(l.nota) AS media
   FROM leitura l
   JOIN historia h ON l.fk_historia = h.id
@@ -130,14 +117,12 @@ SELECT h.nome, AVG(l.nota) AS media
  ORDER BY media DESC
  LIMIT 5;
 
--- 4. Lista de favoritos do usuário
 SELECT h.nome, h.pagina
   FROM favorito f
   JOIN historia h ON f.fk_historia = h.id
  WHERE f.fk_usuario = 1
  ORDER BY f.data_hora DESC;
 
--- 5. Estado do usuário numa história (usado ao abrir a página)
 SELECT
     (SELECT COUNT(*) FROM leitura WHERE fk_usuario = 1 AND fk_historia = 14) AS lida,
     (SELECT nota FROM leitura WHERE fk_usuario = 1 AND fk_historia = 14) AS nota,

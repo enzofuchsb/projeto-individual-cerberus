@@ -1,8 +1,6 @@
-// Ações das páginas de história: marcar como lida, avaliar e favoritar
 var lida = false;
 var favoritado = false;
 
-// Ao abrir a página: busca no banco o que o usuário já fez nesta história
 function buscarEstado(idHistoria) {
     var idUsuario = sessionStorage.ID_USUARIO;
 
@@ -27,7 +25,6 @@ function buscarEstado(idHistoria) {
     });
 }
 
-// Envia ao servidor o usuário e a história (e a nota, quando tiver)
 function enviar(caminho, metodo, idHistoria, nota) {
     return fetch("/historias/" + caminho, {
         method: metodo,
@@ -42,7 +39,6 @@ function enviar(caminho, metodo, idHistoria, nota) {
     });
 }
 
-// Botão "Marcar como lida": INSERT em leitura
 function marcarLeitura(idHistoria) {
     if (sessionStorage.ID_USUARIO == undefined) {
         botao_lida.innerHTML = "Entre na sua conta para contar a leitura";
@@ -62,14 +58,12 @@ function marcarLeitura(idHistoria) {
     });
 }
 
-// Muda o botão para "Lida" e mostra os cerberinhos de avaliação
 function mostrarLida() {
     lida = true;
     botao_lida.innerHTML = "✓ Lida";
     area_nota.style.display = "block";
 }
 
-// Clique num cerberinho: UPDATE da nota em leitura
 function avaliar(idHistoria, nota) {
     enviar("avaliar", "PUT", idHistoria, nota).then(function (resposta) {
         if (resposta.ok) {
@@ -78,7 +72,6 @@ function avaliar(idHistoria, nota) {
     });
 }
 
-// Acende os cerberinhos até a nota e apaga o resto
 function acenderCerberinhos(nota) {
     for (var i = 1; i <= 5; i++) {
         var cerberinho = document.getElementById("cerberinho_" + i);
@@ -91,7 +84,6 @@ function acenderCerberinhos(nota) {
     }
 }
 
-// Botão de favorito: INSERT se não é favorito, DELETE se já é
 function favoritar(idHistoria) {
     if (sessionStorage.ID_USUARIO == undefined) {
         botao_favorito.innerHTML = "Entre na sua conta para favoritar";
@@ -113,7 +105,6 @@ function favoritar(idHistoria) {
     }
 }
 
-// Muda o texto e a cor do botão de favorito
 function mostrarFavorito(ativo) {
     favoritado = ativo;
 

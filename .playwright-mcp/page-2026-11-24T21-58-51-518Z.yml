@@ -1,0 +1,181 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "CERBERUS" [ref=e4] [cursor=pointer]:
+        - /url: index.html
+      - navigation [ref=e5]:
+        - link "Deuses" [ref=e6] [cursor=pointer]:
+          - /url: deuses.html
+        - link "Heróis" [ref=e7] [cursor=pointer]:
+          - /url: herois.html
+        - link "Criaturas" [ref=e8] [cursor=pointer]:
+          - /url: criaturas.html
+        - link "Lugares" [ref=e9] [cursor=pointer]:
+          - /url: lugares.html
+        - link "História do Dia" [ref=e10] [cursor=pointer]:
+          - /url: historia.html
+        - link "Mito no dia a dia" [ref=e11] [cursor=pointer]:
+          - /url: mito.html
+      - link "Entrar" [ref=e12] [cursor=pointer]:
+        - /url: login.html
+  - generic [ref=e14]:
+    - generic [ref=e15]:
+      - generic [ref=e16]: BEM-VINDO AOS PORTÕES
+      - heading [level=1] [ref=e17]:
+        - text: Do Olimpo ao Tártaro,
+        - emphasis [ref=e18]: eu conheço o caminho.
+      - paragraph [ref=e19]: Sou o Cerberus. Guardo os portões do Hades, mas hoje sou o seu guia pelos deuses, heróis, criaturas e lugares da mitologia grega.
+      - generic [ref=e20]:
+        - link "Começar a jornada →" [ref=e21] [cursor=pointer]:
+          - /url: "#caminhos"
+        - link "Conhecer o guia" [ref=e22] [cursor=pointer]:
+          - /url: "#guia"
+    - generic [ref=e23]:
+      - img "Cerberus, o cão de três cabeças" [ref=e24]
+      - generic [ref=e25]: O GUARDIÃO DOS PORTÕES
+  - generic [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e30]: MEU OLHAR NÃO DORME
+      - heading "Três cabeças, três tempos" [level=2] [ref=e31]
+      - paragraph [ref=e32]: "Filho de Tífon e Equidna, vigio a entrada do Submundo há milênios. Desde a Antiguidade, há quem veja nas minhas três cabeças o próprio tempo: o passado, o presente e o futuro."
+    - generic [ref=e33]:
+      - article [ref=e34]:
+        - generic [ref=e35]: I
+        - heading "O Passado" [level=3] [ref=e36]
+        - paragraph [ref=e37]: "Guarda a memória de tudo o que já aconteceu: as origens do mundo, as guerras dos deuses e as almas que já cruzaram o portão."
+      - article [ref=e38]:
+        - generic [ref=e39]: II
+        - heading "O Presente" [level=3] [ref=e40]
+        - paragraph [ref=e41]: "Está sempre de vigia: observa quem chega agora aos portões do Hades e não deixa ninguém passar despercebido."
+      - article [ref=e42]:
+        - generic [ref=e43]: III
+        - heading "O Futuro" [level=3] [ref=e44]
+        - paragraph [ref=e45]: "Olha para o que ainda vem: nenhuma alma escapa do Submundo, e um dia todas chegarão até mim."
+  - generic [ref=e47]:
+    - generic [ref=e48]:
+      - generic [ref=e49]: ESCOLHA SEU CAMINHO
+      - heading "Além dos portões" [level=2] [ref=e50]
+      - paragraph [ref=e51]: Quatro caminhos. Escolha por onde começar.
+    - generic [ref=e52]:
+      - link "I Deuses Zeus, Hades, Poseidon e os olimpianos que dividiram o mundo entre si. →" [ref=e53] [cursor=pointer]:
+        - /url: deuses.html
+        - text: I
+        - heading "Deuses" [level=3] [ref=e54]
+        - paragraph [ref=e55]: Zeus, Hades, Poseidon e os olimpianos que dividiram o mundo entre si.
+        - generic [ref=e56]: →
+      - 'link "II Heróis Héracles, Perseu, Aquiles e Odisseu: mortais que desafiaram o destino. →" [ref=e57] [cursor=pointer]':
+        - /url: herois.html
+        - text: II
+        - heading "Heróis" [level=3] [ref=e58]
+        - paragraph [ref=e59]: "Héracles, Perseu, Aquiles e Odisseu: mortais que desafiaram o destino."
+        - generic [ref=e60]: →
+      - link "III Criaturas Medusa, a Hidra de Lerna, o Minotauro e, claro, eu mesmo. →" [ref=e61] [cursor=pointer]:
+        - /url: criaturas.html
+        - text: III
+        - heading "Criaturas" [level=3] [ref=e62]
+        - paragraph [ref=e63]: Medusa, a Hidra de Lerna, o Minotauro e, claro, eu mesmo.
+        - generic [ref=e64]: →
+      - link "IV Lugares Do Olimpo ao Submundo, a minha casa, passando por cidades que ainda existem. →" [ref=e65] [cursor=pointer]:
+        - /url: lugares.html
+        - text: IV
+        - heading "Lugares" [level=3] [ref=e66]
+        - paragraph [ref=e67]: Do Olimpo ao Submundo, a minha casa, passando por cidades que ainda existem.
+        - generic [ref=e68]: →
+  - generic [ref=e71]:
+    - generic [ref=e72]:
+      - img "Esfinge" [ref=e73]
+      - generic [ref=e74]: HISTÓRIA DO DIA
+    - generic [ref=e75]:
+      - generic [ref=e76]: CRIATURAS
+      - heading "Esfinge" [level=2] [ref=e77]
+      - paragraph [ref=e78]: Propunha um enigma em Tebas até Édipo resolvê-lo.
+      - link "Ler a história →" [ref=e79] [cursor=pointer]:
+        - /url: esfinge.html
+  - generic [ref=e81]:
+    - generic [ref=e82]:
+      - generic [ref=e83]: DESAFIO RÁPIDO
+      - heading "Quem é o deus dos mares?" [level=2] [ref=e84]
+      - paragraph [ref=e85]: Acerte para provar que conhece o Olimpo.
+    - generic [ref=e86]:
+      - button "Zeus" [ref=e87] [cursor=pointer]
+      - button "Poseidon" [ref=e88] [cursor=pointer]
+      - button "Hermes" [ref=e89] [cursor=pointer]
+      - button "Apolo" [ref=e90] [cursor=pointer]
+  - generic [ref=e92]:
+    - generic [ref=e93]:
+      - generic [ref=e94]: AINDA HÁ MAIS PORTÕES
+      - heading "Mais conteúdos" [level=2] [ref=e95]
+      - paragraph [ref=e96]: Além dos quatro caminhos, guardo outras passagens. Algumas abertas para todos, outras só para quem diz o próprio nome.
+    - generic [ref=e97]:
+      - 'link "ABERTO O mito no seu dia a dia Nike, pânico, eco, calcanhar de Aquiles: palavras, expressões e marcas que vieram dos mitos." [ref=e98] [cursor=pointer]':
+        - /url: mito.html
+        - generic [ref=e99]: ABERTO
+        - heading "O mito no seu dia a dia" [level=3] [ref=e100]
+        - paragraph [ref=e101]: "Nike, pânico, eco, calcanhar de Aquiles: palavras, expressões e marcas que vieram dos mitos."
+      - link "ABERTO História do Dia Um mito curto por dia, com uma pergunta no final para ver se você prestou atenção." [ref=e102] [cursor=pointer]:
+        - /url: historia.html
+        - generic [ref=e103]: ABERTO
+        - heading "História do Dia" [level=3] [ref=e104]
+        - paragraph [ref=e105]: Um mito curto por dia, com uma pergunta no final para ver se você prestou atenção.
+    - generic [ref=e106]:
+      - generic [ref=e107]:
+        - generic [ref=e108]: SÓ PARA QUEM TEM CONTA
+        - heading "Entre e sua jornada fica guardada" [level=2] [ref=e109]
+        - paragraph [ref=e110]: Com login, eu lembro de tudo o que você fez e te mostro o quanto já avançou.
+        - generic [ref=e111]:
+          - link "Criar minha conta →" [ref=e112] [cursor=pointer]:
+            - /url: cadastro.html
+          - link "Já tenho conta" [ref=e113] [cursor=pointer]:
+            - /url: login.html
+      - list [ref=e114]:
+        - listitem [ref=e115]:
+          - generic [ref=e116]: I
+          - generic [ref=e117]:
+            - text: Marque o que já leu
+            - paragraph [ref=e118]: Cada história lida fica guardada na sua conta.
+        - listitem [ref=e119]:
+          - generic [ref=e120]: II
+          - generic [ref=e121]:
+            - text: Avalie com cerberinhos
+            - paragraph [ref=e122]: Dê de 1 a 5 cerberinhos para cada história que você leu.
+        - listitem [ref=e123]:
+          - generic [ref=e124]: III
+          - generic [ref=e125]:
+            - text: Seus favoritos
+            - paragraph [ref=e126]: Guarde os mitos que mais gostou para voltar depois.
+        - listitem [ref=e127]:
+          - generic [ref=e128]: IV
+          - generic [ref=e129]:
+            - text: Minha Jornada
+            - paragraph [ref=e130]: Um perfil com gráficos das suas leituras e das histórias mais bem avaliadas.
+  - generic [ref=e132]:
+    - generic [ref=e133]:
+      - generic [ref=e134]: SEU NOME ENTRE AS HISTÓRIAS
+      - heading "Diga seu nome, viajante." [level=2] [ref=e135]
+      - paragraph [ref=e136]:
+        - text: Crie sua conta para salvar seus mitos favoritos.
+        - link "Criar minha conta →" [ref=e137] [cursor=pointer]:
+          - /url: cadastro.html
+    - generic [ref=e138]:
+      - textbox "Seu nome" [ref=e139]
+      - button "Atravessar o portão" [ref=e140] [cursor=pointer]
+      - paragraph [ref=e141]
+  - contentinfo [ref=e142]:
+    - generic [ref=e143]:
+      - generic [ref=e144]:
+        - generic [ref=e145]: CERBERUS
+        - paragraph [ref=e146]: Os mitos atravessam eras. Eu guardo suas histórias.
+      - generic [ref=e147]:
+        - generic [ref=e148]: EXPLORE
+        - link "História do Dia" [ref=e149] [cursor=pointer]:
+          - /url: historia.html
+      - generic [ref=e150]:
+        - generic [ref=e151]: PROJETO
+        - link "Meu perfil" [ref=e152] [cursor=pointer]:
+          - /url: perfil.html
+        - link "GitHub" [ref=e153] [cursor=pointer]:
+          - /url: https://github.com/enzofuchsb/projeto-individual-cerberus
+    - generic [ref=e155]:
+      - generic [ref=e156]: CERBERUS · Mitologia grega para viajantes curiosos
+      - generic [ref=e157]: Projeto Individual · enzofuchsb
+  - 'img "Mini Cerberus: clique para ele falar" [ref=e159] [cursor=pointer]'
