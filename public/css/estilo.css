@@ -940,10 +940,31 @@ img {
     margin-bottom: 8px;
 }
 
-.cerberinho {
-    width: 48px;
+.notas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.nota-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
     cursor: pointer;
-    opacity: 0.25;
+}
+
+.nota-numero {
+    color: #f2b632;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.cerberinho {
+    width: 64px;
+    opacity: 0.35;
 }
 
 .cerberinho.aceso {

@@ -3,7 +3,6 @@ var router = express.Router();
 
 var historiaController = require("../controllers/historiaController");
 
-// Páginas de história
 router.get("/estado/:idUsuario/:idHistoria", function (req, res) {
     historiaController.buscarEstado(req, res);
 });
@@ -24,7 +23,6 @@ router.delete("/desfavoritar", function (req, res) {
     historiaController.desfavoritar(req, res);
 });
 
-// Perfil "Minha Jornada"
 router.get("/resumo/:idUsuario", function (req, res) {
     historiaController.buscarResumo(req, res);
 });

@@ -45,11 +45,28 @@
                 <button id="botao_lida" class="favorito" onclick="marcarLeitura(15)">✓ Marcar como lida</button>
                 <div id="area_nota" class="area-nota">
                     <p>Que nota você dá? Clique nos cerberinhos:</p>
-                    <img id="cerberinho_1" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 1" onclick="avaliar(15, 1)">
-                    <img id="cerberinho_2" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 2" onclick="avaliar(15, 2)">
-                    <img id="cerberinho_3" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 3" onclick="avaliar(15, 3)">
-                    <img id="cerberinho_4" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 4" onclick="avaliar(15, 4)">
-                    <img id="cerberinho_5" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 5" onclick="avaliar(15, 5)">
+                    <div class="notas">
+                    <div class="nota-item" onclick="avaliar(15, 1)">
+                        <img id="cerberinho_1" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 1">
+                        <span class="nota-numero">1 ★</span>
+                    </div>
+                    <div class="nota-item" onclick="avaliar(15, 2)">
+                        <img id="cerberinho_2" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 2">
+                        <span class="nota-numero">2 ★</span>
+                    </div>
+                    <div class="nota-item" onclick="avaliar(15, 3)">
+                        <img id="cerberinho_3" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 3">
+                        <span class="nota-numero">3 ★</span>
+                    </div>
+                    <div class="nota-item" onclick="avaliar(15, 4)">
+                        <img id="cerberinho_4" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 4">
+                        <span class="nota-numero">4 ★</span>
+                    </div>
+                    <div class="nota-item" onclick="avaliar(15, 5)">
+                        <img id="cerberinho_5" src="img/mini-cerberus.webp" class="cerberinho" alt="Nota 5">
+                        <span class="nota-numero">5 ★</span>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>

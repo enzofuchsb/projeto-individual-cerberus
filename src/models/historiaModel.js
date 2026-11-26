@@ -1,6 +1,5 @@
 var database = require("../database/config");
 
-// Conta se leu (0 ou 1), pega a nota e conta se favoritou (0 ou 1)
 function buscarEstado(idUsuario, idHistoria) {
     var instrucaoSql = `
         SELECT
